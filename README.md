@@ -1,4 +1,4 @@
-# ps-forense.es
+# psforense.es
 
 Web profesional de **Patrick Svensson, Psicología Forense** (versión 1.1 de la marca).
 
@@ -30,10 +30,8 @@ favicon.svg y PNG, site.webmanifest   Iconos
 Los textos pendientes aparecen marcados en rojo con corchetes dentro de la web.
 
 1. **Aviso legal y privacidad:** completa tu **NIF** y tu **domicilio profesional** (`aviso-legal/index.html` y `privacidad/index.html`). La LSSI-CE obliga a publicarlos.
-2. **Privacidad:** indica el **proveedor de tu correo** (por ejemplo, Google Workspace o el de tu registrador).
-3. **Formación:** si todavía estás cursando el máster, cambia en `sobre-mi/index.html` la línea `Máster en Psicología Forense` por `Máster en Psicología Forense (en curso)`.
-4. **Dominio:** el archivo `CNAME` contiene `ps-forense.es`, el dominio de tu correo. Si el dominio que vas a usar es otro, cámbialo ahí y en `sitemap.xml`, `robots.txt` y las etiquetas `canonical` y `og:` de cada página (buscar y reemplazar `https://ps-forense.es`).
-5. Pide a un profesional que revise los textos legales antes de publicar.
+2. **Formación:** si todavía estás cursando el máster, cambia en `sobre-mi/index.html` la línea `Máster en Psicología Forense` por `Máster en Psicología Forense (en curso)`.
+3. Pide a un profesional que revise los textos legales antes de publicar.
 
 ## Ver la web en tu ordenador
 
@@ -54,18 +52,18 @@ y abre http://localhost:8000. (Abrir los archivos con doble clic no funciona bie
 
 ### Pasos
 
-1. Crea el repositorio en GitHub (por ejemplo `ps-forense-web`).
+1. Repositorio: https://github.com/patrickusaf/psforense (público).
 2. Sube el **contenido** de esta carpeta a la raíz de la rama `main` (incluidos `CNAME` y `.nojekyll`, que son archivos ocultos: en Mac, pulsa `Cmd + Mayús + .` para verlos en el Finder).
    ```
    git init
    git add .
    git commit -m "Web PS Forense v1.1"
    git branch -M main
-   git remote add origin https://github.com/TU_USUARIO/ps-forense-web.git
+   git remote add origin https://github.com/patrickusaf/psforense.git
    git push -u origin main
    ```
 3. En el repositorio: **Settings > Pages > Build and deployment > Source: Deploy from a branch**, rama `main`, carpeta `/ (root)`. Guarda.
-4. En **Custom domain** debe aparecer `ps-forense.es` (lo toma del archivo `CNAME`). Si no, escríbelo y guarda.
+4. En **Custom domain** debe aparecer `psforense.es` (lo toma del archivo `CNAME`). Si no, escríbelo y guarda.
 5. Recomendado: verifica el dominio en **Settings (de tu cuenta) > Pages > Add a domain**. GitHub te dará un registro TXT para añadir en tu DNS. Protege el dominio frente a usos no autorizados.
 6. Configura el DNS en tu registrador (tabla de abajo) y espera a que se propague (de minutos a 24 horas).
 7. Cuando GitHub lo permita, activa **Enforce HTTPS** en Settings > Pages.
@@ -82,17 +80,18 @@ y abre http://localhost:8000. (Abrir los archivos con doble clic no funciona bie
 | AAAA  | @      | 2606:50c0:8001::153 |
 | AAAA  | @      | 2606:50c0:8002::153 |
 | AAAA  | @      | 2606:50c0:8003::153 |
-| CNAME | www    | TU_USUARIO.github.io |
+| CNAME | www    | patrickusaf.github.io |
 
 - Borra los registros A o AAAA que el registrador tenga por defecto para `@`.
-- **No toques los registros MX ni los TXT del correo**: son los que hacen funcionar contacto@ps-forense.es.
+- **No toques los registros MX, TXT, SRV ni los CNAME del correo** (mail, imap, pop, smtp, webmail, autoconfig, autodiscover): son los que hacen funcionar contacto@psforense.es.
+- En DonDominio, borra el registro **ANAME** de `psforense.es` y el **CNAME comodín** `*.psforense.es`, que apuntan al hosting de DonDominio.
 - No uses registros comodín (`*`).
 
 Comprobación desde el Terminal:
 
 ```
-dig ps-forense.es +noall +answer -t A
-dig www.ps-forense.es +noall +answer
+dig psforense.es +noall +answer -t A
+dig www.psforense.es +noall +answer
 ```
 
 ## Publicar en un hosting tradicional
