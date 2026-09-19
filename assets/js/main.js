@@ -1,5 +1,6 @@
 /* PS Forense · Patrick Svensson · main.js
-   Sin cookies, sin analítica y sin servicios de terceros. */
+   Sin cookies ni analítica. Solo al pulsar «Enviar» en el formulario de contacto, el mensaje viaja a un servicio de envío
+   propio (Cloudflare Worker) que lo manda por correo; no se guarda. Ver ../psforense-formulario. */
 (function () {
   "use strict";
 
@@ -33,12 +34,20 @@
     el.textContent = new Date().getFullYear();
   });
 
-  // Formulario de contacto: prepara un correo en el programa del usuario.
-  // Los datos no se envían a ningún servidor.
+  // Formulario de contacto. Si data-endpoint está vacío, prepara un correo en el programa del usuario (sin enviar datos).
+  // Con data-endpoint, envía el mensaje al servicio de envío y muestra el resultado.
   var form = document.getElementById("form-contacto");
   if (!form) return;
   var destino = form.getAttribute("data-destino");
+  var endpoint = form.getAttribute("data-endpoint") || "";
+  if (!endpoint) {
+    var intro = document.getElementById("form-intro");
+    if (intro) intro.textContent = "Al pulsar el botón se abrirá tu programa de correo con el mensaje listo para enviar. Esta web no guarda ni envía tus datos.";
+    var btn0 = form.querySelector('button[type="submit"]'); if (btn0) btn0.textContent = "Preparar correo";
+  }
   var estado = document.getElementById("form-estado");
+  var boton = form.querySelector('button[type="submit"]');
+  var cargada = Date.now();   // para detectar robots que rellenan el formulario al instante
 
   var reglas = {
     nombre: function (v) { return v.trim().length >= 2 || "Escribe tu nombre."; },
@@ -70,6 +79,24 @@
     });
   });
 
+  function mostrarErroresServidor(errores) {
+    var primero = null;
+    Object.keys(errores).forEach(function (n) {
+      var el = form.elements[n];
+      var err = document.getElementById("error-" + n);
+      if (!el) return;
+      el.setAttribute("aria-invalid", "true");
+      if (err) { err.textContent = errores[n]; err.classList.add("visible"); }
+      if (!primero) primero = el;
+    });
+    if (primero) primero.focus();
+  }
+
+  function fallo(mensaje) {
+    estado.className = "estado fallo";
+    estado.textContent = mensaje || "No se ha podido enviar el mensaje. Escríbeme directamente a " + destino + " o por WhatsApp.";
+  }
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     estado.textContent = "";
@@ -81,19 +108,63 @@
     if (primero) { primero.focus(); return; }
 
     var f = form.elements;
-    var asunto = "Consulta web: " + f.tipo.value + " (" + f.perfil.value + ")";
-    var cuerpo =
-      "Nombre: " + f.nombre.value.trim() + "\n" +
-      "Correo: " + f.email.value.trim() + "\n" +
-      "Consulta como: " + f.perfil.value + "\n" +
-      "Tipo de caso: " + f.tipo.value + "\n\n" +
-      f.mensaje.value.trim() + "\n\n" +
-      "He leído y acepto la política de privacidad de psforense.es.";
-    window.location.href = "mailto:" + destino +
-      "?subject=" + encodeURIComponent(asunto) +
-      "&body=" + encodeURIComponent(cuerpo);
+    if (!endpoint) {
+      var asunto = "Consulta web: " + f.tipo.value + " (" + f.perfil.value + ")";
+      var cuerpo =
+        "Nombre: " + f.nombre.value.trim() + "\n" +
+        "Correo: " + f.email.value.trim() + "\n" +
+        "Consulta como: " + f.perfil.value + "\n" +
+        "Tipo de caso: " + f.tipo.value + "\n\n" +
+        f.mensaje.value.trim() + "\n\n" +
+        "He leído y acepto la política de privacidad de psforense.es.";
+      window.location.href = "mailto:" + destino +
+        "?subject=" + encodeURIComponent(asunto) +
+        "&body=" + encodeURIComponent(cuerpo);
+      estado.className = "estado ok";
+      estado.textContent = "Tu programa de correo se ha abierto con el mensaje preparado. Revísalo y pulsa enviar. Si no se ha abierto, escribe directamente a " + destino + ".";
+      return;
+    }
 
-    estado.className = "estado ok";
-    estado.textContent = "Tu programa de correo se ha abierto con el mensaje preparado. Revísalo y pulsa enviar. Si no se ha abierto, escribe directamente a " + destino + ".";
+    var textoBoton = boton.textContent;
+    boton.disabled = true;
+    boton.textContent = "Enviando…";
+    estado.textContent = "Enviando tu mensaje…";
+    var control = new AbortController();
+    var espera = setTimeout(function () { control.abort(); }, 20000);
+
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      signal: control.signal,
+      body: JSON.stringify({
+        nombre: f.nombre.value, email: f.email.value, perfil: f.perfil.value, tipo: f.tipo.value,
+        mensaje: f.mensaje.value, privacidad: f.privacidad.checked, web: f.web ? f.web.value : "",
+        t: Date.now() - cargada
+      })
+    })
+      .then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, estado: r.status, j: j }; });
+      })
+      .then(function (x) {
+        if (x.ok && x.j.ok) {
+          estado.className = "estado ok";
+          estado.textContent = "Mensaje enviado. " + (x.j.confirmacion === false
+            ? "Te responderé lo antes posible."
+            : "Te he enviado un correo de confirmación; si no lo ves, mira la carpeta de correo no deseado. Te responderé lo antes posible.");
+          form.reset();
+          cargada = Date.now();
+        } else if (x.estado === 400 && x.j.errores) {
+          estado.textContent = "";
+          mostrarErroresServidor(x.j.errores);
+        } else {
+          fallo(x.j.error);
+        }
+      })
+      .catch(function () { fallo(); })
+      .then(function () {
+        clearTimeout(espera);
+        boton.disabled = false;
+        boton.textContent = textoBoton;
+      });
   });
 })();

@@ -2,7 +2,7 @@
 
 Web profesional de **Patrick Svensson, Psicología Forense** (versión 1.1 de la marca).
 
-Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compilación. No usa cookies, analítica ni recursos de terceros: tipografías, imágenes y código se sirven desde el propio dominio.
+Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compilación. No usa cookies ni analítica: tipografías, imágenes y código se sirven desde el propio dominio. La única conexión externa es el envío del formulario de contacto (ver «Formulario de contacto»).
 
 ## Estructura
 
@@ -10,7 +10,7 @@ Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compil
 index.html                Inicio
 servicios/index.html      Servicios
 sobre-mi/index.html       Sobre mí
-contacto/index.html       Contacto (el formulario abre el programa de correo; no envía datos a ningún servidor)
+contacto/index.html       Contacto (formulario: con `data-endpoint` envía el mensaje al Worker; sin él abre el programa de correo)
 aviso-legal/index.html    Aviso legal (LSSI-CE)
 privacidad/index.html     Política de privacidad (RGPD)
 cookies/index.html        Política de cookies
@@ -24,6 +24,15 @@ CNAME                     Dominio personalizado para GitHub Pages
 robots.txt, sitemap.xml   Buscadores
 favicon.svg y PNG, site.webmanifest   Iconos
 ```
+
+## Formulario de contacto
+
+El formulario envía el mensaje a `contacto@psforense.es` y una confirmación automática al remitente desde `avisos@psforense.es`. Como esta web es estática,
+el envío lo hace un pequeño Cloudflare Worker (proyecto `psforense-formulario`, con sus instrucciones de despliegue). Cuando lo tengas desplegado:
+
+1. Copia la URL del Worker (`https://psforense-formulario.<tu-subdominio>.workers.dev/enviar`).
+2. Pégala en `contacto/index.html`, en el atributo `data-endpoint=""` del formulario.
+3. Publica la web. Mientras `data-endpoint` esté vacío, el formulario funciona como antes (abre el programa de correo).
 
 ## Antes de publicar
 

@@ -58,9 +58,10 @@
       <p class="suave">Trabajo desde Andalucía Oriental. Consulta la disponibilidad para otras zonas.</p>
       <p class="aviso-caja">En el primer contacto basta con una descripción general. No envíes informes médicos, psicológicos ni documentos judiciales hasta que te indique cómo hacerlo de forma segura.</p>
     </div>
-    <form class="formulario" id="form-contacto" data-destino="contacto@psforense.es" novalidate>
-      <h2>Preparar un mensaje</h2>
-      <p class="suave" style="margin:0">Al pulsar el botón se abrirá tu programa de correo con el mensaje listo para enviar. Esta web no guarda ni envía tus datos.</p>
+    <form class="formulario" id="form-contacto" data-destino="contacto@psforense.es" data-endpoint="https://psforense-formulario.psforense-web.workers.dev/enviar" novalidate>
+      <h2>Enviar un mensaje</h2>
+      <p class="suave" style="margin:0" id="form-intro">Tu mensaje llega directamente a mi correo y recibirás una confirmación automática. Te responderé personalmente.</p>
+      <div class="trampa" aria-hidden="true"><label for="web">No rellenes este campo</label><input id="web" name="web" type="text" tabindex="-1" autocomplete="off"></div>
       <div class="dos">
         <div class="campo"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="error-nombre"><p class="error" id="error-nombre" aria-live="polite"></p></div>
         <div class="campo"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="error-email"><p class="error" id="error-email" aria-live="polite"></p></div>
@@ -79,9 +80,9 @@
         <label class="check" for="privacidad"><input id="privacidad" name="privacidad" type="checkbox" required aria-describedby="error-privacidad"><span>He leído la <a href="../privacidad/">política de privacidad</a> y acepto que se usen mis datos para responder a mi consulta.</span></label>
         <p class="error" id="error-privacidad" aria-live="polite"></p>
       </div>
-      <div class="acciones" style="margin-top:24px"><button class="btn btn--lacre" type="submit">Preparar correo</button></div>
+      <div class="acciones" style="margin-top:24px"><button class="btn btn--lacre" type="submit">Enviar mensaje</button></div>
       <p class="estado" id="form-estado" role="status" aria-live="polite"></p>
-      <p class="capa-info"><b>Protección de datos.</b> Responsable: Patrick Svensson. Finalidad: responder a tu consulta. Legitimación: tu consentimiento. Destinatarios: no se ceden datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros, escribiendo a contacto@psforense.es. Más información en la <a href="../privacidad/">política de privacidad</a>.</p>
+      <p class="capa-info"><b>Protección de datos.</b> Responsable: Patrick Svensson. Finalidad: responder a tu consulta. Legitimación: tu consentimiento. Destinatarios: el mensaje se envía a mi correo a través de Cloudflare (envío del formulario) y DonDominio (correo), que actúan como encargados del tratamiento; no se ceden datos a otros terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros, escribiendo a contacto@psforense.es. Más información en la <a href="../privacidad/">política de privacidad</a>.</p>
       <noscript><p class="aviso-caja">Para usar este formulario necesitas JavaScript. También puedes escribir directamente a <a href="mailto:contacto@psforense.es">contacto@psforense.es</a>.</p></noscript>
     </form>
   </div>

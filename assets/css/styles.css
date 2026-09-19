@@ -337,6 +337,8 @@ li { margin-bottom: .35em; }
 .error.visible { display: block; }
 .estado { margin-top: 18px; font-family: var(--grot); font-size: .98rem; }
 .estado:empty { display: none; }
+.estado.fallo { background: #FBEFF0; border-left: 4px solid var(--lacre); color: var(--grafito); padding: 14px 16px; border-radius: 0 var(--radio) var(--radio) 0; }
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .estado.ok { background: var(--blanco); border-left: 4px solid var(--fiordo); padding: 14px 16px; border-radius: 0 var(--radio) var(--radio) 0; }
 .capa-info { font-size: .88rem; color: var(--texto-suave); margin-top: 18px; line-height: 1.55; }
 
