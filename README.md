@@ -147,4 +147,4 @@ git push --follow-tags
 
 ## Tipografías
 
-La web usa Instrument Sans e IBM Plex Serif, muy próximas a las tipografías de la marca. Para usar las oficiales (Familjen Grotesk y Source Serif 4), descárgalas de fonts.google.com, conviértelas a WOFF2, guárdalas en `assets/fonts/` y descomenta el bloque "Tipografías oficiales" en `assets/css/styles.css`.
+La web usa Instrument Sans e IBM Plex Serif, muy próximas a las tipografías de la marca. Para usar las oficiales (Familjen Grotesk y Source Serif 4), descárgalas de fonts.google.com, conviértelas a WOFF2, guárdalas en `assets/fonts/` y descomenta el bloque "Tipografías oficiales" en `assets/css/styles.css`. 
