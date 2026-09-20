@@ -1,6 +1,6 @@
 # psforense.es
 
-Web profesional de **Patrick Svensson, Psicología Forense** (marca v1.1) y escaparate de **Probatio**, su herramienta de gestión para peritos psicólogos.
+Web profesional de **Patrick Svensson, Psicología Forense** (marca v1.1) y escaparate de **Probatio**, su herramienta de gestión para peritos psicólogos.  
 
 Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compilación. No usa cookies ni analítica: tipografías, imágenes y código se sirven desde el propio dominio. La única conexión con un servicio externo es el envío del formulario de contacto (ver más abajo).
 
