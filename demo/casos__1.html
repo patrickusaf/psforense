@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">6</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo on"><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="on">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo "><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="3 mensajes sin leer">3</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>
@@ -87,7 +101,11 @@
       </tr>
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
-        <td>Redactar el borrador del informe pericial</td><td class="der mini">27/9/2026</td>
+        <td>Aplicar el PAI a la clienta <span class="tag">→ Irene Modelo</span></td><td class="der mini">23/9/2026</td>
+      </tr>
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Redactar el borrador del informe pericial <span class="tag">→ Marta Ejemplo</span></td><td class="der mini">27/9/2026</td>
       </tr>
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
@@ -95,12 +113,13 @@
       </tr>
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
-        <td>Preparar la ratificación en sala</td><td class="der mini">14/10/2026</td>
+        <td>Preparar la ratificación en sala <span class="tag">→ Sonia Ficticia</span></td><td class="der mini">14/10/2026</td>
       </tr>
     </table>
     <form class="linea-form" method="post" action="#" data-demo-form>
       <input type="hidden" name="caso_id" value="1">
       <input name="titulo" placeholder="Nueva tarea" required><input type="date" name="vence_el">
+      <select name="asignada_a" aria-label="Asignar a"><option value="">Sin asignar</option><option value="3" >Irene Modelo</option><option value="2" >Luis Muestra</option><option value="1" selected>Marta Ejemplo</option><option value="4" >Pablo Inventado</option><option value="5" >Sonia Ficticia</option></select>
       <button class="btn peq">Añadir</button>
     </form>
   </section>
@@ -136,6 +155,53 @@
     
   </table>
 </section>
+
+<div class="cols" id="comentarios">
+  <section class="tarjeta">
+    <h2>Equipo del caso</h2>
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <label class="mini">Responsable
+        <select name="responsable_id" >
+          <option value="">Sin responsable</option>
+          <option value="3" >Irene Modelo (Técnico/a)</option><option value="2" >Luis Muestra (Abogado/a)</option><option value="1" selected>Marta Ejemplo (Psicólogo/a)</option><option value="4" >Pablo Inventado (Trabajador/a social)</option><option value="5" >Sonia Ficticia (Psicólogo/a)</option>
+        </select></label>
+      <button class="btn linea peq">Guardar</button>
+    </form>
+    <table class="lista">
+      
+      <tr>
+        <td data-label="Persona"><b>Irene Modelo</b><br><span class="mini">Técnico/a · Evaluación y validez</span></td>
+        <td class="der"><form method="post" action="#" data-demo-form><button class="check" title="Quitar del equipo" aria-label="Quitar del equipo">×</button></form></td>
+      </tr>
+      
+    </table>
+    
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <select name="miembro_id" required aria-label="Añadir al equipo"><option value="">Añadir a…</option>
+        <option value="3">Irene Modelo (Técnico/a)</option><option value="2">Luis Muestra (Abogado/a)</option><option value="1">Marta Ejemplo (Psicólogo/a)</option><option value="4">Pablo Inventado (Trabajador/a social)</option><option value="5">Sonia Ficticia (Psicólogo/a)</option></select>
+      <input name="funcion" placeholder="Función (opcional)" maxlength="80">
+      <button class="btn linea peq">Añadir</button>
+    </form>
+    
+  </section>
+  
+  <section class="tarjeta">
+    <div class="cabecera ficha-tarjeta"><h2>Comentarios</h2><a class="mini" href="chat__caso__1.html">Abrir en el chat</a></div>
+    <div class="chat-msgs chat-msgs-caso" data-chat data-canal="caso:1" data-ultimo="0" aria-live="polite">
+      
+      <p class="mini chat-vacio">Sin comentarios. Deja notas para tu equipo con @nombre.</p>
+    </div>
+    
+    <form class="chat-form" method="post" action="#" data-demo-form>
+      <input type="hidden" name="canal" value="caso:1"><input type="hidden" name="volver" value="caso">
+      <textarea name="texto" rows="2" maxlength="4000" placeholder="Comenta algo sobre el caso… (@nombre avisa a esa persona)" required></textarea>
+      <div class="acciones"><button class="btn peq">Comentar</button></div>
+    </form>
+    
+  </section>
+  
+</div>
+
 <section class="tarjeta">
   <div class="cabecera ficha-tarjeta">
     <h2>Evaluaciones psicológicas</h2>
@@ -199,7 +265,7 @@
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Correspondencia</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -211,7 +277,7 @@
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Prueba</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -223,7 +289,7 @@
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Expediente</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -235,7 +301,7 @@
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Consentimiento</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -247,7 +313,7 @@
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Encargo</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>

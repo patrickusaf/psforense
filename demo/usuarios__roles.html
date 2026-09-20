@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roles y permisos · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">4</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Recursos</summary>
+      <div class="submenu">
+        <a href="recursos.html" class="">Enlaces y manuales</a>
+        <a href="evaluacion.html" class="">Evaluación psicológica</a>
+        <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
+    <details class="grupo on"><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="on">Usuarios y roles</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="1 mensajes sin leer">1</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Roles y permisos</h1><div class="acciones"><a class="btn linea" href="usuarios.html">Usuarios</a></div></div>
+<p class="mini">Un rol define qué puede hacer cada persona en cada sección: <b>ninguno</b> (no la ve), <b>lectura</b> (consulta) o <b>escritura</b> (consulta y modifica). Los cambios se aplican de inmediato. El administrador siempre tiene acceso a todo y es el único que gestiona usuarios y roles. Los permisos limitan <b>secciones</b>, no casos concretos: quien puede ver «Trabajo» ve todos los casos del gabinete.</p>
+
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="cabecera ficha-tarjeta">
+    <h2>Administrador <span class="tag gris">De sistema</span> <span class="mini">1 usuario(s)</span></h2>
+  </div>
+  
+  <p class="mini">Acceso total, gestión de usuarios, roles y ajustes. Escritura en todas las secciones y gestión de usuarios y roles (no editable).</p>
+  
+</form>
+
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="cabecera ficha-tarjeta">
+    <h2>Evaluador <span class="tag gris">De sistema</span> <span class="mini">1 usuario(s)</span></h2>
+  </div>
+  
+  <div class="rejilla">
+    <label>Nombre<input name="nombre" value="Evaluador"></label>
+    <label>Descripción<input name="descripcion" value="Trabaja con casos, documentos y evaluaciones. No ve la facturación ni la parte comercial."></label>
+  </div>
+  <table class="lista matriz">
+    <tr><th>Sección</th><th class="cen">Ninguno</th><th class="cen">Lectura</th><th class="cen">Escritura</th></tr>
+    
+    <tr>
+      <td data-label="Sección"><b>Trabajo</b><br><span class="mini">Casos, clientes, documentos, tareas y evaluaciones de cada caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_trabajo" value="ninguno"  aria-label="Trabajo: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="lectura"  aria-label="Trabajo: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="escritura" checked aria-label="Trabajo: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Facturación</b><br><span class="mini">Presupuestos, facturas, gastos, resumen anual, gestoría y registro de facturación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_facturacion" value="ninguno" checked aria-label="Facturación: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="lectura"  aria-label="Facturación: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="escritura"  aria-label="Facturación: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Comercial</b><br><span class="mini">Leads, despachos y prescriptores, colaboradores</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_comercial" value="ninguno" checked aria-label="Comercial: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_comercial" value="lectura"  aria-label="Comercial: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_comercial" value="escritura"  aria-label="Comercial: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Recursos</b><br><span class="mini">Enlaces y manuales, catálogo de pruebas de evaluación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_recursos" value="ninguno"  aria-label="Recursos: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_recursos" value="lectura" checked aria-label="Recursos: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_recursos" value="escritura"  aria-label="Recursos: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Licencias de pruebas</b><br><span class="mini">Licencias, usos y caducidades de las pruebas de pago</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_licencias" value="ninguno"  aria-label="Licencias de pruebas: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_licencias" value="lectura" checked aria-label="Licencias de pruebas: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_licencias" value="escritura"  aria-label="Licencias de pruebas: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Chat y comentarios</b><br><span class="mini">Chat del gabinete, conversaciones directas y comentarios de caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_chat" value="ninguno"  aria-label="Chat y comentarios: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_chat" value="lectura"  aria-label="Chat y comentarios: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_chat" value="escritura" checked aria-label="Chat y comentarios: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Ajustes</b><br><span class="mini">Datos del emisor, copias de seguridad, avisos y demás ajustes generales</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_ajustes" value="ninguno" checked aria-label="Ajustes: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="lectura"  aria-label="Ajustes: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="escritura"  aria-label="Ajustes: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+  </table>
+  <div class="acciones"><button class="btn">Guardar permisos</button></div>
+  
+</form>
+
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="cabecera ficha-tarjeta">
+    <h2>Profesional <span class="tag gris">De sistema</span> <span class="mini">2 usuario(s)</span></h2>
+  </div>
+  
+  <div class="rejilla">
+    <label>Nombre<input name="nombre" value="Profesional"></label>
+    <label>Descripción<input name="descripcion" value="Trabaja con casos, clientes, documentos, facturación, pruebas y colaboración. No cambia ajustes ni usuarios."></label>
+  </div>
+  <table class="lista matriz">
+    <tr><th>Sección</th><th class="cen">Ninguno</th><th class="cen">Lectura</th><th class="cen">Escritura</th></tr>
+    
+    <tr>
+      <td data-label="Sección"><b>Trabajo</b><br><span class="mini">Casos, clientes, documentos, tareas y evaluaciones de cada caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_trabajo" value="ninguno"  aria-label="Trabajo: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="lectura"  aria-label="Trabajo: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="escritura" checked aria-label="Trabajo: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Facturación</b><br><span class="mini">Presupuestos, facturas, gastos, resumen anual, gestoría y registro de facturación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_facturacion" value="ninguno"  aria-label="Facturación: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="lectura"  aria-label="Facturación: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="escritura" checked aria-label="Facturación: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Comercial</b><br><span class="mini">Leads, despachos y prescriptores, colaboradores</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_comercial" value="ninguno"  aria-label="Comercial: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_comercial" value="lectura"  aria-label="Comercial: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_comercial" value="escritura" checked aria-label="Comercial: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Recursos</b><br><span class="mini">Enlaces y manuales, catálogo de pruebas de evaluación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_recursos" value="ninguno"  aria-label="Recursos: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_recursos" value="lectura"  aria-label="Recursos: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_recursos" value="escritura" checked aria-label="Recursos: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Licencias de pruebas</b><br><span class="mini">Licencias, usos y caducidades de las pruebas de pago</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_licencias" value="ninguno"  aria-label="Licencias de pruebas: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_licencias" value="lectura"  aria-label="Licencias de pruebas: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_licencias" value="escritura" checked aria-label="Licencias de pruebas: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Chat y comentarios</b><br><span class="mini">Chat del gabinete, conversaciones directas y comentarios de caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_chat" value="ninguno"  aria-label="Chat y comentarios: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_chat" value="lectura"  aria-label="Chat y comentarios: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_chat" value="escritura" checked aria-label="Chat y comentarios: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Ajustes</b><br><span class="mini">Datos del emisor, copias de seguridad, avisos y demás ajustes generales</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_ajustes" value="ninguno" checked aria-label="Ajustes: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="lectura"  aria-label="Ajustes: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="escritura"  aria-label="Ajustes: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+  </table>
+  <div class="acciones"><button class="btn">Guardar permisos</button></div>
+  
+</form>
+
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="cabecera ficha-tarjeta">
+    <h2>Solo lectura <span class="tag gris">De sistema</span> <span class="mini">1 usuario(s)</span></h2>
+  </div>
+  
+  <div class="rejilla">
+    <label>Nombre<input name="nombre" value="Solo lectura"></label>
+    <label>Descripción<input name="descripcion" value="Consulta casos, recursos y comercial, sin modificar nada."></label>
+  </div>
+  <table class="lista matriz">
+    <tr><th>Sección</th><th class="cen">Ninguno</th><th class="cen">Lectura</th><th class="cen">Escritura</th></tr>
+    
+    <tr>
+      <td data-label="Sección"><b>Trabajo</b><br><span class="mini">Casos, clientes, documentos, tareas y evaluaciones de cada caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_trabajo" value="ninguno"  aria-label="Trabajo: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="lectura" checked aria-label="Trabajo: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_trabajo" value="escritura"  aria-label="Trabajo: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Facturación</b><br><span class="mini">Presupuestos, facturas, gastos, resumen anual, gestoría y registro de facturación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_facturacion" value="ninguno" checked aria-label="Facturación: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="lectura"  aria-label="Facturación: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_facturacion" value="escritura"  aria-label="Facturación: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Comercial</b><br><span class="mini">Leads, despachos y prescriptores, colaboradores</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_comercial" value="ninguno"  aria-label="Comercial: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_comercial" value="lectura" checked aria-label="Comercial: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_comercial" value="escritura"  aria-label="Comercial: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Recursos</b><br><span class="mini">Enlaces y manuales, catálogo de pruebas de evaluación</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_recursos" value="ninguno"  aria-label="Recursos: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_recursos" value="lectura" checked aria-label="Recursos: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_recursos" value="escritura"  aria-label="Recursos: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Licencias de pruebas</b><br><span class="mini">Licencias, usos y caducidades de las pruebas de pago</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_licencias" value="ninguno"  aria-label="Licencias de pruebas: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_licencias" value="lectura" checked aria-label="Licencias de pruebas: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_licencias" value="escritura"  aria-label="Licencias de pruebas: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Chat y comentarios</b><br><span class="mini">Chat del gabinete, conversaciones directas y comentarios de caso</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_chat" value="ninguno"  aria-label="Chat y comentarios: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_chat" value="lectura" checked aria-label="Chat y comentarios: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_chat" value="escritura"  aria-label="Chat y comentarios: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+    <tr>
+      <td data-label="Sección"><b>Ajustes</b><br><span class="mini">Datos del emisor, copias de seguridad, avisos y demás ajustes generales</span></td>
+      <td class="cen" data-label="ninguno"><label class="radio-celda"><input type="radio" name="p_ajustes" value="ninguno" checked aria-label="Ajustes: ninguno"><span class="solo-movil">ninguno</span></label></td><td class="cen" data-label="lectura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="lectura"  aria-label="Ajustes: lectura"><span class="solo-movil">lectura</span></label></td><td class="cen" data-label="escritura"><label class="radio-celda"><input type="radio" name="p_ajustes" value="escritura"  aria-label="Ajustes: escritura"><span class="solo-movil">escritura</span></label></td>
+    </tr>
+  </table>
+  <div class="acciones"><button class="btn">Guardar permisos</button></div>
+  
+</form>
+
+
+
+<section class="tarjeta">
+  <h2>Crear un rol propio</h2>
+  <form class="form" method="post" action="#" data-demo-form>
+    <div class="rejilla">
+      <label>Nombre<input name="nombre" placeholder="Ej.: Administrativo, Colaborador externo" required></label>
+      <label>Descripción<input name="descripcion"></label>
+      <label>Empezar con los permisos de<select name="copiar"><option value="evaluador" >Evaluador</option><option value="usuario" >Profesional</option><option value="lector" selected>Solo lectura</option></select></label>
+    </div>
+    <button class="btn linea peq">Crear rol</button>
+  </form>
+</section>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

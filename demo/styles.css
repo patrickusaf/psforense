@@ -318,3 +318,61 @@ code{background:var(--hielo);padding:1px 6px;border-radius:4px;font-size:.85em}
 @media(max-width:800px){.cols{grid-template-columns:minmax(0,1fr)}}
 .subida input[type=file]{max-width:100%}
 .form,.subida{min-width:0}
+
+/* ---------- Panel: avisos, gráficos ---------- */
+.avisos-panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 22px}
+.aviso-caja{background:var(--blanco);border:1px solid var(--linea);border-left:5px solid var(--niebla);border-radius:var(--radio);padding:16px 18px;box-shadow:var(--sombra)}
+.aviso-caja h2{font-size:1rem;margin:0 0 8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.aviso-caja ul{list-style:none;padding:0;margin:0}
+.aviso-caja li{padding:6px 0;border-top:1px solid var(--linea);font-size:.93rem;display:flex;flex-direction:column;gap:1px}
+.aviso-caja li:first-child{border-top:0}
+.aviso-rojo{border-left-color:var(--lacre)}.aviso-ambar{border-left-color:#B8862B}.aviso-verde{border-left-color:#2F6B4F}.aviso-acero{border-left-color:var(--acero)}
+.aviso-caja .marca{display:inline-block;font-size:.74rem;font-weight:600;border-radius:999px;padding:2px 9px;background:var(--hielo);color:var(--fiordo);border:1px solid var(--linea)}
+.aviso-caja .marca.rojo{background:#FBEFF0;color:var(--lacre);border-color:#E7C3C7}.aviso-caja .marca.ambar{background:#FBF3E2;color:#7A5410;border-color:#E8D3A2}
+.plazo-vencido a{color:var(--lacre);font-weight:600}.plazo-hoy a{font-weight:600}
+.enlace-boton{background:none;border:0;padding:0;margin:0;font:inherit;color:var(--fiordo);text-decoration:underline;text-decoration-color:var(--niebla);text-underline-offset:3px;cursor:pointer;text-align:left}
+.enlace-boton:hover{text-decoration-color:var(--fiordo)}
+.titulo-seccion{margin:26px 0 12px;font-size:1.05rem}
+.graficos-panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px}
+.grafico-tarjeta{margin:0;padding:16px 18px}
+.grafico-tarjeta h3{margin:0 0 10px;font-size:.98rem}
+.grafico-cuerpo{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.grafico{width:100%;height:auto;max-width:400px;display:block}
+.grafico-anillo{width:132px;flex:none}
+.g-et,.g-val{font:500 12.5px var(--sans);fill:var(--grafito)}.g-eje{font:500 11px var(--sans);fill:var(--acero)}.g-centro{font:600 20px var(--sans);fill:var(--fiordo)}
+.leyenda{list-style:none;padding:0;margin:0;font-size:.84rem;color:var(--acero)}.leyenda li{margin:3px 0}
+.punto{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px}
+.c0{background:#1E2B3A}.c1{background:#4A5D6E}.c2{background:#B9C4C9}.c3{background:#8C2F39}.c4{background:#2F6B4F}.c5{background:#B8862B}
+.lectura{margin:12px 0 0;font-size:.88rem;color:var(--acero);border-top:1px solid var(--linea);padding-top:10px}
+
+/* ---------- Menú: utilidades a la derecha, contadores ---------- */
+.contador{display:inline-block;min-width:18px;padding:0 5px;border-radius:999px;background:var(--lacre);color:#fff;font-size:.7rem;font-weight:600;line-height:18px;text-align:center}
+.barra .nav-util{margin-left:auto;display:flex;align-items:stretch;gap:2px}
+.barra .nav-util a{display:flex;align-items:center;gap:5px;padding:0 12px;color:#C9D3D8;text-decoration:none;font-size:.9rem;white-space:nowrap}
+.barra .nav-util a:hover,.barra .nav-util a.on{color:#fff}
+.barra .nav-util .yo{border-left:1px solid rgba(255,255,255,.14);margin-left:6px;padding-left:14px}
+.barra .nav-util .yo .mini{color:var(--niebla)}
+@media(max-width:860px){.barra .nav-util{margin-left:0;flex-direction:column;border-top:1px solid rgba(255,255,255,.14);margin-top:6px;padding-top:6px}.barra .nav-util a{padding:10px 4px}.barra .nav-util .yo{border-left:0;margin-left:0;padding-left:4px}}
+
+/* ---------- Chat y comentarios ---------- */
+.chat{display:grid;grid-template-columns:250px minmax(0,1fr);gap:20px;align-items:start}
+.chat-lateral{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:14px 16px;box-shadow:var(--sombra)}
+.chat-lateral h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--acero);margin:14px 0 6px}.chat-lateral h2:first-child{margin-top:0}
+.chat-lateral ul{list-style:none;padding:0;margin:0}
+.chat-lateral a{display:block;padding:7px 8px;border-radius:6px;text-decoration:none;font-size:.92rem}.chat-lateral a:hover{background:var(--hielo)}.chat-lateral a.on{background:var(--hielo);font-weight:600}
+.chat-principal{margin:0}
+.chat-msgs{max-height:52vh;min-height:140px;overflow-y:auto;padding:4px 2px;margin:8px 0 12px;display:flex;flex-direction:column;gap:8px}
+.chat-msgs-caso{max-height:300px}
+.msg{background:var(--hielo);border-radius:10px;padding:8px 12px;max-width:88%;align-self:flex-start}
+.msg.mio{background:#E3E9EE;align-self:flex-end}
+.msg header{display:flex;align-items:center;gap:8px;font-size:.84rem}
+.msg header form{margin-left:auto}
+.msg .texto{margin:3px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.eliminado .texto{color:var(--acero);font-style:italic}
+.chat-form textarea{width:100%;border:1px solid #B7C3C9;border-radius:6px;padding:9px 11px;font:400 .95rem var(--sans);resize:vertical}
+.notificaciones{list-style:none;padding:0;margin:0}
+.notificaciones li{background:var(--blanco);border:1px solid var(--linea);border-left:4px solid var(--niebla);border-radius:var(--radio);padding:10px 14px;margin-bottom:8px;display:flex;flex-direction:column;gap:2px}
+.notificaciones li.nueva{border-left-color:var(--lacre)}.notificaciones li.leida{opacity:.7}
+.clave-temporal{margin:18px 0}.clave-temporal code{display:inline-block;font:600 1.35rem ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;background:var(--hielo);border:1px dashed var(--acero);border-radius:8px;padding:14px 20px;user-select:all}
+.matriz td,.matriz th{vertical-align:middle}.radio-celda{display:inline-flex;align-items:center;gap:6px}.radio-celda input{width:auto!important;margin:0!important}.solo-movil{display:none}
+@media(max-width:860px){.chat{grid-template-columns:minmax(0,1fr)}.matriz td[data-label]::before{content:attr(data-label)}}

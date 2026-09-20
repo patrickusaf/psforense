@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">6</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo on"><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="on">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo "><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="3 mensajes sin leer">3</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>
@@ -58,7 +72,7 @@
 
 <div class="cabecera"><h1>Casos</h1><a class="btn" href="casos__nuevo.html">Nuevo caso</a></div>
 <form class="filtros" method="get" action="#" data-demo-form>
-  <select name="estado">
+  <select name="estado" aria-label="Estado">
     <option value="">Activos</option>
     
     <option value="consulta" >Consulta</option>
@@ -70,33 +84,34 @@
     <option value="cerrado" >Cerrado</option>
     <option value="rechazado" >Rechazado</option>
   </select>
+  <label class="linea-check"><input type="checkbox" name="mios" value="1" > Solo mis casos</label>
 </form>
 <table class="lista">
-  <tr><th>Referencia</th><th>Caso</th><th>Cliente</th><th>Despacho</th><th>Área</th><th>Estado</th><th>Límite</th><th class="der">Honorarios</th></tr>
+  <tr><th>Referencia</th><th>Caso</th><th>Cliente</th><th>Despacho</th><th>Área</th><th>Estado</th><th>Responsable</th><th>Límite</th><th class="der">Honorarios</th></tr>
   
   <tr class="">
     <td data-label="Referencia"><a href="casos__1.html">EJ-2026-001</a></td>
     <td data-label="Caso">Daño psíquico por acoso laboral (ejemplo)</td><td data-label="Cliente">María Ejemplo Ficticia</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td>
     <td data-label="Área">Laboral</td><td data-label="Estado"><span class="tag">Evaluación</span></td>
-    <td data-label="Límite">14/10/2026</td><td class="der" data-label="Honorarios">900,00 €</td>
+    <td class="mini" data-label="Responsable">Marta Ejemplo</td><td data-label="Límite">14/10/2026</td><td class="der" data-label="Honorarios">900,00 €</td>
   </tr>
   <tr class="">
     <td data-label="Referencia"><a href="casos__3.html">EJ-2026-003</a></td>
     <td data-label="Caso">Investigación interna por denuncia de acoso (ejemplo)</td><td data-label="Cliente">Empresa Modelo S.L.</td><td data-label="Despacho">Asesoría Laboral Modelo</td>
     <td data-label="Área">Empresa</td><td data-label="Estado"><span class="tag">Aceptado</span></td>
-    <td data-label="Límite">25/10/2026</td><td class="der" data-label="Honorarios">1800,00 €</td>
+    <td class="mini" data-label="Responsable">—</td><td data-label="Límite">25/10/2026</td><td class="der" data-label="Honorarios">1800,00 €</td>
   </tr>
   <tr class="">
     <td data-label="Referencia"><a href="casos__4.html">EJ-2026-004</a></td>
     <td data-label="Caso">Recurso contra la calificación de «no apto» (ejemplo)</td><td data-label="Cliente">Lucía Muestra Demo</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td>
     <td data-label="Área">Oposiciones</td><td data-label="Estado"><span class="tag">Propuesta</span></td>
-    <td data-label="Límite">4/11/2026</td><td class="der" data-label="Honorarios">650,00 €</td>
+    <td class="mini" data-label="Responsable">Luis Muestra</td><td data-label="Límite">4/11/2026</td><td class="der" data-label="Honorarios">650,00 €</td>
   </tr>
   <tr class="">
     <td data-label="Referencia"><a href="casos__2.html">EJ-2026-002</a></td>
     <td data-label="Caso">Contrainforme sobre custodia compartida (ejemplo)</td><td data-label="Cliente">Javier Inventado Prueba</td><td data-label="Despacho">Bufete Ficticio &amp; Asociados</td>
     <td data-label="Área">Familia</td><td data-label="Estado"><span class="tag">Informe entregado</span></td>
-    <td data-label="Límite"></td><td class="der" data-label="Honorarios">1200,00 €</td>
+    <td class="mini" data-label="Responsable">Sonia Ficticia</td><td data-label="Límite"></td><td class="der" data-label="Honorarios">1200,00 €</td>
   </tr>
 </table>
 </main>

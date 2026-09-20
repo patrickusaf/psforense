@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">4</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Recursos</summary>
+      <div class="submenu">
+        <a href="recursos.html" class="">Enlaces y manuales</a>
+        <a href="evaluacion.html" class="">Evaluación psicológica</a>
+        <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="on">Chat <span class="contador" aria-label="1 mensajes sin leer">1</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Chat</h1>
+<div class="chat">
+  <aside class="chat-lateral" aria-label="Conversaciones">
+    <h2>Conversaciones</h2>
+    <ul>
+      <li><a href="chat__general.html" class="">General</a></li>
+    </ul>
+    <h2>Personas</h2>
+    <ul>
+      
+      <li><a href="chat__directo__3.html" class="on">Irene Modelo<br><span class="mini">Técnico/a</span></a></li>
+      
+      <li><a href="chat__directo__2.html" class="">Luis Muestra<br><span class="mini">Abogado/a</span></a></li>
+      
+      <li><a href="chat__directo__4.html" class="">Pablo Inventado<br><span class="mini">Trabajador/a social</span></a></li>
+      
+      <li><a href="chat__directo__5.html" class="">Sonia Ficticia<br><span class="mini">Psicólogo/a</span> <span class="contador">1</span></a></li>
+      
+      
+    </ul>
+    
+    <h2>Comentarios de casos</h2>
+    <ul>
+      <li><a href="chat__caso__3.html" class="">EJ-2026-003 · Investigación interna por denuncia de acoso (ejemplo)</a></li><li><a href="chat__caso__2.html" class="">EJ-2026-002 · Contrainforme sobre custodia compartida (ejemplo)</a></li>
+    </ul>
+    
+  </aside>
+  <section class="tarjeta chat-principal">
+    <h2>Conversación con Irene Modelo</h2>
+    
+    <div class="chat-msgs" data-chat data-canal="dm:1-3" data-ultimo="0" aria-live="polite">
+      
+      <p class="mini chat-vacio">Todavía no hay mensajes. Escribe el primero.</p>
+    </div>
+    
+    <form class="chat-form" method="post" action="#" data-demo-form>
+      <input type="hidden" name="canal" value="dm:1-3">
+      <textarea name="texto" rows="3" maxlength="4000" placeholder="Escribe un mensaje. Usa @nombre para avisar a alguien, o @todos." required></textarea>
+      <div class="acciones"><button class="btn">Enviar</button></div>
+    </form>
+    <p class="mini">Es un canal interno del gabinete. Evita escribir datos clínicos que no sean necesarios: para eso están el expediente y los documentos cifrados.</p>
+    
+  </section>
+</div>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

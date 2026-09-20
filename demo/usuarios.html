@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usuarios · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">6</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Recursos</summary>
+      <div class="submenu">
+        <a href="recursos.html" class="">Enlaces y manuales</a>
+        <a href="evaluacion.html" class="">Evaluación psicológica</a>
+        <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
+      </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
+    <details class="grupo on"><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="on">Usuarios y roles</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="3 mensajes sin leer">3</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Usuarios</h1>
+  <div class="acciones"><a class="btn linea" href="usuarios__roles.html">Roles y permisos</a><a class="btn" href="usuarios__nuevo.html">Nuevo usuario</a></div></div>
+<p class="mini">Cada persona tiene su propia cuenta. El <b>rol en la herramienta</b> decide qué puede hacer; el <b>rol profesional</b> es su profesión (psicólogo, trabajador social, abogado…). Al dar de alta, se genera una contraseña temporal que se muestra una sola vez y hay que cambiar en el primer acceso.</p>
+<table class="lista">
+  <tr><th>Persona</th><th>Rol en la herramienta</th><th>Rol profesional</th><th>Estado</th><th>Trabajo</th><th>Último acceso</th><th></th></tr>
+  
+  <tr class="">
+    <td data-label="Persona"><a href="usuarios__3__editar.html"><b>Irene Modelo</b></a><br><span class="mini">irene@example.invalid</span></td>
+    <td data-label="Rol"><span class="tag ">Evaluador</span></td>
+    <td data-label="Profesión">Técnico/a</td>
+    <td data-label="Estado"><span class="tag verde">Activo</span>
+      <span class="tag verde" title="Verificación en dos pasos">2FA</span></td>
+    <td class="mini" data-label="Trabajo">0 casos · 1 tarea</td>
+    <td class="mini" data-label="Último acceso">19/9/2026</td>
+    <td class="der" data-label="Acciones"><a class="btn linea peq" href="usuarios__3__editar.html">Editar</a></td>
+  </tr>
+  <tr class="">
+    <td data-label="Persona"><a href="usuarios__2__editar.html"><b>Luis Muestra</b></a><br><span class="mini">luis@example.invalid</span></td>
+    <td data-label="Rol"><span class="tag ">Profesional</span></td>
+    <td data-label="Profesión">Abogado/a</td>
+    <td data-label="Estado"><span class="tag verde">Activo</span>
+      <span class="tag verde" title="Verificación en dos pasos">2FA</span></td>
+    <td class="mini" data-label="Trabajo">1 caso · 2 tareas</td>
+    <td class="mini" data-label="Último acceso">20/9/2026</td>
+    <td class="der" data-label="Acciones"><a class="btn linea peq" href="usuarios__2__editar.html">Editar</a></td>
+  </tr>
+  <tr class="">
+    <td data-label="Persona"><a href="usuarios__1__editar.html"><b>Marta Ejemplo</b></a><br><span class="mini">demo@example.invalid · col. XX-0001</span></td>
+    <td data-label="Rol"><span class="tag rojo">Administrador</span></td>
+    <td data-label="Profesión">Psicólogo/a</td>
+    <td data-label="Estado"><span class="tag verde">Activo</span>
+      <span class="tag ambar" title="Verificación en dos pasos">Sin 2FA</span></td>
+    <td class="mini" data-label="Trabajo">1 caso · 1 tarea</td>
+    <td class="mini" data-label="Último acceso">20/9/2026</td>
+    <td class="der" data-label="Acciones"><a class="btn linea peq" href="usuarios__1__editar.html">Editar</a></td>
+  </tr>
+  <tr class="">
+    <td data-label="Persona"><a href="usuarios__4__editar.html"><b>Pablo Inventado</b></a><br><span class="mini">pablo@example.invalid</span></td>
+    <td data-label="Rol"><span class="tag ">Solo lectura</span></td>
+    <td data-label="Profesión">Trabajador/a social</td>
+    <td data-label="Estado"><span class="tag verde">Activo</span>
+      <span class="tag ambar" title="Verificación en dos pasos">Sin 2FA</span></td>
+    <td class="mini" data-label="Trabajo">0 casos · 0 tareas</td>
+    <td class="mini" data-label="Último acceso">16/9/2026</td>
+    <td class="der" data-label="Acciones"><a class="btn linea peq" href="usuarios__4__editar.html">Editar</a></td>
+  </tr>
+  <tr class="">
+    <td data-label="Persona"><a href="usuarios__5__editar.html"><b>Sonia Ficticia</b></a><br><span class="mini">sonia@example.invalid · col. XX-5914</span></td>
+    <td data-label="Rol"><span class="tag ">Profesional</span></td>
+    <td data-label="Profesión">Psicólogo/a</td>
+    <td data-label="Estado"><span class="tag verde">Activo</span>
+      <span class="tag verde" title="Verificación en dos pasos">2FA</span></td>
+    <td class="mini" data-label="Trabajo">1 caso · 3 tareas</td>
+    <td class="mini" data-label="Último acceso">20/9/2026</td>
+    <td class="der" data-label="Acciones"><a class="btn linea peq" href="usuarios__5__editar.html">Editar</a></td>
+  </tr>
+</table>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

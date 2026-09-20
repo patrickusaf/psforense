@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">4</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo on"><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="on">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo "><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="1 mensajes sin leer">1</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>

@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">6</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo "><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo on"><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="on">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="3 mensajes sin leer">3</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>
@@ -187,7 +201,7 @@
 <section class="tarjeta">
   <h2>Copias de seguridad</h2>
   <p class="error visible">Todavía no hay ninguna copia de seguridad.</p>
-  <p class="error visible">Último error: 2026-09-20 14:52:32 · falta BACKUP_GPG_PASSPHRASE en el .env</p>
+  
   <dl class="ficha">
     <dt>Copia diaria</dt><dd>a las 03:00 · 0 fichero(s) cifrados guardados en el volumen</dd>
     <dt>Copia externa</dt><dd>desactivada (<code>COPIAS_SMB_URL</code> vacío en el .env)</dd>
@@ -212,36 +226,16 @@
 </section>
 <section class="tarjeta"><h2>Registro de accesos y cambios</h2>
 <table class="lista"><tr><th>Momento</th><th>Usuario</th><th>Acción</th><th>Entidad</th><th>IP</th></tr>
-<tr><td class="mini" data-label="Momento">20/9/2026, 12:55:02</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:53:38</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:53:38</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 4</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:53:37</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 5</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:53:37</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 3</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:53:36</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:23</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:23</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 4</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:23</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 5</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:23</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 3</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:21</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:08</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 3</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:08</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">cobro</td><td class="mini" data-label="Entidad">facturas 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:05</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 12:51:05</td>
-<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<tr><td class="mini" data-label="Momento">20/9/2026, 13:40:21</td>
+<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:07</td>
+<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 3</td>
+<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:07</td>
+<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">cobro</td><td class="mini" data-label="Entidad">facturas 2</td>
+<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:05</td>
+<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 2</td>
+<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:05</td>
+<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
 <td class="mini" data-label="IP">192.0.2.10</td></tr></table></section>
 </main>
 <footer>Probatio · datos confidenciales</footer>

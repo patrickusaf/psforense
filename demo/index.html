@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">6</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="on">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo "><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo "><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="3 mensajes sin leer">3</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>
@@ -57,12 +71,83 @@
 
 
 <h1>Panel</h1>
+
+
+<section class="avisos-panel" aria-label="Avisos">
+  <article class="aviso-caja aviso-rojo" id="plazos">
+    <h2>Plazos
+      <span class="marca rojo">2 vencidos</span>
+      
+      <span class="marca">1 esta semana</span></h2>
+    <ul>
+      
+      <li class="plazo-vencido"><a href="facturas__3.html">Cobro de la factura 2026-002 · Empresa Modelo S.L.</a>
+        <span class="mini">Cobro · venció hace 9 d (11/9/2026)</span></li>
+      
+      <li class="plazo-vencido"><a href="casos__1.html">Corregir pruebas psicométricas y volcar resultados · Daño psíquico por acoso laboral (ejemplo)</a>
+        <span class="mini">Tarea · venció hace 2 d (18/9/2026)</span></li>
+      
+      <li class="plazo-semana"><a href="casos__1.html">Redactar el borrador del informe pericial · Daño psíquico por acoso laboral (ejemplo)</a>
+        <span class="mini">Tarea · en 7 d (27/9/2026)</span></li>
+      
+      <li class="plazo-pronto"><a href="casos__4.html">Revisar bibliografía para el recurso · Recurso contra la calificación de «no apto» (ejemplo)</a>
+        <span class="mini">Tarea · en 12 d (2/10/2026)</span></li>
+      
+      <li class="plazo-pronto"><a href="casos__1.html">Enviar el borrador a la abogada para revisión · Daño psíquico por acoso laboral (ejemplo)</a>
+        <span class="mini">Tarea · en 14 d (4/10/2026)</span></li>
+      
+      <li class="plazo-pronto"><a href="evaluacion__licencias__2__editar.html">Licencia Pearson (ejemplo) · Plataforma web de evaluación</a>
+        <span class="mini">Licencia · en 18 d (8/10/2026)</span></li>
+      
+      
+    </ul>
+  </article>
+
+  
+  <article class="aviso-caja aviso-ambar">
+    <h2>Casos que piden atención <span class="marca ambar">2</span></h2>
+    <ul>
+      
+      <li><a href="casos__3.html">EJ-2026-003 · Investigación interna por denuncia de acoso (ejemplo)</a>
+        <span class="mini">sin responsable</span></li>
+      
+      <li><a href="casos__1.html">EJ-2026-001 · Daño psíquico por acoso laboral (ejemplo)</a>
+        <span class="mini">1 tarea vencida · Marta Ejemplo</span></li>
+      
+      
+    </ul>
+    
+  </article>
+  
+
+  <article class="aviso-caja aviso-acero">
+    <h2>Notificaciones <span class="marca">3</span></h2>
+    <ul>
+      
+      <li><form method="post" action="#" data-demo-form><button class="enlace-boton">Irene Modelo ha comentado en el caso «Contrainforme sobre custodia compartida (ejemplo)»</button></form></li>
+      
+      <li><form method="post" action="#" data-demo-form><button class="enlace-boton">Sonia Ficticia te ha asignado la tarea «Redactar el borrador del informe pericial»</button></form></li>
+      
+      <li><form method="post" action="#" data-demo-form><button class="enlace-boton">Sonia Ficticia te ha mencionado en el chat general</button></form></li>
+      
+      <li><a href="chat__general.html">3 mensajes de chat sin leer</a></li>
+      
+    </ul>
+    <p class="mini"><a href="notificaciones.html">Ver todas</a></p>
+  </article>
+</section>
+
+
 <section class="kpis">
+  
+  <a class="kpi" href="casos.html"><span class="n">1</span><span>Mis casos (de 4)</span></a>
+  <a class="kpi" href="#tareas"><span class="n">1</span><span>Tareas vencidas (mías o sin asignar)</span></a>
+  
   <a class="kpi" href="leads.html"><span class="n">3</span><span>Leads abiertos</span></a>
-  <div class="kpi"><span class="n">4</span><span>Casos activos</span></div>
-  <div class="kpi"><span class="n">954,00 €</span><span>Pendiente de cobro</span></div>
-  <div class="kpi"><span class="n">1</span><span>Tareas vencidas</span></div>
-  <div class="kpi"><span class="n">3650,00 €</span><span>Facturado este año</span></div>
+  
+  <a class="kpi" href="facturas.html"><span class="n">954,00 €</span><span>Pendiente de cobro (1)</span></a>
+  <a class="kpi" href="resumen.html"><span class="n">2100,00 €</span><span>Facturado este año</span></a>
+  
 </section>
 <div class="cal-fila">
   <section class="tarjeta calendario" aria-label="Calendario">
@@ -230,6 +315,8 @@
     <div class="dia" role="gridcell">
       <span class="n">23</span>
       
+      <a class="ev ev-tarea" href="casos__1.html" title="Tarea: Aplicar el PAI a la clienta">Aplicar el PAI a la clienta</a>
+      
       
     </div>
     
@@ -241,6 +328,8 @@
     
     <div class="dia" role="gridcell">
       <span class="n">25</span>
+      
+      <a class="ev ev-tarea" href="casos__2.html" title="Tarea: Revisar el consentimiento informado">Revisar el consentimiento informado</a>
       
       <a class="ev ev-seguimiento" href="leads__2.html" title="Seguimiento de un lead: Contactar: Ana Ficticia (ejemplo)">Contactar: Ana Ficticia (ejemplo)</a>
       
@@ -324,6 +413,12 @@
       <li><span class="ev ev-seguimiento"></span>
         <div><a href="leads__1.html">Contactar: Carlos Ejemplo (ejemplo)</a><br><span class="mini">Seguimiento de un lead · 22/9/2026 · En 2 días</span></div></li>
       
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__1.html">Aplicar el PAI a la clienta</a><br><span class="mini">Tarea · 23/9/2026 · En 3 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__2.html">Revisar el consentimiento informado</a><br><span class="mini">Tarea · 25/9/2026 · En 5 días</span></div></li>
+      
       <li><span class="ev ev-seguimiento"></span>
         <div><a href="leads__2.html">Contactar: Ana Ficticia (ejemplo)</a><br><span class="mini">Seguimiento de un lead · 25/9/2026 · En 5 días</span></div></li>
       
@@ -382,83 +477,54 @@
     </ul>
   </section>
 </div>
+
+
+
 <div class="cols">
-  <section class="tarjeta">
-    <h2>Tareas y plazos</h2>
+  <section class="tarjeta" id="tareas">
+    <h2>Mis tareas</h2>
     <table>
       
       <tr class="urgente">
         <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Corregir pruebas psicométricas y volcar resultados <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td>Corregir pruebas psicométricas y volcar resultados <a class="mini" href="casos__1.html">Daño psíquico por acoso laboral (ejemplo)</a> <span class="tag gris">Sin asignar</span></td>
         <td class="der">18/9/2026</td>
       </tr>
       
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Enviar el presupuesto a Lucía <span class="mini">Recurso contra la calificación de «no apto» (ejemplo)</span></td>
-        <td class="der">22/9/2026</td>
-      </tr>
-      
-      <tr class="">
-        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Entrevistas a la plantilla (segunda ronda) <span class="mini">Investigación interna por denuncia de acoso (ejemplo)</span></td>
-        <td class="der">26/9/2026</td>
-      </tr>
-      
-      <tr class="">
-        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Redactar el borrador del informe pericial <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td>Redactar el borrador del informe pericial <a class="mini" href="casos__1.html">Daño psíquico por acoso laboral (ejemplo)</a></td>
         <td class="der">27/9/2026</td>
       </tr>
       
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Revisar bibliografía para el recurso <span class="mini">Recurso contra la calificación de «no apto» (ejemplo)</span></td>
+        <td>Revisar bibliografía para el recurso <a class="mini" href="casos__4.html">Recurso contra la calificación de «no apto» (ejemplo)</a> <span class="tag gris">Sin asignar</span></td>
         <td class="der">2/10/2026</td>
       </tr>
       
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Enviar el borrador a la abogada para revisión <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td>Enviar el borrador a la abogada para revisión <a class="mini" href="casos__1.html">Daño psíquico por acoso laboral (ejemplo)</a> <span class="tag gris">Sin asignar</span></td>
         <td class="der">4/10/2026</td>
       </tr>
       
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Preparar la ratificación del contrainforme <span class="mini">Contrainforme sobre custodia compartida (ejemplo)</span></td>
-        <td class="der">8/10/2026</td>
-      </tr>
-      
-      <tr class="">
-        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
-        <td>Preparar la ratificación en sala <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
-        <td class="der">14/10/2026</td>
+        <td>Redactar el informe de conclusiones <a class="mini" href="casos__3.html">Investigación interna por denuncia de acoso (ejemplo)</a> <span class="tag gris">Sin asignar</span></td>
+        <td class="der">18/10/2026</td>
       </tr>
       
       
     </table>
+    
     <form class="linea-form" method="post" action="#" data-demo-form>
       <input name="titulo" placeholder="Nueva tarea" required>
       <input type="date" name="vence_el">
+      <select name="asignada_a" aria-label="Asignar a"><option value="">Sin asignar</option><option value="3" >Irene Modelo</option><option value="2" >Luis Muestra</option><option value="1" selected>Marta Ejemplo</option><option value="4" >Pablo Inventado</option><option value="5" >Sonia Ficticia</option></select>
       <button class="btn peq">Añadir</button>
     </form>
-  </section>
-  <section class="tarjeta">
-    <h2>Facturas pendientes de cobro</h2>
-    <table>
-      
-      <tr><td><a href="facturas__3.html">2026-002</a></td>
-      <td>Empresa Modelo S.L.</td><td class="der">954,00 €</td>
-      <td class="der mini">11/9/2026</td></tr>
-      
-      
-    </table>
-  </section>
-</div>
-<div class="cols">
-  <section class="tarjeta">
-    <h2>Casos por estado</h2>
-    <table><tr><td>Aceptado</td><td class="der">1</td></tr><tr><td>Informe entregado</td><td class="der">1</td></tr><tr><td>Evaluación</td><td class="der">1</td></tr><tr><td>Propuesta</td><td class="der">1</td></tr></table>
+    
   </section>
   <section class="tarjeta">
     <h2>Última actividad</h2>
@@ -480,9 +546,75 @@
       
       <tr><td class="mini">15/9/2026</td><td>Segunda sesión: administración de pruebas psicométricas estandarizadas.<br><span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td></tr>
       
+      
     </table>
   </section>
 </div>
+
+
+
+
+<h2 class="titulo-seccion">Tu actividad de un vistazo</h2>
+<section class="graficos-panel">
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-fases">
+    <figcaption><h3>Casos activos por fase</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 196" role="img" aria-labelledby="g-casos-activos-por-fase" class="grafico"><title id="g-casos-activos-por-fase">Casos activos por fase</title><desc>Consulta: 0; Propuesta: 1; Aceptado: 1; Evaluación: 1; Informe entregado: 1; Ratificación: 0</desc><text x="0" y="18" class="g-et">Consulta</text><rect x="118" y="2" width="2" height="24" rx="4" fill="#4A5D6E"/><text x="126" y="18" class="g-val">0</text><text x="0" y="50" class="g-et">Propuesta</text><rect x="118" y="34" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="50" class="g-val">1</text><text x="0" y="82" class="g-et">Aceptado</text><rect x="118" y="66" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="82" class="g-val">1</text><text x="0" y="114" class="g-et">Evaluación</text><rect x="118" y="98" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="114" class="g-val">1</text><text x="0" y="146" class="g-et">Informe entregado</text><rect x="118" y="130" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="146" class="g-val">1</text><text x="0" y="178" class="g-et">Ratificación</text><rect x="118" y="162" width="2" height="24" rx="4" fill="#4A5D6E"/><text x="126" y="178" class="g-val">0</text></svg></div>
+    
+    <p class="lectura">4 casos abiertos; 1 aún sin aceptar (consulta o propuesta) y 2 en marcha.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-areas">
+    <figcaption><h3>Casos activos por área</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 132 132" width="132" height="132" role="img" aria-labelledby="g-casos-activos-por-area" class="grafico grafico-anillo"><title id="g-casos-activos-por-area">Casos activos por área</title><desc>Familia: 1; Oposiciones: 1; Laboral: 1; Empresa: 1</desc><circle cx="66" cy="66" r="46" fill="none" stroke="#1E2B3A" stroke-width="22" stroke-dasharray="72.26 216.77" stroke-dashoffset="0" transform="rotate(-90 66 66)"/><circle cx="66" cy="66" r="46" fill="none" stroke="#4A5D6E" stroke-width="22" stroke-dasharray="72.26 216.77" stroke-dashoffset="-72.26" transform="rotate(-90 66 66)"/><circle cx="66" cy="66" r="46" fill="none" stroke="#B9C4C9" stroke-width="22" stroke-dasharray="72.26 216.77" stroke-dashoffset="-144.51" transform="rotate(-90 66 66)"/><circle cx="66" cy="66" r="46" fill="none" stroke="#8C2F39" stroke-width="22" stroke-dasharray="72.26 216.77" stroke-dashoffset="-216.77" transform="rotate(-90 66 66)"/><text x="66" y="72" text-anchor="middle" class="g-centro">4</text></svg><ul class="leyenda"><li><span class="punto c0"></span>Familia <b>1</b></li><li><span class="punto c1"></span>Oposiciones <b>1</b></li><li><span class="punto c2"></span>Laboral <b>1</b></li><li><span class="punto c3"></span>Empresa <b>1</b></li></ul></div>
+    
+    <p class="lectura">El área con más casos es familia (1). Sirve para decidir dónde reforzar formación y captación.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-evaluaciones">
+    <figcaption><h3>Evaluaciones psicológicas (6 meses)</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 150" role="img" aria-labelledby="g-evaluaciones-por-mes" class="grafico"><title id="g-evaluaciones-por-mes">Evaluaciones por mes</title><desc>abr: 0; may: 0; jun: 0; jul: 0; ago: 2; sep: 4</desc><line x1="0" y1="128" x2="360" y2="128" stroke="#B9C4C9"/><text x="30" y="144" class="g-eje" text-anchor="middle">abr</text><text x="90" y="144" class="g-eje" text-anchor="middle">may</text><text x="150" y="144" class="g-eje" text-anchor="middle">jun</text><text x="210" y="144" class="g-eje" text-anchor="middle">jul</text><rect x="259" y="71" width="22" height="57" fill="#1E2B3A"/><text x="270" y="144" class="g-eje" text-anchor="middle">ago</text><rect x="319" y="14" width="22" height="114" fill="#1E2B3A"/><text x="330" y="144" class="g-eje" text-anchor="middle">sep</text></svg></div>
+    <p class="mini">Más usadas: CUIDA: 2 · MMPI-2-RF: 1 · NAQ-R: 1 · PAI: 1 · PHQ-9: 1</p>
+    <p class="lectura">1 evaluación pendiente de aplicar o subir. Las pruebas más usadas te dicen qué licencias renovar.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-carga">
+    <figcaption><h3>Carga de trabajo por persona</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 150" role="img" aria-labelledby="g-carga-de-trabajo-por-persona" class="grafico"><title id="g-carga-de-trabajo-por-persona">Carga de trabajo por persona</title><desc>Irene: 1; Luis: 3; Marta: 2; Pablo: 0; Sonia: 4</desc><line x1="0" y1="128" x2="360" y2="128" stroke="#B9C4C9"/><rect x="25" y="99.5" width="22" height="28.5" fill="#B9C4C9"/><text x="36" y="144" class="g-eje" text-anchor="middle">Irene</text><rect x="97" y="99.5" width="22" height="28.5" fill="#1E2B3A"/><rect x="97" y="42.5" width="22" height="57" fill="#B9C4C9"/><text x="108" y="144" class="g-eje" text-anchor="middle">Luis</text><rect x="169" y="99.5" width="22" height="28.5" fill="#1E2B3A"/><rect x="169" y="71" width="22" height="28.5" fill="#B9C4C9"/><text x="180" y="144" class="g-eje" text-anchor="middle">Marta</text><text x="252" y="144" class="g-eje" text-anchor="middle">Pablo</text><rect x="313" y="99.5" width="22" height="28.5" fill="#1E2B3A"/><rect x="313" y="14" width="22" height="85.5" fill="#B9C4C9"/><text x="324" y="144" class="g-eje" text-anchor="middle">Sonia</text></svg><ul class="leyenda"><li><span class="punto c0"></span>Casos como responsable</li><li><span class="punto c2"></span>Tareas abiertas</li></ul></div>
+    
+    <p class="lectura">Sonia lleva la mayor carga (1 caso y 3 tareas). Hay 1 caso sin responsable.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-facturacion">
+    <figcaption><h3>Facturación de los últimos 12 meses (base)</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 150" role="img" aria-labelledby="g-facturacion-mensual" class="grafico"><title id="g-facturacion-mensual">Facturación mensual</title><desc>oct: 0 €; nov: 0 €; dic: 0 €; ene: 0 €; feb: 0 €; mar: 0 €; abr: 0 €; may: 0 €; jun: 0 €; jul: 0 €; ago: 2100 €; sep: 0 €</desc><line x1="0" y1="128" x2="360" y2="128" stroke="#B9C4C9"/><text x="15" y="144" class="g-eje" text-anchor="middle">oct</text><text x="45" y="144" class="g-eje" text-anchor="middle">nov</text><text x="75" y="144" class="g-eje" text-anchor="middle">dic</text><text x="105" y="144" class="g-eje" text-anchor="middle">ene</text><text x="135" y="144" class="g-eje" text-anchor="middle">feb</text><text x="165" y="144" class="g-eje" text-anchor="middle">mar</text><text x="195" y="144" class="g-eje" text-anchor="middle">abr</text><text x="225" y="144" class="g-eje" text-anchor="middle">may</text><text x="255" y="144" class="g-eje" text-anchor="middle">jun</text><text x="285" y="144" class="g-eje" text-anchor="middle">jul</text><rect x="305.7" y="62.86" width="18.6" height="65.14" fill="#2F6B4F"/><rect x="305.7" y="14" width="18.6" height="48.86" fill="#B8862B"/><text x="315" y="144" class="g-eje" text-anchor="middle">ago</text><text x="345" y="144" class="g-eje" text-anchor="middle">sep</text></svg><ul class="leyenda"><li><span class="punto c4"></span>Cobrado</li><li><span class="punto c5"></span>Pendiente de cobro</li></ul></div>
+    
+    <p class="lectura">2100 € facturados en 12 meses, unos 175 € al mes. Te ayuda a saber si el trimestre va por encima o por debajo de tu media.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-cobros">
+    <figcaption><h3>Cobros pendientes por antigüedad</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 132" role="img" aria-labelledby="g-cobros-pendientes-por-antiguedad" class="grafico"><title id="g-cobros-pendientes-por-antiguedad">Cobros pendientes por antigüedad</title><desc>Sin vencer: 0 €; Vencidas 1–15 d: 954 €; Vencidas 16–30 d: 0 €; Vencidas &gt; 30 d: 0 €</desc><text x="0" y="18" class="g-et">Sin vencer</text><rect x="118" y="2" width="2" height="24" rx="4" fill="#2F6B4F"/><text x="126" y="18" class="g-val">0 €</text><text x="0" y="50" class="g-et">Vencidas 1–15 d</text><rect x="118" y="34" width="178" height="24" rx="4" fill="#B8862B"/><text x="302" y="50" class="g-val">954 €</text><text x="0" y="82" class="g-et">Vencidas 16–30 d</text><rect x="118" y="66" width="2" height="24" rx="4" fill="#8C2F39"/><text x="126" y="82" class="g-val">0 €</text><text x="0" y="114" class="g-et">Vencidas &gt; 30 d</text><rect x="118" y="98" width="2" height="24" rx="4" fill="#8C2F39"/><text x="126" y="114" class="g-val">0 €</text></svg></div>
+    
+    <p class="lectura">954 € vencidos sin cobrar: reclámalos antes de que pasen de 30 días.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-presupuestos">
+    <figcaption><h3>Presupuestos del último año</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 22" role="img" aria-labelledby="g-presupuestos-del-ultimo-ano" class="grafico grafico-tramos"><title id="g-presupuestos-del-ultimo-ano">Presupuestos del último año</title><desc>Aceptados: 1; Pendientes: 1; Rechazados: 0</desc><rect x="0" y="0" width="180" height="22" fill="#2F6B4F"/><rect x="180" y="0" width="180" height="22" fill="#B9C4C9"/><rect x="360" y="0" width="0" height="22" fill="#8C2F39"/></svg><ul class="leyenda"><li><span class="punto c4"></span>Aceptados <b>1</b></li><li><span class="punto c2"></span>Pendientes <b>1</b></li><li><span class="punto c3"></span>Rechazados <b>0</b></li></ul></div>
+    
+    <p class="lectura">Aceptas 100 % de los presupuestos resueltos. Si baja, revisa precios o el plazo de respuesta.</p>
+  </figure>
+  
+  <figure class="tarjeta grafico-tarjeta" id="grafico-leads">
+    <figcaption><h3>De dónde llegan tus leads</h3></figcaption>
+    <div class="grafico-cuerpo"><svg viewBox="0 0 360 132" role="img" aria-labelledby="g-leads-por-origen" class="grafico"><title id="g-leads-por-origen">Leads por origen</title><desc>Web: 1; Recomendación: 1; Despacho o prescriptor: 1; Charla o evento: 1</desc><text x="0" y="18" class="g-et">Web</text><rect x="118" y="2" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="18" class="g-val">1</text><text x="0" y="50" class="g-et">Recomendación</text><rect x="118" y="34" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="50" class="g-val">1</text><text x="0" y="82" class="g-et">Despacho o prescrip…</text><rect x="118" y="66" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="82" class="g-val">1</text><text x="0" y="114" class="g-et">Charla o evento</text><rect x="118" y="98" width="178" height="24" rx="4" fill="#4A5D6E"/><text x="302" y="114" class="g-val">1</text></svg></div>
+    
+    <p class="lectura">Cuando conviertas leads en clientes verás qué origen compensa más.</p>
+  </figure>
+  
+</section>
+
 </main>
 <footer>Probatio · datos confidenciales</footer>
 <script src="app.js" defer></script>

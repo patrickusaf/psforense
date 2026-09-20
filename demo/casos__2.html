@@ -14,21 +14,18 @@
 
 <header class="barra">
   <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
-  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span><span class="contador" aria-label="Avisos pendientes">4</span></button>
   <nav id="menu-principal" aria-label="Principal">
     <a href="index.html" class="">Panel</a>
-    <details class="grupo "><summary>Comercial</summary>
-      <div class="submenu">
-        <a href="leads.html" class="">Leads</a>
-        <a href="despachos.html" class="">Despachos y prescriptores</a>
-        <a href="colaboradores.html" class="">Colaboradores</a>
-      </div></details>
+    
     <details class="grupo on"><summary>Trabajo</summary>
       <div class="submenu">
         <a href="casos.html" class="on">Casos</a>
         <a href="clientes.html" class="">Clientes</a>
         <a href="documentos.html" class="">Documentos</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Facturación</summary>
       <div class="submenu">
         <a href="presupuestos.html" class="">Presupuestos</a>
@@ -37,18 +34,35 @@
         <a href="resumen.html" class="">Resumen anual</a>
         <a href="gestoria.html" class="">Gestoría</a>
       </div></details>
+    
+    
     <details class="grupo "><summary>Recursos</summary>
       <div class="submenu">
         <a href="recursos.html" class="">Enlaces y manuales</a>
         <a href="evaluacion.html" class="">Evaluación psicológica</a>
         <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
       </div></details>
+    
+    
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    
     <details class="grupo "><summary>Ajustes</summary>
       <div class="submenu">
         <a href="config.html" class="">Ajustes generales</a>
+        <a href="usuarios.html" class="">Usuarios y roles</a>
         <a href="seguridad.html" class="">Seguridad de la cuenta</a>
         <a href="verifactu.html" class="">Registro de facturación</a>
       </div></details>
+    <span class="nav-util">
+      <a href="#" data-demo-off class="">Chat <span class="contador" aria-label="1 mensajes sin leer">1</span></a>
+      <a href="notificaciones.html" class="">Avisos <span class="contador" aria-label="3 sin leer">3</span></a>
+      <a href="seguridad.html" class="yo" title="Tu cuenta">Marta <span class="mini">Administrador</span></a>
+    </span>
   </nav>
   
 </header>
@@ -83,12 +97,17 @@
       
       <tr class="">
         <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
-        <td>Preparar la ratificación del contrainforme</td><td class="der mini">8/10/2026</td>
+        <td>Revisar el consentimiento informado <span class="tag">→ Luis Muestra</span></td><td class="der mini">25/9/2026</td>
+      </tr>
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Preparar la ratificación del contrainforme <span class="tag">→ Sonia Ficticia</span></td><td class="der mini">8/10/2026</td>
       </tr>
     </table>
     <form class="linea-form" method="post" action="#" data-demo-form>
       <input type="hidden" name="caso_id" value="2">
       <input name="titulo" placeholder="Nueva tarea" required><input type="date" name="vence_el">
+      <select name="asignada_a" aria-label="Asignar a"><option value="">Sin asignar</option><option value="3" >Irene Modelo</option><option value="2" >Luis Muestra</option><option value="1" selected>Marta Ejemplo</option><option value="4" >Pablo Inventado</option><option value="5" >Sonia Ficticia</option></select>
       <button class="btn peq">Añadir</button>
     </form>
   </section>
@@ -122,6 +141,87 @@
     
   </table>
 </section>
+
+<div class="cols" id="comentarios">
+  <section class="tarjeta">
+    <h2>Equipo del caso</h2>
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <label class="mini">Responsable
+        <select name="responsable_id" >
+          <option value="">Sin responsable</option>
+          <option value="3" >Irene Modelo (Técnico/a)</option><option value="2" >Luis Muestra (Abogado/a)</option><option value="1" >Marta Ejemplo (Psicólogo/a)</option><option value="4" >Pablo Inventado (Trabajador/a social)</option><option value="5" selected>Sonia Ficticia (Psicólogo/a)</option>
+        </select></label>
+      <button class="btn linea peq">Guardar</button>
+    </form>
+    <table class="lista">
+      
+      <tr>
+        <td data-label="Persona"><b>Irene Modelo</b><br><span class="mini">Técnico/a · Pruebas de parentalidad</span></td>
+        <td class="der"><form method="post" action="#" data-demo-form><button class="check" title="Quitar del equipo" aria-label="Quitar del equipo">×</button></form></td>
+      </tr>
+      <tr>
+        <td data-label="Persona"><b>Luis Muestra</b><br><span class="mini">Abogado/a · Revisión jurídica</span></td>
+        <td class="der"><form method="post" action="#" data-demo-form><button class="check" title="Quitar del equipo" aria-label="Quitar del equipo">×</button></form></td>
+      </tr>
+      
+    </table>
+    
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <select name="miembro_id" required aria-label="Añadir al equipo"><option value="">Añadir a…</option>
+        <option value="3">Irene Modelo (Técnico/a)</option><option value="2">Luis Muestra (Abogado/a)</option><option value="1">Marta Ejemplo (Psicólogo/a)</option><option value="4">Pablo Inventado (Trabajador/a social)</option><option value="5">Sonia Ficticia (Psicólogo/a)</option></select>
+      <input name="funcion" placeholder="Función (opcional)" maxlength="80">
+      <button class="btn linea peq">Añadir</button>
+    </form>
+    
+  </section>
+  
+  <section class="tarjeta">
+    <div class="cabecera ficha-tarjeta"><h2>Comentarios</h2><a class="mini" href="chat__caso__2.html">Abrir en el chat</a></div>
+    <div class="chat-msgs chat-msgs-caso" data-chat data-canal="caso:2" data-ultimo="9" aria-live="polite">
+      
+<article class="msg" data-id="7">
+  <header>
+    <b>Luis Muestra</b> <span class="mini">19/9, 19:40</span>
+    
+    <form method="post" action="#" data-demo-form><input type="hidden" name="volver" value="caso"><button class="check" title="Eliminar mensaje" aria-label="Eliminar mensaje">×</button></form>
+    
+  </header>
+  <p class="texto">El letrado de la parte contraria ha pedido el contrainforme para el día 10.</p>
+</article>
+
+<article class="msg" data-id="8">
+  <header>
+    <b>Sonia Ficticia</b> <span class="mini">19/9, 20:40</span>
+    
+    <form method="post" action="#" data-demo-form><input type="hidden" name="volver" value="caso"><button class="check" title="Eliminar mensaje" aria-label="Eliminar mensaje">×</button></form>
+    
+  </header>
+  <p class="texto">Entendido. @Irene, ¿tienes ya las puntuaciones del CUIDA?</p>
+</article>
+
+<article class="msg" data-id="9">
+  <header>
+    <b>Irene Modelo</b> <span class="mini">19/9, 21:40</span>
+    
+    <form method="post" action="#" data-demo-form><input type="hidden" name="volver" value="caso"><button class="check" title="Eliminar mensaje" aria-label="Eliminar mensaje">×</button></form>
+    
+  </header>
+  <p class="texto">Sí, las subo hoy. Hay un perfil con tendencia a la deseabilidad social: lo marco como cuestionable.</p>
+</article>
+
+      
+    </div>
+    
+    <form class="chat-form" method="post" action="#" data-demo-form>
+      <input type="hidden" name="canal" value="caso:2"><input type="hidden" name="volver" value="caso">
+      <textarea name="texto" rows="2" maxlength="4000" placeholder="Comenta algo sobre el caso… (@nombre avisa a esa persona)" required></textarea>
+      <div class="acciones"><button class="btn peq">Comentar</button></div>
+    </form>
+    
+  </section>
+  
+</div>
+
 <section class="tarjeta">
   <div class="cabecera ficha-tarjeta">
     <h2>Evaluaciones psicológicas</h2>
@@ -179,7 +279,7 @@
         <br><span class="mini">PDF generado al emitir la factura</span>
       </td>
       <td><span class="tag">Factura</span></td>
-      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">185 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>

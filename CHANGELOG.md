@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.2] · 2026-09-20
+### Cambiado
+- La demostración de Probatio en `/demo/` se actualiza a la versión 0.9.0: panel con avisos y gráficos, varias personas con roles, chat y comentarios de caso.
+
 ## [1.3.1] · 2026-09-20
 ### Cambiado
 - La demostración de Probatio en `/demo/` se actualiza a la versión 0.8.0 (nueva sección de evaluación psicológica).
