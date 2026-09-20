@@ -25,7 +25,7 @@ rsync -a --delete --exclude=.git --exclude=README.md --exclude=.gitignore ../pro
 ```
 index.html                Inicio
 servicios/index.html      Servicios (incluye el apartado de software)
-software/index.html       Probatio: qué es, qué incluye y condiciones
+software/index.html       Probatio: qué es, capturas, qué incluye y condiciones
 demo/                     Demostración navegable de Probatio, con datos ficticios (generada)
 sobre-mi/index.html       Sobre mí
 contacto/index.html       Contacto: formulario con envío por correo (Cloudflare Worker) o mensaje por WhatsApp
@@ -36,6 +36,7 @@ cookies/index.html        Política de cookies
 assets/css/styles.css     Estilos
 assets/js/main.js         Menú móvil y formulario
 assets/img/               Fotografías e imagen para redes (og-image.png)
+assets/img/probatio/      Capturas de Probatio (datos ficticios), tomadas de la demostración
 assets/fonts/             Tipografías (licencia SIL OFL incluida)
 VERSION, CHANGELOG.md     Versionado de la web
 CNAME                     Dominio personalizado para GitHub Pages
