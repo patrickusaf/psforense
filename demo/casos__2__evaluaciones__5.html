@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CUIDA · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <details class="grupo "><summary>Recursos</summary>
+      <div class="submenu">
+        <a href="recursos.html" class="">Enlaces y manuales</a>
+        <a href="evaluacion.html" class="">Evaluación psicológica</a>
+        <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
+      </div></details>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera">
+  <div><h1>CUIDA <span class="tag grande">Interpretada</span></h1>
+    <p class="mini">Caso: <a href="casos__2.html">Contrainforme sobre custodia compartida (ejemplo)</a> · EJ-2026-002 · Aplicada desde Probatio</p></div>
+  <div class="acciones">
+    
+    <a class="btn linea" href="casos__2.html">Volver al caso</a>
+  </div>
+</div>
+
+
+
+<div class="cols">
+  <form class="tarjeta form" method="post" action="#" data-demo-form>
+    <h2>Resultado</h2>
+    <div class="rejilla">
+      <label>Estado<select name="estado"><option value="pendiente" >Pendiente</option><option value="aplicada" >Aplicada</option><option value="interpretada" selected>Interpretada</option><option value="descartada" >Descartada</option></select></label>
+      <label>Validez del perfil<select name="perfil_valido"><option value="">— Sin valorar —</option><option value="valido" >Válido</option><option value="cuestionable" selected>Cuestionable</option><option value="invalido" >No válido</option></select></label>
+      <label>Persona evaluada<input name="evaluado" value="Sofía Muestra (madre)"></label>
+      <label>Fecha<input type="date" name="fecha" value="2026-08-03"></label>
+      <label>Forma<select name="forma"><option value="online" selected>Online</option><option value="papel" >En papel</option><option value="otro" >Otra</option></select></label>
+    </div>
+    <label>Resumen de la interpretación (sin datos brutos)<textarea name="resultado" rows="6">Perfil con tendencia a la deseabilidad social; se contrasta con otras fuentes (dato ficticio).</textarea></label>
+    <label>Notas<input name="notas" value=""></label>
+    <div class="acciones"><button class="btn">Guardar</button></div>
+  </form>
+  <section class="tarjeta">
+    <h2>Archivos de la evaluación</h2>
+    <form class="subida" method="post" enctype="multipart/form-data" action="#" data-demo-form>
+      <input type="file" name="archivo" required>
+      <input name="titulo" placeholder="Título (opcional)">
+      <button class="btn peq">Subir</button>
+    </form>
+    <table class="lista">
+      
+      <tr><td class="mini">Aún no hay archivos. Se guardan cifrados, como el resto de documentos del caso.</td></tr>
+    </table>
+  </section>
+</div>
+
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <h2>Descartar</h2>
+  <p class="mini">Para una evaluación creada por error o que no llegó a aplicarse. Se conserva en el historial como «descartada».</p>
+  <label class="linea-check"><input type="checkbox" name="devolver" value="si" checked> Devolver el uso descontado a la licencia</label>
+  <div class="acciones"><button class="btn linea peq">Descartar evaluación</button></div>
+</form>
+
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

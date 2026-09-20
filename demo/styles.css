@@ -292,3 +292,29 @@ code{background:var(--hielo);padding:1px 6px;border-radius:4px;font-size:.85em}
   table.lista td[colspan]::before{content:none}
   table.lista tr.urgente{border-left:4px solid var(--lacre)}
 }
+
+/* ---------- Evaluación psicológica: ámbitos desplegables, estados de licencia ---------- */
+.tag.verde{background:#E7F0EA;color:#2F6B4F;border-color:#BFD6C8}
+.tag.ambar{background:#FBF3E2;color:#7A5410;border-color:#E8D3A2}
+.tag.rojo{background:#FBEFF0;color:var(--lacre);border-color:#E7C3C7}
+.tag.gris{background:#EEF0F1;color:var(--acero)}
+.ambito{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);margin:0 0 12px;box-shadow:var(--sombra)}
+.ambito>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;padding:14px 18px;list-style:none;font-weight:600;color:var(--fiordo)}
+.ambito>summary::-webkit-details-marker{display:none}
+.ambito>summary::before{content:"›";display:inline-block;margin-right:10px;color:var(--acero);transition:transform .15s}
+.ambito[open]>summary::before{transform:rotate(90deg)}
+.ambito>summary .ambito-nombre{flex:1}
+.ambito>table.lista{margin:0;border:0;box-shadow:none;border-radius:0 0 var(--radio) var(--radio)}
+.ambito-desc{margin:0 18px 10px}
+.ambito-mini{box-shadow:none;margin:6px 0}
+.ambito-mini>summary{padding:8px 12px;font-weight:500}
+.ambito-mini .linea-check{display:block;margin:4px 14px}
+.ambitos-check{border:1px solid var(--linea);border-radius:var(--radio);padding:10px 14px;margin:0 0 14px}
+.ambitos-check legend{padding:0 6px;color:var(--acero);font-size:.85rem}
+.licencia-mala{border-left:4px solid var(--lacre)}
+.ev-licencia{background:#FBF3E2;color:#7A5410;border:1px solid #E8D3A2}
+/* Que una columna con formularios largos no ensanche la página en móvil */
+.cols>*{min-width:0}
+@media(max-width:800px){.cols{grid-template-columns:minmax(0,1fr)}}
+.subida input[type=file]{max-width:100%}
+.form,.subida{min-width:0}

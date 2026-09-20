@@ -2,6 +2,12 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.1] · 2026-09-20
+### Cambiado
+- La demostración de Probatio en `/demo/` se actualiza a la versión 0.8.0 (nueva sección de evaluación psicológica).
+### Corregido
+- La demostración mostraba, en el registro de accesos de Ajustes, una dirección IP de red local. Ahora se sustituye por una de documentación.
+
 ## [1.3.0] · 2026-09-20
 ### Añadido
 - **Capturas de Probatio** en `/software/` (panel, expediente, leads, gestoría, factura y vista móvil), con datos ficticios, dentro de la sección «Así se ve».

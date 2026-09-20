@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subir evaluación · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <details class="grupo "><summary>Recursos</summary>
+      <div class="submenu">
+        <a href="recursos.html" class="">Enlaces y manuales</a>
+        <a href="evaluacion.html" class="">Evaluación psicológica</a>
+        <a href="evaluacion__licencias.html" class="">Licencias de pruebas</a>
+      </div></details>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><div><h1>Subir evaluación</h1><p class="mini">Caso: <a href="casos__4.html">Recurso contra la calificación de «no apto» (ejemplo)</a> · EJ-2026-004</p></div></div>
+<p class="mini">Para una evaluación que ya has hecho por otra vía (en papel o en la plataforma de la editorial). El archivo se guarda <b>cifrado</b> en los documentos del caso.</p>
+
+<form class="tarjeta form" method="post" enctype="multipart/form-data" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Prueba del catálogo
+      <select name="instrumento_id"><option value="">— Otra (escribe el nombre) —</option>
+        
+        <optgroup label="Capacidades parentales y custodia"><option value="1" >CUIDA</option><option value="2" >PSI-4-SF</option></optgroup>
+        <optgroup label="Psicopatología, ansiedad y depresión"><option value="5" >BAI</option><option value="4" >BDI-II</option><option value="7" >DASS-21</option><option value="9" >GAD-7</option><option value="14" >MCMI-IV</option><option value="11" >MMPI-2</option><option value="10" >MMPI-2-RF</option><option value="12" >MMPI-3</option><option value="13" >PAI</option><option value="8" >PHQ-9</option><option value="3" >SCL-90-R</option><option value="6" >STAI</option></optgroup>
+        <optgroup label="Personalidad"><option value="16" >16PF-5</option><option value="14" >MCMI-IV</option><option value="11" >MMPI-2</option><option value="10" >MMPI-2-RF</option><option value="12" >MMPI-3</option><option value="15" >NEO PI-R</option><option value="13" >PAI</option><option value="30" >PCL-R</option><option value="17" >PID-5</option></optgroup>
+        <optgroup label="Validez de síntomas y simulación"><option value="19" >M-FAST</option><option value="11" >MMPI-2</option><option value="10" >MMPI-2-RF</option><option value="12" >MMPI-3</option><option value="13" >PAI</option><option value="18" >SIMS</option><option value="20" >SIRS-2</option><option value="21" >TOMM</option><option value="22" >Test de 15 ítems de Rey</option></optgroup>
+        <optgroup label="Trauma y daño psíquico"><option value="24" >CAPS-5</option><option value="25" >EGS-R</option><option value="26" >IES-R</option><option value="23" >PCL-5</option><option value="27" >TSI-2</option></optgroup>
+        <optgroup label="Riesgo de violencia y reincidencia"><option value="28" >HCR-20 V3</option><option value="30" >PCL-R</option><option value="29" >SARA / SARA-V3</option><option value="31" >SAVRY</option><option value="32" >Static-99R</option></optgroup>
+        <optgroup label="Acoso y riesgos psicosociales laborales"><option value="34" >CoPsoQ-istas21</option><option value="35" >MBI</option><option value="33" >NAQ-R</option></optgroup>
+        <optgroup label="Neuropsicología y capacidad cognitiva"><option value="39" >Figura Compleja de Rey</option><option value="40" >Stroop</option><option value="38" >TAVEC</option><option value="41" >TMT</option><option value="21" >TOMM</option><option value="22" >Test de 15 ítems de Rey</option><option value="36" >WAIS-IV</option><option value="37" >WMS-IV</option></optgroup>
+        
+      </select></label>
+    <label>…o nombre de otra prueba<input name="instrumento_libre" value="" maxlength="120"></label>
+    <label>Persona evaluada<input name="evaluado" value="Lucía Muestra Demo"></label>
+    <label>Fecha de la evaluación<input type="date" name="fecha" value="2026-09-20"></label>
+    <label>Forma de aplicación<select name="forma"><option value="online" >Online</option><option value="papel" >En papel</option><option value="otro" selected>Otra</option></select></label>
+    <label>Validez del perfil<select name="perfil_valido"><option value="">— Sin valorar —</option><option value="valido" >Válido</option><option value="cuestionable" >Cuestionable</option><option value="invalido" >No válido</option></select></label>
+  </div>
+  <label>Archivo con la evaluación (informe de la plataforma, hoja de respuestas escaneada…)<input type="file" name="archivo" required></label>
+  <label>Título del documento (opcional)<input name="titulo" value=""></label>
+  <label>Resumen de la interpretación (sin datos brutos)<textarea name="resultado" rows="4"></textarea></label>
+  <label>Notas<input name="notas" value=""></label>
+  <label class="linea-check"><input type="checkbox" name="interpretada" value="si" > Ya está interpretada (si no, queda como «aplicada»)</label>
+  <div class="acciones"><button class="btn">Guardar evaluación</button><a class="btn linea" href="casos__4.html">Cancelar</a></div>
+</form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+
