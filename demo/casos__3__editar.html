@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Investigación interna por denuncia de acoso (ejemplo) · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Investigación interna por denuncia de acoso (ejemplo)</h1>
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Referencia<input name="referencia" value="EJ-2026-003" placeholder="2026-014"></label>
+    <label>Título<input name="titulo" value="Investigación interna por denuncia de acoso (ejemplo)" required></label>
+    <label>Cliente<select name="cliente_id"><option value="">Sin cliente</option>
+      <option value="3" selected>Empresa Modelo S.L.</option><option value="2" >Javier Inventado Prueba</option><option value="4" >Lucía Muestra Demo</option><option value="1" >María Ejemplo Ficticia</option></select></label>
+    <label>Despacho<select name="despacho_id"><option value="">Sin despacho</option>
+      <option value="4" >Aseguradora Muestra</option><option value="3" selected>Asesoría Laboral Modelo</option><option value="2" >Bufete Ficticio &amp; Asociados</option><option value="1" >Despacho Ejemplo Abogados (ficticio)</option></select></label>
+    <label>Área<select name="area">
+      
+      <option value="laboral" >Laboral</option>
+      <option value="oposiciones" >Oposiciones</option>
+      <option value="familia" >Familia</option>
+      <option value="civil" >Civil</option>
+      <option value="penal" >Penal</option>
+      <option value="empresa" selected>Empresa</option>
+      <option value="otro" >Otro</option></select></label>
+    <label>Tipo de encargo<select name="encargo">
+      
+      <option value="informe" >Informe</option>
+      <option value="contrainforme" >Contrainforme</option>
+      <option value="asesoramiento" >Asesoramiento</option>
+      <option value="investigacion" selected>Investigación</option>
+      <option value="formacion" >Formación</option>
+      <option value="ratificacion" >Ratificación</option></select></label>
+    <label>Estado<select name="estado">
+      
+      <option value="consulta" >Consulta</option>
+      <option value="propuesta" >Propuesta</option>
+      <option value="aceptado" selected>Aceptado</option>
+      <option value="evaluacion" >Evaluación</option>
+      <option value="informe_entregado" >Informe entregado</option>
+      <option value="ratificacion" >Ratificación</option>
+      <option value="cerrado" >Cerrado</option>
+      <option value="rechazado" >Rechazado</option></select></label>
+    <label>Honorarios (€)<input name="honorarios" value="1800.00"></label>
+    <label>Procedimiento<input name="procedimiento" value=""></label>
+    <label>Juzgado<input name="juzgado" value=""></label>
+    <label>Fecha de alta<input type="date" name="fecha_alta" value="2026-09-11"></label>
+    <label>Fecha límite<input type="date" name="fecha_limite" value="2026-10-25"></label>
+    <label>Fecha de ratificación o vista<input type="date" name="fecha_ratificacion" value=""></label>
+  </div>
+  <label>Notas<textarea name="notas" rows="4">CASO FICTICIO. Entrevistas a la plantilla y protocolo de actuación.</textarea></label>
+  <button class="btn">Guardar</button>
+</form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+.demo-aviso{background:#8C2F39;color:#fff;text-align:center;padding:8px 14px;font-size:.86rem;line-height:1.35}
+.demo-aviso a{color:#fff;font-weight:600}
+#demo-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);max-width:min(92vw,460px);background:#1E2B3A;color:#EEF2F3;padding:12px 18px;border-radius:8px;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);font-size:.92rem;z-index:99;text-align:center}
+#demo-toast[hidden]{display:none}
+a[data-demo-off]{cursor:not-allowed}
+@media print{.demo-aviso,#demo-toast{display:none}}

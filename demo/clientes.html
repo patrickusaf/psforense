@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clientes · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="on">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Clientes</h1><a class="btn" href="clientes__nuevo.html">Nuevo cliente</a></div>
+<form class="filtros" method="get" action="#" data-demo-form><input name="q" value="" placeholder="Buscar por nombre o NIF"><button class="btn peq">Buscar</button></form>
+<table class="lista">
+  <tr><th>Nombre</th><th>Tipo</th><th>NIF</th><th>Localidad</th><th>Despacho</th><th>Contacto</th></tr>
+  
+  <tr><td data-label="Nombre"><a href="clientes__3.html">Empresa Modelo S.L.</a></td><td data-label="Tipo">Empresa o profesional</td><td data-label="NIF">B00000000</td>
+  <td data-label="Localidad">Málaga</td><td data-label="Despacho">Asesoría Laboral Modelo</td><td class="mini" data-label="Contacto">cliente@ejemplo.invalid</td></tr>
+  
+  <tr><td data-label="Nombre"><a href="clientes__2.html">Javier Inventado Prueba</a></td><td data-label="Tipo">Particular</td><td data-label="NIF">00000001R</td>
+  <td data-label="Localidad">Málaga</td><td data-label="Despacho">Bufete Ficticio &amp; Asociados</td><td class="mini" data-label="Contacto">cliente@ejemplo.invalid</td></tr>
+  
+  <tr><td data-label="Nombre"><a href="clientes__4.html">Lucía Muestra Demo</a></td><td data-label="Tipo">Particular</td><td data-label="NIF">00000002W</td>
+  <td data-label="Localidad">Marbella</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td><td class="mini" data-label="Contacto">cliente@ejemplo.invalid</td></tr>
+  
+  <tr><td data-label="Nombre"><a href="clientes__1.html">María Ejemplo Ficticia</a></td><td data-label="Tipo">Particular</td><td data-label="NIF">00000000T</td>
+  <td data-label="Localidad">Málaga</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td><td class="mini" data-label="Contacto">maria@ejemplo.invalid</td></tr>
+  
+</table>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

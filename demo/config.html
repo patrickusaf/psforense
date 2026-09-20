@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajustes · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo on"><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="on">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Ajustes</h1>
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="rejilla">
+  
+    
+    <label>Exigir verificación en dos pasos<select name="2fa_obligatoria">
+      <option value="si" >Sí: quien no la tenga debe activarla</option>
+      <option value="no" selected>No: es opcional</option></select></label>
+    
+  
+    
+    <label>Días de antelación de los avisos<input name="aviso_dias" value="7"></label>
+    
+  
+    
+    <label>Hora del aviso diario (HH:MM)<input name="aviso_hora" value="08:00"></label>
+    
+  
+    
+    <label>Mostrar vencimientos fiscales (si/no)<input name="calendario_fiscal" value="si"></label>
+    
+  
+    
+    <label>Conservación de consentimientos (años)<input name="conservacion_consentimiento" value="5"></label>
+    
+  
+    
+    <label>Conservación de correspondencia (años)<input name="conservacion_correspondencia" value="6"></label>
+    
+  
+    
+    <label>Conservación de encargos (años)<input name="conservacion_encargo" value="5"></label>
+    
+  
+    
+    <label>Conservación de expedientes (años)<input name="conservacion_expediente" value="5"></label>
+    
+  
+    
+    <label>Conservación de facturas (años)<input name="conservacion_factura" value="6"></label>
+    
+  
+    
+    <label>Conservación de gastos (años)<input name="conservacion_gasto" value="6"></label>
+    
+  
+    
+    <label>Conservación de informes (años)<input name="conservacion_informe" value="5"></label>
+    
+  
+    
+    <label>Conservación de otros documentos (años)<input name="conservacion_otro" value="5"></label>
+    
+  
+    
+    <label>Conservación de pruebas (años)<input name="conservacion_prueba" value="5"></label>
+    
+  
+    
+    <label>Copias que se conservan (de cada tipo)<input name="copia_conservar" value="30"></label>
+    
+  
+    
+    <label>Hora de la copia diaria (HH:MM)<input name="copia_hora" value="03:00"></label>
+    
+  
+    
+    <label>Colegiación<input name="emisor_colegio" value="Psicólogo colegiado (ejemplo)"></label>
+    
+  
+    
+    <label>Código postal y localidad<input name="emisor_cp_loc" value="00000 Ciudad Ejemplo"></label>
+    
+  
+    
+    <label>Dirección<input name="emisor_direccion" value="Calle del Ejemplo 1, 2.º B"></label>
+    
+  
+    
+    <label>Correo electrónico<input name="emisor_email" value="contacto@ejemplo.invalid"></label>
+    
+  
+    
+    <label>IBAN<input name="emisor_iban" value=""></label>
+    
+  
+    
+    <label>NIF<input name="emisor_nif" value="00000000T"></label>
+    
+  
+    
+    <label>Nombre<input name="emisor_nombre" value="Gabinete Pericial Ejemplo"></label>
+    
+  
+    
+    <label>Teléfono<input name="emisor_telefono" value="+34 600 000 000"></label>
+    
+  
+    
+    <label>Web<input name="emisor_web" value="ejemplo.invalid"></label>
+    
+  
+    
+    <label>Mención de exención de IVA<input name="mencion_exenta" value="Operación exenta de IVA en virtud del artículo 20.Uno.3.º de la Ley 37/1992, de 28 de diciembre, del Impuesto sobre el Valor Añadido."></label>
+    
+  
+    
+    <label>Plazo de pago (días)<input name="plazo_pago_dias" value="15"></label>
+    
+  
+    
+    <label style="grid-column:1/-1">Condiciones por defecto de los presupuestos<textarea name="presupuesto_condiciones" rows="4">Presupuesto sin compromiso, válido durante el plazo indicado. Los honorarios corresponden a los servicios descritos; cualquier ampliación del alcance se presupuesta aparte. El pago se realiza por transferencia en el plazo indicado en la factura. Este presupuesto no garantiza ningún resultado en el procedimiento.</textarea></label>
+    
+  
+    
+    <label>Validez de los presupuestos (días)<input name="presupuesto_validez_dias" value="30"></label>
+    
+  
+    
+    <label>Modo VERI*FACTU<select name="verifactu_modo">
+      <option value="desactivado" selected>Desactivado (sin QR en la factura)</option>
+      <option value="no_verifactu" >Sistema no VERI*FACTU (QR sin remisión)</option>
+      <option value="verifactu" >Sistema VERI*FACTU (QR y remisión a la AEAT)</option></select></label>
+    
+  
+  </div>
+  <button class="btn">Guardar</button>
+</form>
+<section class="tarjeta">
+  <h2>Copias de seguridad</h2>
+  <p class="error visible">Todavía no hay ninguna copia de seguridad.</p>
+  <p class="error visible">Último error: 2026-09-20 02:26:38 · falta BACKUP_GPG_PASSPHRASE en el .env</p>
+  <dl class="ficha">
+    <dt>Copia diaria</dt><dd>a las 03:00 · 0 fichero(s) cifrados guardados en el volumen</dd>
+    <dt>Copia externa</dt><dd>desactivada (<code>COPIAS_SMB_URL</code> vacío en el .env)</dd>
+  </dl>
+  
+  <div class="acciones">
+  <form method="post" action="#" data-demo-form><button class="btn linea">Hacer una copia ahora</button></form></div>
+</section>
+<section class="tarjeta">
+  <h2>Avisos y registro de facturación</h2>
+  <p class="mini">El resumen diario se envía por Telegram o correo si los configuras en el <code>.env</code> del servidor.
+  Solo incluye referencias de caso y números de factura, nunca nombres.</p>
+  <div class="acciones">
+    <form method="post" action="#" data-demo-form><button class="btn linea">Enviar aviso de prueba</button></form>
+    <a class="btn linea" href="verifactu.html">Registro de facturación (VERI*FACTU)</a>
+  </div>
+</section>
+<section class="tarjeta"><h2>Almacenamiento documental</h2>
+<p><b>7</b> documentos · <b>371 KB</b> ocupados ·
+<b>0</b> cifrados.
+<br><span class="error">No hay clave de cifrado configurada (DOCS_KEY): los archivos se guardan sin cifrar.</span></p>
+</section>
+<section class="tarjeta"><h2>Registro de accesos y cambios</h2>
+<table class="lista"><tr><th>Momento</th><th>Usuario</th><th>Acción</th><th>Entidad</th><th>IP</th></tr>
+<tr><td class="mini" data-label="Momento">20/9/2026, 0:29:49</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:29:36</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 2</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:29:36</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 4</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:29:36</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 5</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:29:36</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 3</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:29:35</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:26:56</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 2</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:26:56</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 4</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:26:56</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 5</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:26:56</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">ver_documento</td><td class="mini" data-label="Entidad">documentos 3</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:26:54</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:25:33</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">192.168.0.247</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:25:13</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 3</td>
+<td class="mini" data-label="IP">127.0.0.1</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:25:13</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">cobro</td><td class="mini" data-label="Entidad">facturas 2</td>
+<td class="mini" data-label="IP">127.0.0.1</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:25:11</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 2</td>
+<td class="mini" data-label="IP">127.0.0.1</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 0:25:11</td>
+<td data-label="Usuario">Demo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+<td class="mini" data-label="IP">127.0.0.1</td></tr></table></section>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

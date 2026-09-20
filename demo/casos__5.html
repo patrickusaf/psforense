@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valoración de secuelas psicológicas (ejemplo) · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera">
+  <div><h1>Valoración de secuelas psicológicas (ejemplo)</h1><p class="mini">EJ-2025-014 · Civil · Informe</p></div>
+  <a class="btn" href="facturas__nueva.html">Crear factura</a>
+</div>
+<div class="cols">
+  <section class="tarjeta">
+    <h2>Datos del caso</h2>
+    <dl class="ficha">
+      <dt>Cliente</dt><dd><a href="clientes__2.html">Javier Inventado Prueba</a></dd>
+      <dt>Despacho</dt><dd><a href="despachos__2.html">Bufete Ficticio &amp; Asociados</a></dd>
+      <dt>Estado</dt><dd><span class="tag">Cerrado</span></dd>
+      <dt>Procedimiento</dt><dd>Juicio verbal 000/2025</dd>
+      <dt>Juzgado</dt><dd>Juzgado de Primera Instancia n.º 0 de Málaga (ejemplo)</dd>
+      <dt>Alta</dt><dd>3/1/2026</dd>
+      <dt>Límite</dt><dd>—</dd>
+      <dt>Ratificación</dt><dd>—</dd>
+      <dt>Honorarios</dt><dd>900,00 €</dd>
+    </dl>
+    <p class="notas">CASO FICTICIO cerrado. Informe ratificado.</p>
+    <a class="btn linea" href="casos__5__editar.html">Editar</a>
+  </section>
+  <section class="tarjeta">
+    <h2>Tareas</h2>
+    <table>
+      
+    </table>
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <input type="hidden" name="caso_id" value="5">
+      <input name="titulo" placeholder="Nueva tarea" required><input type="date" name="vence_el">
+      <button class="btn peq">Añadir</button>
+    </form>
+  </section>
+</div>
+<section class="tarjeta">
+  <h2>Actuaciones</h2>
+  <form class="linea-form" method="post" action="#" data-demo-form>
+    <input type="hidden" name="caso_id" value="5">
+    <input type="date" name="fecha" value="2026-09-20">
+    <select name="tipo">
+      <option value="llamada">Llamada</option>
+      <option value="reunion">Reunión</option>
+      <option value="email">Email</option>
+      <option value="entrevista">Entrevista</option>
+      <option value="documento">Documento</option>
+      <option value="juicio">Juicio</option>
+      <option value="otro">Otro</option></select>
+    <input name="resumen" placeholder="Qué ha pasado" required class="ancho">
+    <button class="btn peq">Registrar</button>
+  </form>
+  <table>
+    
+    <tr><td class="mini">Sin actuaciones registradas.</td></tr>
+  </table>
+</section>
+<section class="tarjeta">
+  <h2>Documentación</h2>
+  <form class="subida" method="post" enctype="multipart/form-data" action="#" data-demo-form>
+    <input type="hidden" name="caso_id" value="5">
+    
+    <input type="file" name="archivo" required>
+    <input name="titulo" placeholder="Título (opcional)">
+    <select name="categoria">
+      
+      <option value="expediente">Expediente</option>
+      <option value="encargo">Encargo</option>
+      <option value="prueba">Prueba</option>
+      <option value="informe">Informe</option>
+      <option value="consentimiento">Consentimiento</option>
+      <option value="correspondencia">Correspondencia</option>
+      <option value="factura">Factura</option>
+      <option value="otro">Otro</option>
+    </select>
+    <label class="linea-check"><input type="checkbox" name="confidencial" value="si" checked> Confidencial</label>
+    <label class="linea-check">Conservar hasta <input type="date" name="conservar_hasta"></label>
+    <button class="btn peq">Subir</button>
+  </form>
+  <table>
+    <tr><th>Documento</th><th>Categoría</th><th>Subido</th><th class="der">Tamaño</th><th></th></tr>
+    
+    <tr><td class="mini">Todavía no hay documentos.</td></tr>
+  </table>
+</section>
+
+<section class="tarjeta">
+  <h2>Facturas del caso</h2>
+  <table>
+    
+    <tr><td class="mini">Todavía no hay facturas.</td></tr>
+  </table>
+</section>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

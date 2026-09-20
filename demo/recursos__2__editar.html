@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editar recurso · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="on">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Editar recurso</h1>
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Título<input name="titulo" value="BOE · legislación consolidada" required></label>
+    <label>Enlace<input name="url" inputmode="url" value="https://www.boe.es" placeholder="https://" required></label>
+    <label>Categoría<select name="categoria"><option value="cuestionarios" >Cuestionarios y pruebas</option><option value="manuales" >Manuales y guías</option><option value="webs" >Webs de interés</option><option value="normativa" selected>Normativa y jurisprudencia</option><option value="herramientas" >Herramientas</option><option value="formacion" >Formación</option><option value="otro" >Otro</option></select></label>
+    <label>Etiquetas (separadas por comas)<input name="etiquetas" value="normativa" placeholder="laboral, acoso"></label>
+  </div>
+  <label>Descripción<textarea name="descripcion" rows="2">Ejemplo: consulta de leyes y reales decretos.</textarea></label>
+  <label class="linea-check"><input type="checkbox" name="favorito" value="si" > Favorito</label>
+  <div class="acciones"><button class="btn">Guardar</button><a class="btn linea" href="recursos.html">Cancelar</a></div>
+</form>
+<form method="post" action="#" data-demo-form><button class="btn linea peq">Eliminar recurso</button></form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

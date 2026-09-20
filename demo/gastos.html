@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gastos · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="on">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Gastos</h1><div class="acciones"><a class="btn linea" href="gestoria.html">Gestoría</a><a class="btn" href="gastos__nuevo.html">Nuevo gasto</a></div></div>
+<p class="mini">Tus facturas recibidas (gastos deducibles). Tu gestor las necesita cada trimestre; se incluyen en el paquete con su justificante.</p>
+<form class="filtros" method="get" action="#" data-demo-form>
+  <select name="anio" aria-label="Año"><option >2027</option><option selected>2026</option><option >2025</option><option >2024</option><option >2023</option><option >2022</option></select>
+  <select name="t" aria-label="Trimestre"><option value="1" >1.º trimestre</option><option value="2" >2.º trimestre</option><option value="3" selected>3.º trimestre</option><option value="4" >4.º trimestre</option></select>
+</form>
+<div class="tabla-scroll"><table class="lista">
+  <tr><th>Fecha</th><th>Proveedor</th><th>Concepto</th><th>Categoría</th><th class="der">Base</th><th class="der">IVA</th><th class="der">Total</th><th>Justificante</th></tr>
+  
+  <tr>
+    <td class="mini" data-label="Fecha">16/9/2026</td>
+    <td data-label="Proveedor"><a href="gastos__4__editar.html">Papelería Ejemplo</a><br><span class="mini">T-1188</span></td>
+    <td data-label="Concepto">Material de oficina</td>
+    <td class="mini" data-label="Categoría">Material y equipos</td>
+    <td class="der" data-label="Base">34,50 €</td><td class="der" data-label="IVA">7,25 €</td><td class="der" data-label="Total">41,75 €</td>
+    <td data-label="Justificante"><span class="mini vencido">Falta</span></td>
+  </tr>
+  <tr>
+    <td class="mini" data-label="Fecha">11/9/2026</td>
+    <td data-label="Proveedor"><a href="gastos__3__editar.html">Software Ejemplo S.L.</a><br><span class="mini">SW-2026-771</span></td>
+    <td data-label="Concepto">Suscripción de software de escritorio</td>
+    <td class="mini" data-label="Categoría">Software y suscripciones</td>
+    <td class="der" data-label="Base">12,10 €</td><td class="der" data-label="IVA">2,54 €</td><td class="der" data-label="Total">14,64 €</td>
+    <td data-label="Justificante"><span class="mini vencido">Falta</span></td>
+  </tr>
+  <tr>
+    <td class="mini" data-label="Fecha">5/9/2026</td>
+    <td data-label="Proveedor"><a href="gastos__2__editar.html">Seguros Ejemplo S.A.</a><br><span class="mini">RC-88121</span></td>
+    <td data-label="Concepto">Seguro de responsabilidad civil profesional</td>
+    <td class="mini" data-label="Categoría">Seguros</td>
+    <td class="der" data-label="Base">180,00 €</td><td class="der" data-label="IVA">0,00 €</td><td class="der" data-label="Total">180,00 €</td>
+    <td data-label="Justificante"><span class="mini vencido">Falta</span></td>
+  </tr>
+  <tr>
+    <td class="mini" data-label="Fecha">1/9/2026</td>
+    <td data-label="Proveedor"><a href="gastos__1__editar.html">Colegio Oficial de Psicología</a><br><span class="mini">C-2026-0332</span></td>
+    <td data-label="Concepto">Cuota colegial trimestral</td>
+    <td class="mini" data-label="Categoría">Colegio profesional</td>
+    <td class="der" data-label="Base">210,00 €</td><td class="der" data-label="IVA">0,00 €</td><td class="der" data-label="Total">210,00 €</td>
+    <td data-label="Justificante"><span class="mini vencido">Falta</span></td>
+  </tr>
+  
+  <tr><td colspan="4"><b>Total del trimestre</b></td><td class="der" data-label="Proveedor"><b>436,60 €</b></td><td class="der" data-label="Concepto"><b>9,79 €</b></td><td class="der" data-label="Categoría"><b>446,39 €</b></td><td data-label="Base"></td></tr>
+</table></div>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

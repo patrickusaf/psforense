@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datos de la gestoría · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="on">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Datos de la gestoría</h1>
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Nombre de la gestoría<input name="nombre" value="Gestoría Ejemplo Asesores (ejemplo)"></label>
+    <label>Persona de contacto<input name="contacto" value="Elena Ejemplo Gestora"></label>
+    <label>Correo (para el envío; varios separados por coma)<input name="email" inputmode="email" value="gestor@ejemplo.invalid"></label>
+    <label>Con copia a (opcional)<input name="email_cc" inputmode="email" value=""></label>
+    <label>Teléfono<input name="telefono" inputmode="tel" value="600 555 666"></label>
+    <label>Web<input name="web" value="https://ejemplo.invalid" placeholder="https://"></label>
+    <label>Dirección<input name="direccion" value="Calle Inventada 10, 1.º A"></label>
+    <label>Código postal y localidad<input name="cp_loc" value="29000 Málaga"></label>
+    <label>Horario<input name="horario" value="L-V 9:00-14:00 y 16:00-18:30" placeholder="L-V 9:00-14:00"></label>
+  </div>
+  <label>Notas (qué te piden, plazos acordados, número de cliente…)<textarea name="notas" rows="3">EJEMPLO ficticio. Piden el resumen trimestral antes del día 10 del mes de vencimiento y los justificantes de gastos en PDF.</textarea></label>
+  <div class="acciones"><button class="btn">Guardar</button><a class="btn linea" href="gestoria.html">Cancelar</a></div>
+</form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhatsApp y tarjeta · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo on"><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="on">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>WhatsApp y tarjeta de visita</h1><a class="btn linea" href="leads__rapido.html">Alta rápida</a></div>
+<section class="tarjeta">
+  <h2>Cómo se registran estos leads</h2>
+  <p>WhatsApp no informa de quién ha pulsado un enlace ni de quién ha escaneado un QR: <b>solo sabes quién es cuando te escribe</b>. Por eso el mensaje precargado lleva una marca de origen, <code>(Ref. web)</code> o <code>(Ref. tarjeta)</code>, y en <a href="leads__rapido.html">Alta rápida</a> pegas su mensaje: el CRM detecta la marca, asigna el origen y crea el lead en dos toques.</p>
+  <p class="mini">Si la persona borra la marca antes de enviar, eliges el origen a mano. Automatizarlo del todo exigiría la API de WhatsApp Business, con un número dedicado y verificación de empresa de Meta.</p>
+</section>
+
+<div class="cols">
+  <section class="tarjeta">
+    <h2>Enlace de la web</h2>
+    <p class="mini">El botón «Contactar por WhatsApp» de de tu web debe usar este enlace.</p>
+    <label class="form">Enlace<input readonly value="https://wa.me/34600000000?text=Hola%20Gabinete%2C%20quiero%20hacer%20una%20consulta.%20(Ref.%20web)" class="enlace-copiable"></label>
+    <div class="acciones"><a class="btn linea" href="https://wa.me/34600000000?text=Hola%20Gabinete%2C%20quiero%20hacer%20una%20consulta.%20(Ref.%20web)" target="_blank" rel="noopener noreferrer">Probar el enlace</a></div>
+  </section>
+  <section class="tarjeta">
+    <h2>QR de la tarjeta de visita</h2>
+    <p class="mini">Para la próxima tirada de tarjetas: el QR abre el chat con «(Ref. tarjeta)».</p>
+    <img class="qr-vista" src="/leads/whatsapp/qr-tarjeta.svg" alt="QR de WhatsApp para la tarjeta de visita">
+    <div class="acciones"><a class="btn" href="#" data-demo-off>Descargar SVG</a><a class="btn linea" href="#" data-demo-off>Descargar PNG</a></div>
+    <p class="mini">Pásale el SVG a quien maquete la tarjeta. Los QR de tarjetas ya impresas siguen funcionando: llegarán sin marca y elegirás el origen a mano.</p>
+  </section>
+</div>
+
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

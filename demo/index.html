@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="on">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Panel</h1>
+<section class="kpis">
+  <a class="kpi" href="leads.html"><span class="n">3</span><span>Leads abiertos</span></a>
+  <div class="kpi"><span class="n">4</span><span>Casos activos</span></div>
+  <div class="kpi"><span class="n">954,00 €</span><span>Pendiente de cobro</span></div>
+  <div class="kpi"><span class="n">1</span><span>Tareas vencidas</span></div>
+  <div class="kpi"><span class="n">3650,00 €</span><span>Facturado este año</span></div>
+</section>
+<div class="cal-fila">
+  <section class="tarjeta calendario" aria-label="Calendario">
+  <div class="cal-cab">
+    <h2>Calendario</h2>
+    <div class="cal-nav">
+      <a class="btn linea peq" href="index.html" aria-label="Mes anterior">‹</a>
+      <strong>Septiembre 2026</strong>
+      <a class="btn linea peq" href="index.html" aria-label="Mes siguiente">›</a>
+      
+    </div>
+  </div>
+  <ul class="cal-leyenda">
+    <li><span class="ev ev-ratificacion"></span>Ratificación o vista</li><li><span class="ev ev-limite"></span>Fecha límite del caso</li><li><span class="ev ev-tarea"></span>Tarea</li><li><span class="ev ev-seguimiento"></span>Seguimiento de un lead</li><li><span class="ev ev-cobro"></span>Cobro de factura</li><li><span class="ev ev-presupuesto"></span>Vence un presupuesto</li><li><span class="ev ev-fiscal"></span>Vencimiento fiscal</li><li><span class="ev ev-conservacion"></span>Fin de conservación de un documento</li>
+  </ul>
+  <div class="cal" role="grid">
+    <div class="cal-sem" role="columnheader">Lun</div><div class="cal-sem" role="columnheader">Mar</div><div class="cal-sem" role="columnheader">Mié</div><div class="cal-sem" role="columnheader">Jue</div><div class="cal-sem" role="columnheader">Vie</div><div class="cal-sem" role="columnheader">Sáb</div><div class="cal-sem" role="columnheader">Dom</div>
+    
+    <div class="dia fuera" role="gridcell">
+      <span class="n">31</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">1</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">2</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">3</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">4</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">5</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">6</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">7</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">8</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">9</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">10</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">11</span>
+      
+      <a class="ev ev-cobro" href="facturas__3.html" title="Cobro de factura: Factura 2026-002 · Empresa Modelo S.L.">Factura 2026-002 · Empresa Modelo S.L.</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">12</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">13</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">14</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">15</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">16</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">17</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">18</span>
+      
+      <a class="ev ev-tarea" href="casos__1.html" title="Tarea: Corregir pruebas psicométricas y volcar resultados">Corregir pruebas psicométricas y volcar resultados</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">19</span>
+      
+      
+    </div>
+    
+    <div class="dia hoy" role="gridcell">
+      <span class="n">20</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">21</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">22</span>
+      
+      <a class="ev ev-tarea" href="casos__4.html" title="Tarea: Enviar el presupuesto a Lucía">Enviar el presupuesto a Lucía</a>
+      
+      <a class="ev ev-seguimiento" href="leads__1.html" title="Seguimiento de un lead: Contactar: Carlos Ejemplo (ejemplo)">Contactar: Carlos Ejemplo (ejemplo)</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">23</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">24</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">25</span>
+      
+      <a class="ev ev-seguimiento" href="leads__2.html" title="Seguimiento de un lead: Contactar: Ana Ficticia (ejemplo)">Contactar: Ana Ficticia (ejemplo)</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">26</span>
+      
+      <a class="ev ev-tarea" href="casos__3.html" title="Tarea: Entrevistas a la plantilla (segunda ronda)">Entrevistas a la plantilla (segunda ronda)</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">27</span>
+      
+      <a class="ev ev-tarea" href="casos__1.html" title="Tarea: Redactar el borrador del informe pericial">Redactar el borrador del informe pericial</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">28</span>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">29</span>
+      
+      <a class="ev ev-seguimiento" href="leads__3.html" title="Seguimiento de un lead: Contactar: Empresa Inventada S.L. (ejemplo)">Contactar: Empresa Inventada S.L. (ejemplo)</a>
+      
+      
+    </div>
+    
+    <div class="dia" role="gridcell">
+      <span class="n">30</span>
+      
+      
+    </div>
+    
+    <div class="dia fuera" role="gridcell">
+      <span class="n">1</span>
+      
+      
+    </div>
+    
+    <div class="dia fuera" role="gridcell">
+      <span class="n">2</span>
+      
+      <a class="ev ev-tarea" href="casos__4.html" title="Tarea: Revisar bibliografía para el recurso">Revisar bibliografía para el recurso</a>
+      
+      
+    </div>
+    
+    <div class="dia fuera" role="gridcell">
+      <span class="n">3</span>
+      
+      
+    </div>
+    
+    <div class="dia fuera" role="gridcell">
+      <span class="n">4</span>
+      
+      <a class="ev ev-tarea" href="casos__1.html" title="Tarea: Enviar el borrador a la abogada para revisión">Enviar el borrador a la abogada para revisión</a>
+      
+      
+    </div>
+    
+  </div>
+</section>
+
+  <section class="tarjeta proximos">
+    <h2>Próximos 45 días</h2>
+    <ul class="prox">
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__4.html">Enviar el presupuesto a Lucía</a><br><span class="mini">Tarea · 22/9/2026 · En 2 días</span></div></li>
+      
+      <li><span class="ev ev-seguimiento"></span>
+        <div><a href="leads__1.html">Contactar: Carlos Ejemplo (ejemplo)</a><br><span class="mini">Seguimiento de un lead · 22/9/2026 · En 2 días</span></div></li>
+      
+      <li><span class="ev ev-seguimiento"></span>
+        <div><a href="leads__2.html">Contactar: Ana Ficticia (ejemplo)</a><br><span class="mini">Seguimiento de un lead · 25/9/2026 · En 5 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__3.html">Entrevistas a la plantilla (segunda ronda)</a><br><span class="mini">Tarea · 26/9/2026 · En 6 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__1.html">Redactar el borrador del informe pericial</a><br><span class="mini">Tarea · 27/9/2026 · En 7 días</span></div></li>
+      
+      <li><span class="ev ev-seguimiento"></span>
+        <div><a href="leads__3.html">Contactar: Empresa Inventada S.L. (ejemplo)</a><br><span class="mini">Seguimiento de un lead · 29/9/2026 · En 9 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__4.html">Revisar bibliografía para el recurso</a><br><span class="mini">Tarea · 2/10/2026 · En 12 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__1.html">Enviar el borrador a la abogada para revisión</a><br><span class="mini">Tarea · 4/10/2026 · En 14 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__2.html">Preparar la ratificación del contrainforme</a><br><span class="mini">Tarea · 8/10/2026 · En 18 días</span></div></li>
+      
+      <li><span class="ev ev-ratificacion"></span>
+        <div><a href="casos__2.html">Contrainforme sobre custodia compartida (ejemplo)</a><br><span class="mini">Ratificación o vista · 10/10/2026 · En 20 días</span></div></li>
+      
+      <li><span class="ev ev-conservacion"></span>
+        <div><a href="documentos.html">Notas de la entrevista clínica</a><br><span class="mini">Fin de conservación de un documento · 10/10/2026 · En 20 días</span></div></li>
+      
+      <li><span class="ev ev-limite"></span>
+        <div><a href="casos__1.html">Daño psíquico por acoso laboral (ejemplo)</a><br><span class="mini">Fecha límite del caso · 14/10/2026 · En 24 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__1.html">Preparar la ratificación en sala</a><br><span class="mini">Tarea · 14/10/2026 · En 24 días</span></div></li>
+      
+      <li><span class="ev ev-presupuesto"></span>
+        <div><a href="presupuestos__1.html">Vence P-2026-001 · María Ejemplo Ficticia</a><br><span class="mini">Vence un presupuesto · 14/10/2026 · En 24 días</span></div></li>
+      
+      <li><span class="ev ev-tarea"></span>
+        <div><a href="casos__3.html">Redactar el informe de conclusiones</a><br><span class="mini">Tarea · 18/10/2026 · En 28 días</span></div></li>
+      
+      <li><span class="ev ev-fiscal"></span>
+        <div><a href="gestoria--anio-2026.html">Modelos 303 (IVA) y 130 (IRPF) · 3.er trimestre de 2026</a><br><span class="mini">Vencimiento fiscal · 20/10/2026 · En 30 días</span></div></li>
+      
+      <li><span class="ev ev-limite"></span>
+        <div><a href="casos__3.html">Investigación interna por denuncia de acoso (ejemplo)</a><br><span class="mini">Fecha límite del caso · 25/10/2026 · En 35 días</span></div></li>
+      
+      <li><span class="ev ev-ratificacion"></span>
+        <div><a href="casos__1.html">Daño psíquico por acoso laboral (ejemplo)</a><br><span class="mini">Ratificación o vista · 28/10/2026 · En 38 días</span></div></li>
+      
+      <li><span class="ev ev-limite"></span>
+        <div><a href="casos__4.html">Recurso contra la calificación de «no apto» (ejemplo)</a><br><span class="mini">Fecha límite del caso · 4/11/2026 · En 45 días</span></div></li>
+      
+      
+    </ul>
+  </section>
+</div>
+<div class="cols">
+  <section class="tarjeta">
+    <h2>Tareas y plazos</h2>
+    <table>
+      
+      <tr class="urgente">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Corregir pruebas psicométricas y volcar resultados <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td class="der">18/9/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Enviar el presupuesto a Lucía <span class="mini">Recurso contra la calificación de «no apto» (ejemplo)</span></td>
+        <td class="der">22/9/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Entrevistas a la plantilla (segunda ronda) <span class="mini">Investigación interna por denuncia de acoso (ejemplo)</span></td>
+        <td class="der">26/9/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Redactar el borrador del informe pericial <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td class="der">27/9/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Revisar bibliografía para el recurso <span class="mini">Recurso contra la calificación de «no apto» (ejemplo)</span></td>
+        <td class="der">2/10/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Enviar el borrador a la abogada para revisión <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td class="der">4/10/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Preparar la ratificación del contrainforme <span class="mini">Contrainforme sobre custodia compartida (ejemplo)</span></td>
+        <td class="der">8/10/2026</td>
+      </tr>
+      
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check" title="Marcar como hecha">○</button></form></td>
+        <td>Preparar la ratificación en sala <span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td>
+        <td class="der">14/10/2026</td>
+      </tr>
+      
+      
+    </table>
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <input name="titulo" placeholder="Nueva tarea" required>
+      <input type="date" name="vence_el">
+      <button class="btn peq">Añadir</button>
+    </form>
+  </section>
+  <section class="tarjeta">
+    <h2>Facturas pendientes de cobro</h2>
+    <table>
+      
+      <tr><td><a href="facturas__3.html">2026-002</a></td>
+      <td>Empresa Modelo S.L.</td><td class="der">954,00 €</td>
+      <td class="der mini">11/9/2026</td></tr>
+      
+      
+    </table>
+  </section>
+</div>
+<div class="cols">
+  <section class="tarjeta">
+    <h2>Casos por estado</h2>
+    <table><tr><td>Aceptado</td><td class="der">1</td></tr><tr><td>Informe entregado</td><td class="der">1</td></tr><tr><td>Evaluación</td><td class="der">1</td></tr><tr><td>Propuesta</td><td class="der">1</td></tr></table>
+  </section>
+  <section class="tarjeta">
+    <h2>Última actividad</h2>
+    <table>
+      
+      <tr><td class="mini">19/9/2026</td><td>Se envía al despacho el calendario previsto de entrega del informe.<br><span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td></tr>
+      
+      <tr><td class="mini">17/9/2026</td><td>Primeras entrevistas con la plantilla.<br><span class="mini">Investigación interna por denuncia de acoso (ejemplo)</span></td></tr>
+      
+      <tr><td class="mini">17/9/2026</td><td>Primer contacto (ejemplo).<br><span class="mini"></span></td></tr>
+      
+      <tr><td class="mini">17/9/2026</td><td>Primer contacto (ejemplo).<br><span class="mini"></span></td></tr>
+      
+      <tr><td class="mini">17/9/2026</td><td>Primer contacto (ejemplo).<br><span class="mini"></span></td></tr>
+      
+      <tr><td class="mini">17/9/2026</td><td>Primer contacto (ejemplo).<br><span class="mini"></span></td></tr>
+      
+      <tr><td class="mini">16/9/2026</td><td>Primer contacto: se explica el alcance y se prepara el presupuesto.<br><span class="mini">Recurso contra la calificación de «no apto» (ejemplo)</span></td></tr>
+      
+      <tr><td class="mini">15/9/2026</td><td>Segunda sesión: administración de pruebas psicométricas estandarizadas.<br><span class="mini">Daño psíquico por acoso laboral (ejemplo)</span></td></tr>
+      
+    </table>
+  </section>
+</div>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

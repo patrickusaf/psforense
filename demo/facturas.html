@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facturas · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="on">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Facturas</h1><div><a class="btn linea" href="#" data-demo-off>Exportar CSV</a>
+<a class="btn" href="facturas__nueva.html">Nueva factura</a></div></div>
+<form class="filtros" method="get" action="#" data-demo-form><select name="estado"><option value="">Todas</option>
+  
+  <option value="borrador" >Borrador</option>
+  <option value="emitida" >Emitida</option>
+  <option value="cobrada" >Cobrada</option>
+  <option value="anulada" >Anulada</option></select></form>
+<table class="lista">
+  <tr><th>Número</th><th>Fecha</th><th>Cliente</th><th class="der">Base</th><th class="der">IVA</th>
+  <th class="der">Retención</th><th class="der">Total</th><th>Estado</th><th></th></tr>
+  
+  <tr><td data-label="Número"><a href="facturas__4.html">borrador</a></td><td data-label="Fecha">20/9/2026</td>
+  <td data-label="Cliente">Lucía Muestra Demo</td><td class="der" data-label="Base">650,00 €</td><td class="der" data-label="IVA">136,50 €</td>
+  <td class="der" data-label="Retención"></td><td class="der" data-label="Total"><b>786,50 €</b></td>
+  <td data-label="Estado"><span class="tag">Borrador</span></td>
+  <td></td></tr>
+  
+  <tr><td data-label="Número"><a href="facturas__1.html">borrador</a></td><td data-label="Fecha">20/9/2026</td>
+  <td data-label="Cliente">María Ejemplo Ficticia</td><td class="der" data-label="Base">900,00 €</td><td class="der" data-label="IVA">189,00 €</td>
+  <td class="der" data-label="Retención">-135,00 €</td><td class="der" data-label="Total"><b>954,00 €</b></td>
+  <td data-label="Estado"><span class="tag">Borrador</span></td>
+  <td></td></tr>
+  
+  <tr><td data-label="Número"><a href="facturas__3.html">2026-002</a></td><td data-label="Fecha">27/8/2026</td>
+  <td data-label="Cliente">Empresa Modelo S.L.</td><td class="der" data-label="Base">900,00 €</td><td class="der" data-label="IVA">189,00 €</td>
+  <td class="der" data-label="Retención">-135,00 €</td><td class="der" data-label="Total"><b>954,00 €</b></td>
+  <td data-label="Estado"><span class="tag">Emitida</span></td>
+  <td><a class="mini" href="facturas__3__imprimir.html" target="_blank">PDF</a></td></tr>
+  
+  <tr><td data-label="Número"><a href="facturas__2.html">2026-001</a></td><td data-label="Fecha">11/8/2026</td>
+  <td data-label="Cliente">Javier Inventado Prueba</td><td class="der" data-label="Base">1200,00 €</td><td class="der" data-label="IVA">252,00 €</td>
+  <td class="der" data-label="Retención">-180,00 €</td><td class="der" data-label="Total"><b>1272,00 €</b></td>
+  <td data-label="Estado"><span class="tag">Cobrada</span></td>
+  <td><a class="mini" href="facturas__2__imprimir.html" target="_blank">PDF</a></td></tr>
+  
+</table>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

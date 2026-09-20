@@ -1,16 +1,34 @@
 # psforense.es
 
-Web profesional de **Patrick Svensson, Psicología Forense** (versión 1.1 de la marca).
+Web profesional de **Patrick Svensson, Psicología Forense** (marca v1.1) y escaparate de **Probatio**, su herramienta de gestión para peritos psicólogos.
 
-Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compilación. No usa cookies ni analítica: tipografías, imágenes y código se sirven desde el propio dominio. La única conexión externa es el envío del formulario de contacto (ver «Formulario de contacto»).
+Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compilación. No usa cookies ni analítica: tipografías, imágenes y código se sirven desde el propio dominio. La única conexión con un servicio externo es el envío del formulario de contacto (ver más abajo).
+
+Versión actual: ver [VERSION](VERSION) · historial en [CHANGELOG.md](CHANGELOG.md).
+
+## Los tres repositorios
+
+| Repositorio | Visibilidad | Qué contiene |
+|---|---|---|
+| **[psforense](https://github.com/patrickusaf/psforense)** (este) | Público | La web psforense.es, incluida la demostración de Probatio en `demo/` |
+| **probatio** | Privado | El código de la herramienta (CRM, facturación y gestión documental) |
+| **[probatio-demo](https://github.com/patrickusaf/probatio-demo)** | Público | La misma demostración, sin datos reales, publicada también con GitHub Pages |
+
+La carpeta `demo/` **no se edita a mano**: la genera `scripts/generar-demo.js` del repositorio privado `probatio`. Para actualizarla, regenera la demo y sincroniza esta carpeta con el repositorio `probatio-demo`:
+
+```
+rsync -a --delete --exclude=.git --exclude=README.md --exclude=.gitignore ../probatio-demo/ demo/
+```
 
 ## Estructura
 
 ```
 index.html                Inicio
-servicios/index.html      Servicios
+servicios/index.html      Servicios (incluye el apartado de software)
+software/index.html       Probatio: qué es, qué incluye y condiciones
+demo/                     Demostración navegable de Probatio, con datos ficticios (generada)
 sobre-mi/index.html       Sobre mí
-contacto/index.html       Contacto (formulario: con `data-endpoint` envía el mensaje al Worker; sin él abre el programa de correo)
+contacto/index.html       Contacto: formulario con envío por correo (Cloudflare Worker) o mensaje por WhatsApp
 aviso-legal/index.html    Aviso legal (LSSI-CE)
 privacidad/index.html     Política de privacidad (RGPD)
 cookies/index.html        Política de cookies
@@ -19,20 +37,17 @@ assets/css/styles.css     Estilos
 assets/js/main.js         Menú móvil y formulario
 assets/img/               Fotografías e imagen para redes (og-image.png)
 assets/fonts/             Tipografías (licencia SIL OFL incluida)
+VERSION, CHANGELOG.md     Versionado de la web
 CNAME                     Dominio personalizado para GitHub Pages
 .nojekyll                 Evita que GitHub Pages procese el sitio con Jekyll
 robots.txt, sitemap.xml   Buscadores
 favicon.svg y PNG, site.webmanifest   Iconos
 ```
 
-## Formulario de contacto
+## Formulario de contacto y WhatsApp
 
-El formulario envía el mensaje a `contacto@psforense.es` y una confirmación automática al remitente desde `avisos@psforense.es`. Como esta web es estática,
-el envío lo hace un pequeño Cloudflare Worker (proyecto `psforense-formulario`, con sus instrucciones de despliegue). Cuando lo tengas desplegado:
-
-1. Copia la URL del Worker (`https://psforense-formulario.<tu-subdominio>.workers.dev/enviar`).
-2. Pégala en `contacto/index.html`, en el atributo `data-endpoint=""` del formulario.
-3. Publica la web. Mientras `data-endpoint` esté vacío, el formulario funciona como antes (abre el programa de correo).
+- El formulario (`data-endpoint` en `contacto/index.html`) envía el mensaje a un **Cloudflare Worker** propio (proyecto `psforense-formulario`), que lo reenvía por correo a contacto@ y manda una confirmación automática. No guarda el mensaje. Si `data-endpoint` está vacío, el formulario abre el programa de correo.
+- Los enlaces de WhatsApp llevan la marca **«(Ref. web)»** en el mensaje precargado. Así, cuando alguien escribe, el CRM (Probatio) detecta el origen y crea el lead en dos toques. **No quites la marca** de los enlaces; el QR de la tarjeta usa «(Ref. tarjeta)».
 
 ## Antes de publicar
 
@@ -117,8 +132,18 @@ Los archivos `CNAME` y `.nojekyll` solo sirven para GitHub Pages y se pueden omi
 
 - Los textos están directamente en cada `index.html`.
 - Colores y tipografía: variables al principio de `assets/css/styles.css`.
-- Datos de contacto: aparecen en la cabecera, el pie y la página de contacto de cada archivo. Usa buscar y reemplazar en todo el proyecto.
+- Datos de contacto: aparecen en la cabecera, el pie y la página de contacto de cada archivo. Usa buscar y reemplazar en todo el proyecto (respeta la marca «(Ref. web)» de los enlaces de WhatsApp).
 - Tras cambiar una página, actualiza la fecha `lastmod` en `sitemap.xml`.
+
+## Versionado
+
+Versionado semántico `MAYOR.MENOR.PARCHE`: **parche** = correcciones de texto o errores; **menor** = páginas o secciones nuevas; **mayor** = rediseño o cambio de marca. Al publicar una versión: actualiza `VERSION` y `CHANGELOG.md`, haz el commit y crea la etiqueta:
+
+```
+git commit -am "1.2.1: descripción"
+git tag -a v1.2.1 -m "Versión 1.2.1"
+git push --follow-tags
+```
 
 ## Tipografías
 

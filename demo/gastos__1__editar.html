@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editar gasto · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="on">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Editar gasto</h1>
+
+<form class="tarjeta form" method="post" enctype="multipart/form-data" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Fecha de la factura<input type="date" name="fecha" value="2026-09-01" required></label>
+    <label>Proveedor<input name="proveedor" value="Colegio Oficial de Psicología" required></label>
+    <label>NIF del proveedor<input name="proveedor_nif" value="Q0000000J"></label>
+    <label>Nº de factura<input name="numero_factura" value="C-2026-0332"></label>
+    <label>Concepto<input name="concepto" value="Cuota colegial trimestral" required></label>
+    <label>Categoría<select name="categoria"><option value="alquiler" >Alquiler</option><option value="suministros" >Suministros</option><option value="material" >Material y equipos</option><option value="formacion" >Formación</option><option value="colegio" selected>Colegio profesional</option><option value="seguros" >Seguros</option><option value="desplazamientos" >Desplazamientos</option><option value="software" >Software y suscripciones</option><option value="publicidad" >Publicidad y web</option><option value="gestoria" >Gestoria</option><option value="otros" >Otros</option></select></label>
+    <label>Base imponible (€)<input name="base" inputmode="decimal" value="210.00" required></label>
+    <label>IVA<select name="iva_tipo"><option value="0.21" >21 %</option><option value="0.1" >10 %</option><option value="0.04" >4 %</option><option value="0" selected>Exento / sin IVA</option></select></label>
+    <label>% deducible<input name="deducible_pct" inputmode="numeric" class="corto" value="100"></label>
+  </div>
+  <label>Justificante (PDF o imagen)<input type="file" name="archivo" accept=".pdf,image/*"></label>
+  
+  <label>Notas<input name="notas" value="EJEMPLO ficticio."></label>
+  <div class="acciones"><button class="btn">Guardar</button><a class="btn linea" href="gastos.html">Cancelar</a></div>
+</form>
+<form method="post" action="#" data-demo-form><button class="btn linea peq">Eliminar gasto</button></form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

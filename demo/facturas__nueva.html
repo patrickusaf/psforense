@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nueva factura · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="on">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Nueva factura</h1>
+</div>
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <div class="rejilla">
+    <label>Cliente<select name="cliente_id" required><option value="">Elige un cliente</option>
+      <option value="3" >Empresa Modelo S.L.</option><option value="2" >Javier Inventado Prueba</option><option value="4" >Lucía Muestra Demo</option><option value="1" >María Ejemplo Ficticia</option></select></label>
+    <label>Caso<select name="caso_id"><option value="">Sin caso</option>
+      <option value="4" >Recurso contra la calificación de «no apto» (ejemplo)</option><option value="3" >Investigación interna por denuncia de acoso (ejemplo)</option><option value="1" >Daño psíquico por acoso laboral (ejemplo)</option><option value="2" >Contrainforme sobre custodia compartida (ejemplo)</option><option value="5" >Valoración de secuelas psicológicas (ejemplo)</option></select></label>
+    <label>Fecha<input type="date" name="fecha" value="2026-09-20" required></label>
+    <label>Fecha de la operación<input type="date" name="fecha_operacion" value=""></label>
+    <label>Vencimiento<input type="date" name="vencimiento" value=""></label>
+    <label>Tipo<select name="tipo">
+      <option value="ordinaria" >Ordinaria</option>
+      <option value="rectificativa" >Rectificativa</option></select></label>
+    <label>IVA<select name="iva_tipo">
+      <option value="0.21" selected>21 %</option>
+      <option value="0" >Exento (asistencia sanitaria)</option></select></label>
+    <label>Retención IRPF<select name="irpf_tipo">
+      <option value="0" selected>Sin retención</option>
+      <option value="0.15" >15 %</option>
+      <option value="0.07" >7 % (inicio de actividad)</option></select></label>
+    <label>Forma de pago<select name="forma_pago">
+      
+      <option value="Transferencia bancaria" selected>Transferencia bancaria</option>
+      <option value="Bizum" >Bizum</option>
+      <option value="Tarjeta" >Tarjeta</option></select></label>
+    <label>Referencia<input name="referencia" value="" placeholder="Procedimiento 000/2026"></label>
+  </div>
+  <h2>Conceptos</h2>
+  <table class="lineas">
+    <tr><th>Concepto</th><th>Cantidad</th><th>Precio (€)</th></tr>
+    
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+    <tr><td><input name="concepto" value=""></td>
+    <td><input name="cantidad" value="" class="corto"></td>
+    <td><input name="precio" value="" class="corto"></td></tr>
+  </table>
+  <label>Nota<input name="nota" value=""></label>
+  <div class="acciones"><button class="btn">Guardar borrador</button>
+  </div>
+  <p class="mini">Al emitirla se le asigna número correlativo y deja de poder editarse.</p>
+</form>
+
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

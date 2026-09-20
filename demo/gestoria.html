@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestoría · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo on"><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="on">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Gestoría</h1>
+  <div class="acciones"><a class="btn linea" href="gastos.html">Gastos</a><a class="btn linea" href="resumen.html">Resumen anual</a></div></div>
+
+<section class="tarjeta">
+  <div class="cabecera"><h2>Tu gestoría</h2><a class="btn linea peq" href="gestoria__datos.html">Editar</a></div>
+  
+  <dl class="ficha">
+    <dt>Gestoría</dt><dd><b>Gestoría Ejemplo Asesores (ejemplo)</b></dd>
+    <dt>Persona de contacto</dt><dd>Elena Ejemplo Gestora</dd>
+    <dt>Correo</dt><dd><a href="mailto:gestor@ejemplo.invalid">gestor@ejemplo.invalid</a></dd>
+    <dt>Teléfono</dt><dd><a href="tel:600555666">600 555 666</a></dd>
+    <dt>Dirección</dt><dd>Calle Inventada 10, 1.º A, 29000 Málaga</dd>
+    <dt>Web</dt><dd><a href="https://ejemplo.invalid" target="_blank" rel="noopener noreferrer">https://ejemplo.invalid</a></dd>
+    <dt>Horario</dt><dd>L-V 9:00-14:00 y 16:00-18:30</dd>
+  </dl>
+  <p class="notas">EJEMPLO ficticio. Piden el resumen trimestral antes del día 10 del mes de vencimiento y los justificantes de gastos en PDF.</p>
+  
+</section>
+
+<section class="tarjeta">
+  <div class="cabecera"><h2>3.º trimestre de 2026</h2>
+    <form class="filtros" method="get" action="#" data-demo-form>
+      <select name="anio" aria-label="Año"><option >2027</option><option selected>2026</option><option >2025</option><option >2024</option><option >2023</option><option >2022</option></select>
+      <select name="t" aria-label="Trimestre"><option value="1" >1.º trimestre</option><option value="2" >2.º trimestre</option><option value="3" selected>3.º trimestre</option><option value="4" >4.º trimestre</option></select>
+    </form></div>
+  
+    <p class="mini">Presentación de los modelos 303 y 130: <b>20/10/2026</b> (en 30 días). Confirma la fecha con tu gestor.</p>
+
+  <h3>Lista de comprobación</h3>
+  <ul class="lista-comprobacion">
+    <li class="si">Facturas emitidas en el trimestre: <b>2</b> (2226,00 €)</li>
+    <li class="si">Todas las facturas tienen su PDF archivado</li>
+    <li class="si">Gastos registrados: <b>4</b>. </li>
+    <li class="no">4 gasto(s) sin justificante adjunto.</li>
+    <li class="no">1 factura(s) del trimestre pendientes de cobro</li>
+    <li class="no">Todavía no se ha enviado a la gestoría</li>
+  </ul>
+
+  <h3>Cifras orientativas</h3>
+  <div class="tabla-scroll"><table>
+    <tr><th>IVA (modelo 303)</th><th class="der">Base</th><th class="der">Cuota</th></tr>
+    <tr><td>Repercutido (facturas emitidas)</td><td class="der">2100,00 €</td><td class="der">441,00 €</td></tr>
+    <tr><td>Soportado deducible (gastos)</td><td class="der">436,60 €</td><td class="der">9,79 €</td></tr>
+    <tr><td><b>Resultado</b></td><td></td><td class="der"><b>431,21 €</b></td></tr>
+  </table></div>
+  <div class="tabla-scroll"><table>
+    <tr><th>IRPF (modelo 130, acumulado del año)</th><th class="der">Importe</th></tr>
+    <tr><td>Ingresos</td><td class="der">2100,00 €</td></tr>
+    <tr><td>Gastos deducibles</td><td class="der">436,60 €</td></tr>
+    <tr><td>Rendimiento neto</td><td class="der">1663,40 €</td></tr>
+    <tr><td>20 % del rendimiento</td><td class="der">332,68 €</td></tr>
+    <tr><td>Retenciones soportadas</td><td class="der">315,00 €</td></tr>
+    <tr><td><b>Pago fraccionado orientativo</b> <span class="mini">(sin descontar trimestres anteriores)</span></td><td class="der"><b>17,68 €</b></td></tr>
+  </table></div>
+  <p class="mini">Son cifras orientativas para preparar la documentación. Las confirma tu gestor con tu situación completa.</p>
+
+  <h3>Enviar la documentación</h3>
+  <p class="mini">El ZIP incluye: listado de facturas emitidas (CSV para Excel), listado de gastos, resumen del trimestre, los PDF de las facturas y los justificantes de gastos.</p>
+  <form class="form" method="post" action="#" data-demo-form>
+    <input type="hidden" name="anio" value="2026"><input type="hidden" name="t" value="3">
+    <label>Mensaje para tu gestor (opcional)<textarea name="mensaje" rows="2" placeholder="Por ejemplo: este trimestre hay una factura rectificativa."></textarea></label>
+    <div class="acciones">
+      <button class="btn" >Enviar a Gestoría Ejemplo Asesores (ejemplo)</button>
+      <a class="btn linea" href="#" data-demo-off>Descargar el ZIP</a>
+    </div>
+    
+  </form>
+</section>
+
+<div class="cols">
+  <section class="tarjeta"><h2>Próximos vencimientos</h2>
+    <ul class="prox">
+      <li><div><b>20/10/2026</b><br><span class="mini">Modelos 303 (IVA) y 130 (IRPF) · 3.er trimestre de 2026</span></div></li><li><div><b>1/2/2027</b><br><span class="mini">Modelos 303 (IVA) y 130 (IRPF) · 4.º trimestre de 2026</span></div></li><li><div><b>1/2/2027</b><br><span class="mini">Modelo 390 · resumen anual de IVA de 2026</span></div></li><li><div><b>1/3/2027</b><br><span class="mini">Modelo 347 · operaciones con terceros de 2026 (si procede)</span></div></li>
+    </ul><p class="mini">Fechas generales; si caen en fin de semana pasan al lunes. No se tienen en cuenta los festivos. Confírmalas con tu gestor.</p></section>
+  <section class="tarjeta"><h2>Envíos anteriores</h2>
+    <table>
+    <tr><td class="mini">Todavía no has enviado nada desde aquí.</td></tr></table></section>
+</div>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuevo lead · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo on"><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="on">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Nuevo lead</h1>
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <p class="aviso info">Un lead es solo información comercial. No anotes aquí datos clínicos ni de salud: eso va en el caso, cuando el contacto se convierta en cliente.</p>
+  <div class="rejilla">
+    <label>Nombre<input name="nombre" value="" required></label>
+    <label>Tipo<select name="tipo">
+      <option value="particular" selected>Particular</option>
+      <option value="empresa" >Empresa o profesional</option></select></label>
+    <label>Correo<input type="email" name="email" value=""></label>
+    <label>Teléfono<input name="telefono" value=""></label>
+    <label>Localidad<input name="localidad" value=""></label>
+    <label>Origen<select name="origen">
+      <option value="prescriptor" >Despacho o prescriptor</option><option value="web" >Web</option><option value="redes" >Redes sociales</option><option value="colegio" >Colegio profesional</option><option value="recomendacion" >Recomendación</option><option value="evento" >Charla o evento</option><option value="busqueda" >Búsqueda en internet</option><option value="whatsapp" >WhatsApp</option><option value="tarjeta" >Tarjeta de visita</option><option value="otro" >Otro</option></select></label>
+    <label>Detalle del origen<input name="origen_detalle" value="" placeholder="Charla en el colegio, formulario de la web…"></label>
+    <label>Derivado por<select name="despacho_id"><option value="">Nadie</option>
+      <option value="4" >Aseguradora Muestra</option><option value="3" >Asesoría Laboral Modelo</option><option value="2" >Bufete Ficticio &amp; Asociados</option><option value="1" >Despacho Ejemplo Abogados (ficticio)</option></select></label>
+    <label>Área de interés<select name="area"><option value="">Sin especificar</option>
+      <option value="laboral" >Laboral</option><option value="oposiciones" >Oposiciones</option><option value="familia" >Familia</option><option value="civil" >Civil</option><option value="penal" >Penal</option><option value="empresa" >Empresa</option><option value="otro" >Otro</option></select></label>
+    <label>Estado<select name="estado">
+      <option value="nuevo" selected>Nuevo</option><option value="contactado" >Contactado</option><option value="en_conversacion" >En conversación</option><option value="convertido" >Convertido</option><option value="descartado" >Descartado</option></select></label>
+    <label>Próximo contacto<input type="date" name="proximo_contacto" value=""></label>
+    <label>Motivo de descarte<input name="motivo_descarte" value="" placeholder="Solo si se descarta"></label>
+  </div>
+  <label>Qué necesita<textarea name="necesidad" rows="3"></textarea></label>
+  <label>Notas<textarea name="notas" rows="3"></textarea></label>
+  <button class="btn">Guardar</button>
+</form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

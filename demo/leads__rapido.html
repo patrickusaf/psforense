@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alta rápida de lead · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo on"><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="on">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<h1>Alta rápida de lead</h1>
+<p class="mini">Para cuando alguien te escribe por WhatsApp. Pega su primer mensaje y, si lleva la marca «(Ref. web)» o «(Ref. tarjeta)», el origen se detecta solo.</p>
+
+<form class="tarjeta form" method="post" action="#" data-demo-form>
+  <label>Nombre<input name="nombre" value="" autocomplete="off" autofocus></label>
+  <label>Teléfono<input name="telefono" inputmode="tel" value="" placeholder="+34 6…" autocomplete="off"></label>
+  <label>Su primer mensaje (opcional)<textarea name="mensaje" rows="3" placeholder="Pega aquí lo que te ha escrito"></textarea></label>
+  <label>Origen si el mensaje no lo indica<select name="origen">
+    <option value="prescriptor" >Despacho o prescriptor</option><option value="web" >Web</option><option value="redes" >Redes sociales</option><option value="colegio" >Colegio profesional</option><option value="recomendacion" >Recomendación</option><option value="evento" >Charla o evento</option><option value="busqueda" >Búsqueda en internet</option><option value="whatsapp" selected>WhatsApp</option><option value="tarjeta" >Tarjeta de visita</option><option value="otro" >Otro</option></select></label>
+  <label>Nota<input name="nota" value=""></label>
+  <div class="acciones"><button class="btn">Crear lead</button><a class="btn linea" href="leads.html">Cancelar</a></div>
+</form>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

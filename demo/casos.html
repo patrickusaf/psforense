@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casos · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Casos</h1><a class="btn" href="casos__nuevo.html">Nuevo caso</a></div>
+<form class="filtros" method="get" action="#" data-demo-form>
+  <select name="estado">
+    <option value="">Activos</option>
+    
+    <option value="consulta" >Consulta</option>
+    <option value="propuesta" >Propuesta</option>
+    <option value="aceptado" >Aceptado</option>
+    <option value="evaluacion" >Evaluación</option>
+    <option value="informe_entregado" >Informe entregado</option>
+    <option value="ratificacion" >Ratificación</option>
+    <option value="cerrado" >Cerrado</option>
+    <option value="rechazado" >Rechazado</option>
+  </select>
+</form>
+<table class="lista">
+  <tr><th>Referencia</th><th>Caso</th><th>Cliente</th><th>Despacho</th><th>Área</th><th>Estado</th><th>Límite</th><th class="der">Honorarios</th></tr>
+  
+  <tr class="">
+    <td data-label="Referencia"><a href="casos__1.html">EJ-2026-001</a></td>
+    <td data-label="Caso">Daño psíquico por acoso laboral (ejemplo)</td><td data-label="Cliente">María Ejemplo Ficticia</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td>
+    <td data-label="Área">Laboral</td><td data-label="Estado"><span class="tag">Evaluación</span></td>
+    <td data-label="Límite">14/10/2026</td><td class="der" data-label="Honorarios">900,00 €</td>
+  </tr>
+  <tr class="">
+    <td data-label="Referencia"><a href="casos__3.html">EJ-2026-003</a></td>
+    <td data-label="Caso">Investigación interna por denuncia de acoso (ejemplo)</td><td data-label="Cliente">Empresa Modelo S.L.</td><td data-label="Despacho">Asesoría Laboral Modelo</td>
+    <td data-label="Área">Empresa</td><td data-label="Estado"><span class="tag">Aceptado</span></td>
+    <td data-label="Límite">25/10/2026</td><td class="der" data-label="Honorarios">1800,00 €</td>
+  </tr>
+  <tr class="">
+    <td data-label="Referencia"><a href="casos__4.html">EJ-2026-004</a></td>
+    <td data-label="Caso">Recurso contra la calificación de «no apto» (ejemplo)</td><td data-label="Cliente">Lucía Muestra Demo</td><td data-label="Despacho">Despacho Ejemplo Abogados (ficticio)</td>
+    <td data-label="Área">Oposiciones</td><td data-label="Estado"><span class="tag">Propuesta</span></td>
+    <td data-label="Límite">4/11/2026</td><td class="der" data-label="Honorarios">650,00 €</td>
+  </tr>
+  <tr class="">
+    <td data-label="Referencia"><a href="casos__2.html">EJ-2026-002</a></td>
+    <td data-label="Caso">Contrainforme sobre custodia compartida (ejemplo)</td><td data-label="Cliente">Javier Inventado Prueba</td><td data-label="Despacho">Bufete Ficticio &amp; Asociados</td>
+    <td data-label="Área">Familia</td><td data-label="Estado"><span class="tag">Informe entregado</span></td>
+    <td data-label="Límite"></td><td class="der" data-label="Honorarios">1200,00 €</td>
+  </tr>
+</table>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

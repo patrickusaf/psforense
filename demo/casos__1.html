@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daño psíquico por acoso laboral (ejemplo) · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo on"><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="on">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo "><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera">
+  <div><h1>Daño psíquico por acoso laboral (ejemplo)</h1><p class="mini">EJ-2026-001 · Laboral · Informe</p></div>
+  <a class="btn" href="facturas__nueva.html">Crear factura</a>
+</div>
+<div class="cols">
+  <section class="tarjeta">
+    <h2>Datos del caso</h2>
+    <dl class="ficha">
+      <dt>Cliente</dt><dd><a href="clientes__1.html">María Ejemplo Ficticia</a></dd>
+      <dt>Despacho</dt><dd><a href="despachos__1.html">Despacho Ejemplo Abogados (ficticio)</a></dd>
+      <dt>Estado</dt><dd><span class="tag">Evaluación</span></dd>
+      <dt>Procedimiento</dt><dd>Procedimiento ordinario 000/2026</dd>
+      <dt>Juzgado</dt><dd>Juzgado de lo Social n.º 0 de Málaga (ejemplo)</dd>
+      <dt>Alta</dt><dd>30/8/2026</dd>
+      <dt>Límite</dt><dd>14/10/2026</dd>
+      <dt>Ratificación</dt><dd>28/10/2026</dd>
+      <dt>Honorarios</dt><dd>900,00 €</dd>
+    </dl>
+    <p class="notas">CASO FICTICIO. Objeto: valorar el daño psíquico y su relación causal con los hechos denunciados.</p>
+    <a class="btn linea" href="casos__1__editar.html">Editar</a>
+  </section>
+  <section class="tarjeta">
+    <h2>Tareas</h2>
+    <table>
+      
+      <tr class="urgente">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Corregir pruebas psicométricas y volcar resultados</td><td class="der mini">18/9/2026</td>
+      </tr>
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Redactar el borrador del informe pericial</td><td class="der mini">27/9/2026</td>
+      </tr>
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Enviar el borrador a la abogada para revisión</td><td class="der mini">4/10/2026</td>
+      </tr>
+      <tr class="">
+        <td><form method="post" action="#" data-demo-form><button class="check">○</button></form></td>
+        <td>Preparar la ratificación en sala</td><td class="der mini">14/10/2026</td>
+      </tr>
+    </table>
+    <form class="linea-form" method="post" action="#" data-demo-form>
+      <input type="hidden" name="caso_id" value="1">
+      <input name="titulo" placeholder="Nueva tarea" required><input type="date" name="vence_el">
+      <button class="btn peq">Añadir</button>
+    </form>
+  </section>
+</div>
+<section class="tarjeta">
+  <h2>Actuaciones</h2>
+  <form class="linea-form" method="post" action="#" data-demo-form>
+    <input type="hidden" name="caso_id" value="1">
+    <input type="date" name="fecha" value="2026-09-20">
+    <select name="tipo">
+      <option value="llamada">Llamada</option>
+      <option value="reunion">Reunión</option>
+      <option value="email">Email</option>
+      <option value="entrevista">Entrevista</option>
+      <option value="documento">Documento</option>
+      <option value="juicio">Juicio</option>
+      <option value="otro">Otro</option></select>
+    <input name="resumen" placeholder="Qué ha pasado" required class="ancho">
+    <button class="btn peq">Registrar</button>
+  </form>
+  <table>
+    
+    <tr><td class="mini">19/9/2026</td><td class="mini">Email</td><td>Se envía al despacho el calendario previsto de entrega del informe.</td></tr>
+    
+    <tr><td class="mini">15/9/2026</td><td class="mini">Entrevista</td><td>Segunda sesión: administración de pruebas psicométricas estandarizadas.</td></tr>
+    
+    <tr><td class="mini">8/9/2026</td><td class="mini">Entrevista</td><td>Primera sesión de evaluación (90 min): entrevista clínica y consentimiento informado.</td></tr>
+    
+    <tr><td class="mini">2/9/2026</td><td class="mini">Reunión</td><td>Reunión con la abogada. Se acuerdan el alcance del informe y los honorarios.</td></tr>
+    
+    <tr><td class="mini">30/8/2026</td><td class="mini">Llamada</td><td>Primer contacto del despacho: se pide valorar el daño psíquico de la clienta.</td></tr>
+    
+    
+  </table>
+</section>
+<section class="tarjeta">
+  <h2>Documentación</h2>
+  <form class="subida" method="post" enctype="multipart/form-data" action="#" data-demo-form>
+    <input type="hidden" name="caso_id" value="1">
+    
+    <input type="file" name="archivo" required>
+    <input name="titulo" placeholder="Título (opcional)">
+    <select name="categoria">
+      
+      <option value="expediente">Expediente</option>
+      <option value="encargo">Encargo</option>
+      <option value="prueba">Prueba</option>
+      <option value="informe">Informe</option>
+      <option value="consentimiento">Consentimiento</option>
+      <option value="correspondencia">Correspondencia</option>
+      <option value="factura">Factura</option>
+      <option value="otro">Otro</option>
+    </select>
+    <label class="linea-check"><input type="checkbox" name="confidencial" value="si" checked> Confidencial</label>
+    <label class="linea-check">Conservar hasta <input type="date" name="conservar_hasta"></label>
+    <button class="btn peq">Subir</button>
+  </form>
+  <table>
+    <tr><th>Documento</th><th>Categoría</th><th>Subido</th><th class="der">Tamaño</th><th></th></tr>
+    
+    <tr>
+      <td><a href="documentos__5.html">Correo de la abogada con la documentación del procedimiento</a>
+        
+        <br><span class="mini">probatio_ej-2026-001_correspondencia_correo-de-la-abogada-con-la-documentacion-del-procedimiento_20260920_v1.txt · conservar hasta 19/9/2028</span>
+        <br><span class="mini">Documento de ejemplo</span>
+      </td>
+      <td><span class="tag">Correspondencia</span></td>
+      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="der mini">1 KB</td>
+      <td><form method="post"
+            action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
+    </tr>
+    <tr>
+      <td><a href="documentos__4.html">Resultados de las pruebas psicométricas</a>
+        
+        <br><span class="mini">probatio_ej-2026-001_prueba_resultados-de-las-pruebas-psicometricas_20260920_v1.csv · conservar hasta 18/9/2032</span>
+        <br><span class="mini">Documento de ejemplo</span>
+      </td>
+      <td><span class="tag">Prueba</span></td>
+      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="der mini">1 KB</td>
+      <td><form method="post"
+            action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
+    </tr>
+    <tr>
+      <td><a href="documentos__3.html">Notas de la entrevista clínica</a>
+        
+        <br><span class="mini">probatio_ej-2026-001_expediente_notas-de-la-entrevista-clinica_20260920_v1.txt · conservar hasta 10/10/2026</span>
+        <br><span class="mini">Documento de ejemplo</span>
+      </td>
+      <td><span class="tag">Expediente</span></td>
+      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="der mini">1 KB</td>
+      <td><form method="post"
+            action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
+    </tr>
+    <tr>
+      <td><a href="documentos__2.html">Consentimiento informado</a>
+        
+        <br><span class="mini">probatio_ej-2026-001_consentimiento_consentimiento-informado_20260920_v1.txt · conservar hasta 18/9/2032</span>
+        <br><span class="mini">Documento de ejemplo</span>
+      </td>
+      <td><span class="tag">Consentimiento</span></td>
+      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="der mini">1 KB</td>
+      <td><form method="post"
+            action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
+    </tr>
+    <tr>
+      <td><a href="documentos__1.html">Hoja de encargo firmada</a>
+        
+        <br><span class="mini">probatio_ej-2026-001_encargo_hoja-de-encargo-firmada_20260920_v1.pdf · conservar hasta 18/9/2032</span>
+        <br><span class="mini">Documento de ejemplo</span>
+      </td>
+      <td><span class="tag">Encargo</span></td>
+      <td class="mini">20/9/2026<br>Demo</td>
+      <td class="der mini">1 KB</td>
+      <td><form method="post"
+            action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
+    </tr>
+    
+  </table>
+</section>
+
+<section class="tarjeta">
+  <h2>Facturas del caso</h2>
+  <table>
+    
+    <tr><td><a href="facturas__1.html">borrador</a></td><td>20/9/2026</td>
+    <td><span class="tag">Borrador</span></td><td class="der">954,00 €</td></tr>
+    
+  </table>
+</section>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+

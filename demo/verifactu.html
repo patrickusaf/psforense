@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Registro de facturación · Probatio · Demo</title>
+<link rel="icon" type="image/svg+xml" href="img/isotipo-fondo-fiordo.svg">
+<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-aviso" role="note"><b>Demostración de Probatio</b> · datos ficticios · no se guarda nada · <a href="https://psforense.es/software/">Conocer Probatio</a></div>
+
+<header class="barra">
+  <a class="marca" href="index.html" title="Panel"><img src="img/isotipo-blanco.svg" alt=""><span>Probatio</span></a>
+  <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu-principal"><span class="menu-icono" aria-hidden="true"></span><span>Menú</span></button>
+  <nav id="menu-principal" aria-label="Principal">
+    <a href="index.html" class="">Panel</a>
+    <details class="grupo "><summary>Comercial</summary>
+      <div class="submenu">
+        <a href="leads.html" class="">Leads</a>
+        <a href="despachos.html" class="">Despachos y prescriptores</a>
+        <a href="colaboradores.html" class="">Colaboradores</a>
+      </div></details>
+    <details class="grupo "><summary>Trabajo</summary>
+      <div class="submenu">
+        <a href="casos.html" class="">Casos</a>
+        <a href="clientes.html" class="">Clientes</a>
+        <a href="documentos.html" class="">Documentos</a>
+      </div></details>
+    <details class="grupo "><summary>Facturación</summary>
+      <div class="submenu">
+        <a href="presupuestos.html" class="">Presupuestos</a>
+        <a href="facturas.html" class="">Facturas</a>
+        <a href="gastos.html" class="">Gastos</a>
+        <a href="resumen.html" class="">Resumen anual</a>
+        <a href="gestoria.html" class="">Gestoría</a>
+      </div></details>
+    <a href="recursos.html" class="">Recursos</a>
+    <details class="grupo on"><summary>Ajustes</summary>
+      <div class="submenu">
+        <a href="config.html" class="">Ajustes generales</a>
+        <a href="seguridad.html" class="">Seguridad de la cuenta</a>
+        <a href="verifactu.html" class="on">Registro de facturación</a>
+      </div></details>
+  </nav>
+  
+</header>
+<main>
+
+
+
+<div class="cabecera"><h1>Registro de facturación</h1><a class="btn linea" href="config.html">Volver a Ajustes</a></div>
+
+<p class="aviso">La cadena de <b>2</b> registro(s) es íntegra: ninguna factura emitida se ha alterado desde que se registró.</p>
+
+<section class="tarjeta">
+  <h2>Cómo funciona</h2>
+  <p>Cada factura emitida genera un registro con una huella SHA-256 que incluye la huella del registro anterior. Si alguien altera o quita
+  una factura, la cadena se rompe y esta pantalla lo detecta. Los registros no se pueden modificar ni borrar, ni siquiera desde la base de datos.</p>
+  <p class="mini"><b>Alcance actual:</b> registro, huella, encadenamiento, verificación y código QR. Aún no hay firma electrónica ni remisión
+  a la AEAT: necesitan tu certificado electrónico. Modo actual del QR: <b>desactivado</b>.</p>
+</section>
+<section class="tarjeta">
+  <h2>Últimos registros</h2>
+  <table>
+    <tr><th>N.º</th><th>Factura</th><th>Fecha</th><th>Tipo</th><th class="der">Importe total</th><th>Huella</th><th>Generado</th></tr>
+    
+    <tr><td class="mini">2</td><td>2026-002</td><td class="mini">27-08-2026</td><td>F1</td>
+      <td class="der">1089,00 €</td><td class="mini" title="C9793CE77C421C3DBA6C211A0AC46C09B64E76587569859B554CD35FDC97043A">C9793CE77C421C3D…</td>
+      <td class="mini">2026-09-20T02:25:13+02:00</td></tr>
+    <tr><td class="mini">1</td><td>2026-001</td><td class="mini">11-08-2026</td><td>F1</td>
+      <td class="der">1452,00 €</td><td class="mini" title="D565B1AC77FEADC6729DE838A9C8917CC9F94CA67E08945B7CBCF5C9C0C84F98">D565B1AC77FEADC6…</td>
+      <td class="mini">2026-09-20T02:25:11+02:00</td></tr>
+    
+  </table>
+</section>
+</main>
+<footer>Probatio · datos confidenciales</footer>
+<script src="app.js" defer></script>
+<div id="demo-toast" role="status" aria-live="polite" hidden></div>
+<script src="demo.js" defer></script>
+</body>
+</html>
+
