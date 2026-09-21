@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.7] · 2026-09-21
+### Cambiado
+- Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.5: «Próximos 45 días» del Panel también ofrece «Ver más».
+
 ## [1.3.6] · 2026-09-21
 ### Cambiado
 - Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.4: en el Panel, las cajas de avisos limitan la lista y ofrecen «Ver más».

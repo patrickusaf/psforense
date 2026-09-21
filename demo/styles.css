@@ -414,3 +414,15 @@ section[id]{scroll-margin-top:84px}
 .aviso-caja .ver-mas .menos,.aviso-caja .ver-mas[open] .mas{display:none}
 .aviso-caja .ver-mas[open] .menos{display:inline}
 .aviso-caja .ver-mas>ul>li:first-child{border-top:1px solid var(--linea)}
+
+/* «Ver N más» también en «Próximos 45 días» */
+.proximos details.ver-mas{margin:0}
+.proximos .ver-mas>summary{cursor:pointer;list-style:none;padding:10px 0 2px;border-top:1px solid var(--linea);font-size:.86rem;font-weight:600;color:var(--acero);user-select:none}
+.proximos .ver-mas>summary::-webkit-details-marker{display:none}
+.proximos .ver-mas>summary:hover{color:var(--fiordo)}
+.proximos .ver-mas>summary::after{content:" ▾"}
+.proximos .ver-mas[open]>summary::after{content:" ▴"}
+.proximos .ver-mas .menos,.proximos .ver-mas[open] .mas{display:none}
+.proximos .ver-mas[open] .menos{display:inline}
+.proximos .ver-mas>ul>li:first-child{border-top:1px solid var(--linea)}
+.proximos .prox>li:last-child{border-bottom:0}
