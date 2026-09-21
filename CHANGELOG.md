@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.3] · 2026-09-21
+### Cambiado
+- La demostración de Probatio en `/demo/` se actualiza a la versión 0.9.1: nuevo apartado de Ajustes para activar o silenciar las notificaciones por Telegram y correo.
+
 ## [1.3.2] · 2026-09-20
 ### Cambiado
 - La demostración de Probatio en `/demo/` se actualiza a la versión 0.9.0: panel con avisos y gráficos, varias personas con roles, chat y comentarios de caso.

@@ -81,11 +81,9 @@
     
   
     
-    <label>Días de antelación de los avisos<input name="aviso_dias" value="7"></label>
     
   
     
-    <label>Hora del aviso diario (HH:MM)<input name="aviso_hora" value="08:00"></label>
     
   
     
@@ -210,10 +208,37 @@
   <div class="acciones">
   <form method="post" action="#" data-demo-form><button class="btn linea">Hacer una copia ahora</button></form></div>
 </section>
-<section class="tarjeta">
-  <h2>Avisos y registro de facturación</h2>
-  <p class="mini">El resumen diario se envía por Telegram o correo si los configuras en el <code>.env</code> del servidor.
-  Solo incluye referencias de caso y números de factura, nunca nombres.</p>
+<section class="tarjeta" id="notificaciones">
+  <h2>Notificaciones (Telegram y correo)</h2>
+  <p class="mini">Aquí decides qué avisos salen del servidor. Desactivarlos <b>no borra</b> la configuración del <code>.env</code>: cuando vuelvas a ejercer,
+  vuelves a activarlos. Los avisos dentro de Probatio (panel, campana y chat) no cambian. El resumen solo incluye referencias de caso y números de factura, nunca nombres.</p>
+  <form class="form" method="post" action="#" data-demo-form>
+    <div class="rejilla">
+      <label>Resumen diario de actividad
+        <select name="aviso_resumen">
+          <option value="si" selected>Activado: casos, plazos, tareas, leads y cobros</option>
+          <option value="no" >Desactivado: no se envía ningún resumen</option></select></label>
+      <label>Avisos del sistema (copias de seguridad y sucesos importantes)
+        <select name="aviso_sistema">
+          <option value="si" selected>Activados (recomendado)</option>
+          <option value="no" >Desactivados</option></select></label>
+      <label>Telegram <span class="mini">· sin configurar en el .env</span>
+        <select name="aviso_telegram">
+          <option value="si" selected>Enviar por Telegram</option>
+          <option value="no" >No enviar por Telegram</option></select></label>
+      <label>Correo electrónico <span class="mini">· sin configurar en el .env</span>
+        <select name="aviso_correo">
+          <option value="si" selected>Enviar por correo</option>
+          <option value="no" >No enviar por correo</option></select></label>
+      <label>Hora del resumen (HH:MM)<input name="aviso_hora" value="08:00" pattern="([01][0-9]|2[0-3]):[0-5][0-9]" required></label>
+      <label>Días de antelación de los avisos<input name="aviso_dias" type="number" min="1" max="60" value="7" required></label>
+    </div>
+    <p class="mini">
+      
+      Todavía no se ha enviado ningún resumen. 
+      </p>
+    <button class="btn">Guardar notificaciones</button>
+  </form>
   <div class="acciones">
     <form method="post" action="#" data-demo-form><button class="btn linea">Enviar aviso de prueba</button></form>
     <a class="btn linea" href="verifactu.html">Registro de facturación (VERI*FACTU)</a>
