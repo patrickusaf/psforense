@@ -7,7 +7,7 @@ Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compil
 Versión actual: ver [VERSION](VERSION) · historial en [CHANGELOG.md](CHANGELOG.md).  
 
 ## Los tres repositorios
-
+ 
 | Repositorio | Visibilidad | Qué contiene |
 |---|---|---|
 | **[psforense](https://github.com/patrickusaf/psforense)** (este) | Público | La web psforense.es, incluida la demostración de Probatio en `demo/` |
