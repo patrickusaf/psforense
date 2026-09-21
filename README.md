@@ -6,7 +6,7 @@ Sitio estático en HTML, CSS y JavaScript, sin dependencias ni proceso de compil
 
 Versión actual: ver [VERSION](VERSION) · historial en [CHANGELOG.md](CHANGELOG.md).  
 
-## Los tres repositorios
+## Los tres repositorios 
  
 | Repositorio | Visibilidad | Qué contiene |
 |---|---|---|
