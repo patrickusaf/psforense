@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.4] · 2026-09-21
+### Corregido
+- En la demostración de Probatio (`/demo/`), el menú desplegado en el móvil ahora se desplaza cuando no cabe en pantalla.
+
 ## [1.3.3] · 2026-09-21
 ### Cambiado
 - La demostración de Probatio en `/demo/` se actualiza a la versión 0.9.1: nuevo apartado de Ajustes para activar o silenciar las notificaciones por Telegram y correo.

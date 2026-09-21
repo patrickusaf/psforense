@@ -235,6 +235,8 @@ code{background:var(--hielo);padding:1px 6px;border-radius:4px;font-size:.85em}
 .aviso.info a{color:inherit;font-weight:600}
 @media(max-width:860px){
   .barra{flex-wrap:wrap;padding:0 14px;gap:10px 10px}
+  /* La barra es fija: si el menú abierto no cabe en pantalla, la propia barra hace scroll (si no, el final del menú es inalcanzable) */
+  .barra{max-height:100vh;max-height:100dvh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   .barra .marca{padding:10px 0}.barra .marca img{height:26px}
   .menu-btn{display:inline-flex;margin-left:auto}
   .barra .salir-form{align-self:center}
