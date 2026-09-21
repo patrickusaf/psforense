@@ -403,3 +403,14 @@ section[id]{scroll-margin-top:84px}
   .ajustes-lista>li{grid-template-columns:minmax(0,1fr)}
   .barra-guardar{justify-content:space-between}
 }
+
+/* ---------- Panel: «Ver N más» en las cajas de avisos ---------- */
+.aviso-caja details.ver-mas{margin:0}
+.aviso-caja .ver-mas>summary{cursor:pointer;list-style:none;padding:9px 0 3px;border-top:1px solid var(--linea);font-size:.86rem;font-weight:600;color:var(--acero);user-select:none}
+.aviso-caja .ver-mas>summary::-webkit-details-marker{display:none}
+.aviso-caja .ver-mas>summary:hover{color:var(--fiordo)}
+.aviso-caja .ver-mas>summary::after{content:" ▾"}
+.aviso-caja .ver-mas[open]>summary::after{content:" ▴"}
+.aviso-caja .ver-mas .menos,.aviso-caja .ver-mas[open] .mas{display:none}
+.aviso-caja .ver-mas[open] .menos{display:inline}
+.aviso-caja .ver-mas>ul>li:first-child{border-top:1px solid var(--linea)}
