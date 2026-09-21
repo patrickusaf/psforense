@@ -378,3 +378,28 @@ code{background:var(--hielo);padding:1px 6px;border-radius:4px;font-size:.85em}
 .clave-temporal{margin:18px 0}.clave-temporal code{display:inline-block;font:600 1.35rem ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;background:var(--hielo);border:1px dashed var(--acero);border-radius:8px;padding:14px 20px;user-select:all}
 .matriz td,.matriz th{vertical-align:middle}.radio-celda{display:inline-flex;align-items:center;gap:6px}.radio-celda input{width:auto!important;margin:0!important}.solo-movil{display:none}
 @media(max-width:860px){.chat{grid-template-columns:minmax(0,1fr)}.matriz td[data-label]::before{content:attr(data-label)}}
+
+/* ---------- Espacios entre bloques (la cabecera, las columnas y las tablas no se pegan a lo siguiente) ---------- */
+.cabecera{margin-bottom:20px}
+main>.cols,main>.cal-fila,main>.doc-fila,main>table.lista,main>.filtros{margin-bottom:20px}
+main>.filtros{margin-bottom:16px}
+section[id]{scroll-margin-top:84px}
+
+/* ---------- Ajustes: secciones, listas y desplegables ---------- */
+.indice-ajustes{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 20px}
+.indice-ajustes a{display:inline-block;padding:6px 13px;border:1px solid var(--linea);border-radius:999px;background:var(--blanco);color:var(--fiordo);text-decoration:none;font-size:.86rem;font-weight:500}
+.indice-ajustes a:hover{border-color:var(--acero);background:var(--hielo)}
+.tarjeta>h2+p.mini{margin:-6px 0 8px}
+.ajustes-lista{list-style:none;margin:0;padding:0}
+.ajustes-lista>li{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,340px);gap:6px 28px;align-items:center;padding:13px 0;border-top:1px solid var(--linea)}
+.ajustes-lista>li:first-child{border-top:0}
+.ajustes-lista>li.ancha{grid-template-columns:minmax(0,1fr)}
+.form .ajustes-lista label{display:block;margin:0;font-size:.92rem;color:var(--fiordo);font-weight:600}
+.ajustes-lista .aj-txt .mini{display:block;margin-top:2px;font-weight:400}
+.form .ajustes-lista .aj-ctl input,.form .ajustes-lista .aj-ctl select,.form .ajustes-lista .aj-ctl textarea{margin-top:0}
+.form .ajustes-lista .ancha .aj-txt{margin-bottom:6px}
+.barra-guardar{position:sticky;bottom:0;z-index:4;display:flex;justify-content:flex-end;align-items:center;gap:14px;padding:12px 0;margin:0 0 20px;background:linear-gradient(to top,var(--fondo) 70%,rgba(245,247,248,0))}
+@media(max-width:700px){
+  .ajustes-lista>li{grid-template-columns:minmax(0,1fr)}
+  .barra-guardar{justify-content:space-between}
+}

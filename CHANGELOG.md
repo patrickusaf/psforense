@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.5] · 2026-09-21
+### Cambiado
+- Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.3: Ajustes rediseñado con secciones, listas y desplegables, y espacios corregidos entre los bloques de cada pantalla.
+
 ## [1.3.4] · 2026-09-21
 ### Corregido
 - En la demostración de Probatio (`/demo/`), el menú desplegado en el móvil ahora se desplaza cuando no cabe en pantalla.

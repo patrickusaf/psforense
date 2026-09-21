@@ -71,132 +71,76 @@
 
 
 <h1>Ajustes</h1>
-<form class="tarjeta form" method="post" action="#" data-demo-form>
-  <div class="rejilla">
+<nav aria-label="Secciones de Ajustes"><ul class="indice-ajustes">
+  <li><a href="#profesional">Datos profesionales</a></li><li><a href="#facturacion">Facturación</a></li><li><a href="#presupuestos">Presupuestos</a></li>
+  <li><a href="#conservacion">Conservación</a></li><li><a href="#seguridad">Seguridad y calendario</a></li><li><a href="#copias">Copias</a></li>
+  <li><a href="#notificaciones">Notificaciones</a></li><li><a href="#registro">Registro de accesos</a></li>
+</ul></nav>
+<form class="form" method="post" action="#" data-demo-form>
+  <section class="tarjeta" id="profesional">
+    <h2>Datos profesionales</h2>
+    <p class="mini">Aparecen en las facturas, los presupuestos y los documentos que envías.</p>
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-emisor_nombre">Nombre o razón social</label><span class="mini">Como debe figurar en la factura</span></div><div class="aj-ctl"><input name="emisor_nombre" id="aj-emisor_nombre" value="Gabinete Pericial Ejemplo" autocomplete="organization"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_nif">NIF</label></div><div class="aj-ctl"><input name="emisor_nif" id="aj-emisor_nif" value="00000000T" ></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_colegio">Colegiación</label><span class="mini">Colegio profesional y número</span></div><div class="aj-ctl"><input name="emisor_colegio" id="aj-emisor_colegio" value="Psicólogo colegiado (ejemplo)" ></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_direccion">Dirección</label></div><div class="aj-ctl"><input name="emisor_direccion" id="aj-emisor_direccion" value="Calle del Ejemplo 1, 2.º B" autocomplete="street-address"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_cp_loc">Código postal y localidad</label></div><div class="aj-ctl"><input name="emisor_cp_loc" id="aj-emisor_cp_loc" value="00000 Ciudad Ejemplo" ></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_email">Correo electrónico</label><span class="mini">Es también el de contacto en los documentos</span></div><div class="aj-ctl"><input name="emisor_email" id="aj-emisor_email" value="contacto@ejemplo.invalid" type="email" autocomplete="email"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_telefono">Teléfono</label><span class="mini">Se usa también en el enlace de WhatsApp</span></div><div class="aj-ctl"><input name="emisor_telefono" id="aj-emisor_telefono" value="+34 600 000 000" type="tel" autocomplete="tel"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_web">Web</label></div><div class="aj-ctl"><input name="emisor_web" id="aj-emisor_web" value="ejemplo.invalid" ></div></li>
+    </ul>
+  </section>
+
+  <section class="tarjeta" id="facturacion">
+    <h2>Facturación</h2>
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-emisor_iban">IBAN de cobro</label><span class="mini">Se muestra en la factura para que te paguen por transferencia</span></div><div class="aj-ctl"><input name="emisor_iban" id="aj-emisor_iban" value="" autocomplete="off"></div></li>
+      <li><div class="aj-txt"><label for="aj-plazo_pago_dias">Plazo de pago</label><span class="mini">Días que se conceden por defecto desde la fecha de la factura</span></div><div class="aj-ctl"><select name="plazo_pago_dias" id="aj-plazo_pago_dias"><option value="0">Al contado</option><option value="7">7 días</option><option value="15" selected>15 días</option><option value="30">30 días</option><option value="45">45 días</option><option value="60">60 días</option><option value="90">90 días</option></select></div></li>
+      <li class="ancha"><div class="aj-txt"><label for="aj-mencion_exenta">Mención de exención de IVA</label><span class="mini">Texto legal que se imprime en las facturas exentas. Revísalo con tu asesor.</span></div><div class="aj-ctl"><textarea name="mencion_exenta" id="aj-mencion_exenta" rows="3">Operación exenta de IVA en virtud del artículo 20.Uno.3.º de la Ley 37/1992, de 28 de diciembre, del Impuesto sobre el Valor Añadido.</textarea></div></li>
+      <li><div class="aj-txt"><label for="aj-verifactu_modo">Modo VERI*FACTU</label><span class="mini">Controla el QR de la factura y la remisión a la AEAT</span></div><div class="aj-ctl"><select name="verifactu_modo" id="aj-verifactu_modo"><option value="desactivado" selected>Desactivado (sin QR en la factura)</option><option value="no_verifactu">Sistema no VERI*FACTU (QR sin remisión)</option><option value="verifactu">Sistema VERI*FACTU (QR y remisión a la AEAT)</option></select></div></li>
+    </ul>
+  </section>
+
+  <section class="tarjeta" id="presupuestos">
+    <h2>Presupuestos</h2>
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-presupuesto_validez_dias">Validez de los presupuestos</label><span class="mini">Tiempo que se mantiene el precio ofrecido</span></div><div class="aj-ctl"><select name="presupuesto_validez_dias" id="aj-presupuesto_validez_dias"><option value="7">7 días</option><option value="15">15 días</option><option value="30" selected>30 días</option><option value="45">45 días</option><option value="60">60 días</option><option value="90">90 días</option></select></div></li>
+      <li class="ancha"><div class="aj-txt"><label for="aj-presupuesto_condiciones">Condiciones por defecto de los presupuestos</label><span class="mini">Se copian a cada presupuesto nuevo y puedes cambiarlas en cada uno</span></div><div class="aj-ctl"><textarea name="presupuesto_condiciones" id="aj-presupuesto_condiciones" rows="5">Presupuesto sin compromiso, válido durante el plazo indicado. Los honorarios corresponden a los servicios descritos; cualquier ampliación del alcance se presupuesta aparte. El pago se realiza por transferencia en el plazo indicado en la factura. Este presupuesto no garantiza ningún resultado en el procedimiento.</textarea></div></li>
+    </ul>
+  </section>
+
+  <section class="tarjeta" id="conservacion">
+    <h2>Conservación de documentos</h2>
+    <p class="mini">Años que se guarda cada tipo de documento antes de proponerte su eliminación. Son propuestas por defecto: revísalas con tu asesor.</p>
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-conservacion_encargo">Encargos</label></div><div class="aj-ctl"><select name="conservacion_encargo" id="aj-conservacion_encargo"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_expediente">Expedientes</label></div><div class="aj-ctl"><select name="conservacion_expediente" id="aj-conservacion_expediente"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_prueba">Pruebas</label></div><div class="aj-ctl"><select name="conservacion_prueba" id="aj-conservacion_prueba"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_informe">Informes</label></div><div class="aj-ctl"><select name="conservacion_informe" id="aj-conservacion_informe"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_consentimiento">Consentimientos</label></div><div class="aj-ctl"><select name="conservacion_consentimiento" id="aj-conservacion_consentimiento"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_factura">Facturas</label></div><div class="aj-ctl"><select name="conservacion_factura" id="aj-conservacion_factura"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5">5 años</option><option value="6" selected>6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_gasto">Gastos</label></div><div class="aj-ctl"><select name="conservacion_gasto" id="aj-conservacion_gasto"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5">5 años</option><option value="6" selected>6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_correspondencia">Correspondencia</label></div><div class="aj-ctl"><select name="conservacion_correspondencia" id="aj-conservacion_correspondencia"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5">5 años</option><option value="6" selected>6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-conservacion_otro">Otros documentos</label></div><div class="aj-ctl"><select name="conservacion_otro" id="aj-conservacion_otro"><option value="1">1 año</option><option value="2">2 años</option><option value="3">3 años</option><option value="4">4 años</option><option value="5" selected>5 años</option><option value="6">6 años</option><option value="7">7 años</option><option value="8">8 años</option><option value="10">10 años</option><option value="12">12 años</option><option value="15">15 años</option><option value="20">20 años</option></select></div></li>
+    </ul>
+  </section>
+
+  <section class="tarjeta" id="seguridad">
+    <h2>Seguridad y calendario</h2>
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-2fa_obligatoria">Exigir verificación en dos pasos</label><span class="mini">Con «Sí», quien no la tenga debe activarla para seguir usando la aplicación</span></div><div class="aj-ctl"><select name="2fa_obligatoria" id="aj-2fa_obligatoria"><option value="si">Sí: quien no la tenga debe activarla</option><option value="no" selected>No: es opcional</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-calendario_fiscal">Mostrar vencimientos fiscales</label><span class="mini">Trimestres y modelos en el calendario y en el aviso a la gestoría</span></div><div class="aj-ctl"><select name="calendario_fiscal" id="aj-calendario_fiscal"><option value="si" selected>Sí</option><option value="no">No</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-copia_hora">Hora de la copia diaria</label><span class="mini">Cada día a esta hora se hace una copia cifrada</span></div><div class="aj-ctl"><select name="copia_hora" id="aj-copia_hora"><option value="00:00">00:00</option><option value="00:30">00:30</option><option value="01:00">01:00</option><option value="01:30">01:30</option><option value="02:00">02:00</option><option value="02:30">02:30</option><option value="03:00" selected>03:00</option><option value="03:30">03:30</option><option value="04:00">04:00</option><option value="04:30">04:30</option><option value="05:00">05:00</option><option value="05:30">05:30</option><option value="06:00">06:00</option><option value="06:30">06:30</option><option value="07:00">07:00</option><option value="07:30">07:30</option><option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option><option value="22:30">22:30</option><option value="23:00">23:00</option><option value="23:30">23:30</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-copia_conservar">Copias que se conservan</label><span class="mini">De cada tipo (base de datos y documentos); las más antiguas se eliminan</span></div><div class="aj-ctl"><select name="copia_conservar" id="aj-copia_conservar"><option value="7">7 copias</option><option value="14">14 copias</option><option value="30" selected>30 copias</option><option value="60">60 copias</option><option value="90">90 copias</option><option value="180">180 copias</option></select></div></li>
+    </ul>
+  </section>
+
   
-    
-    <label>Exigir verificación en dos pasos<select name="2fa_obligatoria">
-      <option value="si" >Sí: quien no la tenga debe activarla</option>
-      <option value="no" selected>No: es opcional</option></select></label>
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    <label>Mostrar vencimientos fiscales (si/no)<input name="calendario_fiscal" value="si"></label>
-    
-  
-    
-    <label>Conservación de consentimientos (años)<input name="conservacion_consentimiento" value="5"></label>
-    
-  
-    
-    <label>Conservación de correspondencia (años)<input name="conservacion_correspondencia" value="6"></label>
-    
-  
-    
-    <label>Conservación de encargos (años)<input name="conservacion_encargo" value="5"></label>
-    
-  
-    
-    <label>Conservación de expedientes (años)<input name="conservacion_expediente" value="5"></label>
-    
-  
-    
-    <label>Conservación de facturas (años)<input name="conservacion_factura" value="6"></label>
-    
-  
-    
-    <label>Conservación de gastos (años)<input name="conservacion_gasto" value="6"></label>
-    
-  
-    
-    <label>Conservación de informes (años)<input name="conservacion_informe" value="5"></label>
-    
-  
-    
-    <label>Conservación de otros documentos (años)<input name="conservacion_otro" value="5"></label>
-    
-  
-    
-    <label>Conservación de pruebas (años)<input name="conservacion_prueba" value="5"></label>
-    
-  
-    
-    <label>Copias que se conservan (de cada tipo)<input name="copia_conservar" value="30"></label>
-    
-  
-    
-    <label>Hora de la copia diaria (HH:MM)<input name="copia_hora" value="03:00"></label>
-    
-  
-    
-    <label>Colegiación<input name="emisor_colegio" value="Psicólogo colegiado (ejemplo)"></label>
-    
-  
-    
-    <label>Código postal y localidad<input name="emisor_cp_loc" value="00000 Ciudad Ejemplo"></label>
-    
-  
-    
-    <label>Dirección<input name="emisor_direccion" value="Calle del Ejemplo 1, 2.º B"></label>
-    
-  
-    
-    <label>Correo electrónico<input name="emisor_email" value="contacto@ejemplo.invalid"></label>
-    
-  
-    
-    <label>IBAN<input name="emisor_iban" value=""></label>
-    
-  
-    
-    <label>NIF<input name="emisor_nif" value="00000000T"></label>
-    
-  
-    
-    <label>Nombre<input name="emisor_nombre" value="Gabinete Pericial Ejemplo"></label>
-    
-  
-    
-    <label>Teléfono<input name="emisor_telefono" value="+34 600 000 000"></label>
-    
-  
-    
-    <label>Web<input name="emisor_web" value="ejemplo.invalid"></label>
-    
-  
-    
-    <label>Mención de exención de IVA<input name="mencion_exenta" value="Operación exenta de IVA en virtud del artículo 20.Uno.3.º de la Ley 37/1992, de 28 de diciembre, del Impuesto sobre el Valor Añadido."></label>
-    
-  
-    
-    <label>Plazo de pago (días)<input name="plazo_pago_dias" value="15"></label>
-    
-  
-    
-    <label style="grid-column:1/-1">Condiciones por defecto de los presupuestos<textarea name="presupuesto_condiciones" rows="4">Presupuesto sin compromiso, válido durante el plazo indicado. Los honorarios corresponden a los servicios descritos; cualquier ampliación del alcance se presupuesta aparte. El pago se realiza por transferencia en el plazo indicado en la factura. Este presupuesto no garantiza ningún resultado en el procedimiento.</textarea></label>
-    
-  
-    
-    <label>Validez de los presupuestos (días)<input name="presupuesto_validez_dias" value="30"></label>
-    
-  
-    
-    <label>Modo VERI*FACTU<select name="verifactu_modo">
-      <option value="desactivado" selected>Desactivado (sin QR en la factura)</option>
-      <option value="no_verifactu" >Sistema no VERI*FACTU (QR sin remisión)</option>
-      <option value="verifactu" >Sistema VERI*FACTU (QR y remisión a la AEAT)</option></select></label>
-    
-  
-  </div>
-  <button class="btn">Guardar</button>
+
+  <div class="barra-guardar"><span class="mini">Los cambios se aplican al guardar.</span><button class="btn">Guardar ajustes</button></div>
 </form>
-<section class="tarjeta">
+<section class="tarjeta" id="copias">
   <h2>Copias de seguridad</h2>
   <p class="error visible">Todavía no hay ninguna copia de seguridad.</p>
   
@@ -213,26 +157,28 @@
   <p class="mini">Aquí decides qué avisos salen del servidor. Desactivarlos <b>no borra</b> la configuración del <code>.env</code>: cuando vuelvas a ejercer,
   vuelves a activarlos. Los avisos dentro de Probatio (panel, campana y chat) no cambian. El resumen solo incluye referencias de caso y números de factura, nunca nombres.</p>
   <form class="form" method="post" action="#" data-demo-form>
-    <div class="rejilla">
-      <label>Resumen diario de actividad
-        <select name="aviso_resumen">
-          <option value="si" selected>Activado: casos, plazos, tareas, leads y cobros</option>
-          <option value="no" >Desactivado: no se envía ningún resumen</option></select></label>
-      <label>Avisos del sistema (copias de seguridad y sucesos importantes)
-        <select name="aviso_sistema">
+    <ul class="ajustes-lista">
+      <li><div class="aj-txt"><label for="aj-aviso_resumen">Resumen diario de actividad</label><span class="mini">Casos, plazos, tareas, leads y cobros pendientes</span></div>
+        <div class="aj-ctl"><select name="aviso_resumen" id="aj-aviso_resumen">
+          <option value="si" selected>Activado</option>
+          <option value="no" >Desactivado: no se envía ningún resumen</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-aviso_sistema">Avisos del sistema</label><span class="mini">Fallos de copia de seguridad y otros sucesos importantes</span></div>
+        <div class="aj-ctl"><select name="aviso_sistema" id="aj-aviso_sistema">
           <option value="si" selected>Activados (recomendado)</option>
-          <option value="no" >Desactivados</option></select></label>
-      <label>Telegram <span class="mini">· sin configurar en el .env</span>
-        <select name="aviso_telegram">
+          <option value="no" >Desactivados</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-aviso_telegram">Telegram</label><span class="mini">Sin configurar en el .env del servidor</span></div>
+        <div class="aj-ctl"><select name="aviso_telegram" id="aj-aviso_telegram">
           <option value="si" selected>Enviar por Telegram</option>
-          <option value="no" >No enviar por Telegram</option></select></label>
-      <label>Correo electrónico <span class="mini">· sin configurar en el .env</span>
-        <select name="aviso_correo">
+          <option value="no" >No enviar por Telegram</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-aviso_correo">Correo electrónico</label><span class="mini">Sin configurar en el .env del servidor</span></div>
+        <div class="aj-ctl"><select name="aviso_correo" id="aj-aviso_correo">
           <option value="si" selected>Enviar por correo</option>
-          <option value="no" >No enviar por correo</option></select></label>
-      <label>Hora del resumen (HH:MM)<input name="aviso_hora" value="08:00" pattern="([01][0-9]|2[0-3]):[0-5][0-9]" required></label>
-      <label>Días de antelación de los avisos<input name="aviso_dias" type="number" min="1" max="60" value="7" required></label>
-    </div>
+          <option value="no" >No enviar por correo</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-aviso_hora">Hora del resumen</label><span class="mini">Se envía una vez al día, a esta hora</span></div>
+        <div class="aj-ctl"><select name="aviso_hora" id="aj-aviso_hora"><option value="00:00" >00:00</option><option value="00:30" >00:30</option><option value="01:00" >01:00</option><option value="01:30" >01:30</option><option value="02:00" >02:00</option><option value="02:30" >02:30</option><option value="03:00" >03:00</option><option value="03:30" >03:30</option><option value="04:00" >04:00</option><option value="04:30" >04:30</option><option value="05:00" >05:00</option><option value="05:30" >05:30</option><option value="06:00" >06:00</option><option value="06:30" >06:30</option><option value="07:00" >07:00</option><option value="07:30" >07:30</option><option value="08:00" selected>08:00</option><option value="08:30" >08:30</option><option value="09:00" >09:00</option><option value="09:30" >09:30</option><option value="10:00" >10:00</option><option value="10:30" >10:30</option><option value="11:00" >11:00</option><option value="11:30" >11:30</option><option value="12:00" >12:00</option><option value="12:30" >12:30</option><option value="13:00" >13:00</option><option value="13:30" >13:30</option><option value="14:00" >14:00</option><option value="14:30" >14:30</option><option value="15:00" >15:00</option><option value="15:30" >15:30</option><option value="16:00" >16:00</option><option value="16:30" >16:30</option><option value="17:00" >17:00</option><option value="17:30" >17:30</option><option value="18:00" >18:00</option><option value="18:30" >18:30</option><option value="19:00" >19:00</option><option value="19:30" >19:30</option><option value="20:00" >20:00</option><option value="20:30" >20:30</option><option value="21:00" >21:00</option><option value="21:30" >21:30</option><option value="22:00" >22:00</option><option value="22:30" >22:30</option><option value="23:00" >23:00</option><option value="23:30" >23:30</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-aviso_dias">Antelación de los avisos</label><span class="mini">Con cuántos días de margen se avisa de plazos y vencimientos</span></div>
+        <div class="aj-ctl"><select name="aviso_dias" id="aj-aviso_dias"><option value="1" >1 día antes</option><option value="2" >2 días antes</option><option value="3" >3 días antes</option><option value="5" >5 días antes</option><option value="7" selected>7 días antes</option><option value="10" >10 días antes</option><option value="14" >14 días antes</option><option value="21" >21 días antes</option><option value="30" >30 días antes</option></select></div></li>
+    </ul>
     <p class="mini">
       
       Todavía no se ha enviado ningún resumen. 
@@ -249,7 +195,7 @@
 <b>0</b> cifrados.
 <br><span class="error">No hay clave de cifrado configurada (DOCS_KEY): los archivos se guardan sin cifrar.</span></p>
 </section>
-<section class="tarjeta"><h2>Registro de accesos y cambios</h2>
+<section class="tarjeta" id="registro"><h2>Registro de accesos y cambios</h2>
 <table class="lista"><tr><th>Momento</th><th>Usuario</th><th>Acción</th><th>Entidad</th><th>IP</th></tr>
 <tr><td class="mini" data-label="Momento">20/9/2026, 13:40:21</td>
 <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
