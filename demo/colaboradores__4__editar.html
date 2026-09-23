@@ -77,14 +77,19 @@
     <label>Tipo<select name="tipo"><option value="psicologo" >Psicólogo/a</option><option value="psiquiatra" >Psiquiatra</option><option value="gabinete" >Gabinete</option><option value="colegio" selected>Colegio profesional</option><option value="perito" >Perito</option><option value="traductor" >Traductor/intérprete</option><option value="abogado" >Abogado/a</option><option value="otro" >Otro</option></select></label>
     <label>Especialidad<input name="especialidad" value="Colegiación y peritos" placeholder="Neuropsicología, evaluación infantil…"></label>
     <label>Persona de contacto<input name="contacto_nombre" value="Secretaría"></label>
-    <label>Correo<input type="email" name="email" inputmode="email" value="secretaria@ejemplo.invalid"></label>
+    <label>Correo<input type="email" name="email" inputmode="email" value="secretaria@ejemplo.invalid" data-valida="email"></label>
     <label>Teléfono<input name="telefono" inputmode="tel" value="952 111 111"></label>
     <label>Web<input name="web" value="" placeholder="https://"></label>
     <label>Dirección<input name="direccion" value=""></label>
     <label>Localidad<input name="localidad" value="Málaga"></label>
-    <label>N.º de colegiado<input name="colegiado" value=""></label>
+    <label>N.º de colegiado<input name="colegiado" value="" data-valida="colegiado" placeholder="AO-15009"></label>
     <label>Idiomas<input name="idiomas" value="" placeholder="Español, inglés"></label>
-    <label>Estado<select name="estado"><option value="activo" selected>Activo</option><option value="inactivo" >Inactivo</option></select></label>
+    <div class="campo-interruptor"><span class="campo-interruptor-t">Estado</span>
+      <span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="colab-estado"
+          data-interruptor data-on="activo" data-off="inactivo" data-etiqueta-on="Activo" data-etiqueta-off="Inactivo" aria-label="Activo / Inactivo"><span class="interruptor-bola"></span></button>
+        <input type="hidden" name="estado" value="activo">
+        <span class="interruptor-estado">Activo</span></span>
+    </div>
   </div>
   <label>Condiciones (tarifas, plazos, cómo derivar)<textarea name="condiciones" rows="3">Listado de peritos y turno de oficio.</textarea></label>
   <label>Notas<textarea name="notas" rows="3">EJEMPLO ficticio.</textarea></label>

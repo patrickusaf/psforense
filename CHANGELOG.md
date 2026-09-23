@@ -2,6 +2,11 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.8] · 2026-09-23
+### Cambiado
+- Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.6: Ajustes en pestañas, interruptores en vez de «Sí/No», diagramas
+  de proceso en Casos/Presupuestos/Evaluación y comprobadores de NIF, colegiación, correo y fechas.
+
 ## [1.3.7] · 2026-09-21
 ### Cambiado
 - Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.5: «Próximos 45 días» del Panel también ofrece «Ver más».

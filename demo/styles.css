@@ -385,10 +385,13 @@ main>.cols,main>.cal-fila,main>.doc-fila,main>table.lista,main>.filtros{margin-b
 main>.filtros{margin-bottom:16px}
 section[id]{scroll-margin-top:84px}
 
-/* ---------- Ajustes: secciones, listas y desplegables ---------- */
-.indice-ajustes{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 20px}
-.indice-ajustes a{display:inline-block;padding:6px 13px;border:1px solid var(--linea);border-radius:999px;background:var(--blanco);color:var(--fiordo);text-decoration:none;font-size:.86rem;font-weight:500}
-.indice-ajustes a:hover{border-color:var(--acero);background:var(--hielo)}
+/* ---------- Ajustes: pestañas, listas y desplegables ---------- */
+.pestañas{display:flex;gap:2px;border-bottom:1.5px solid var(--linea);margin:0 0 20px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pestañas [role=tab]{appearance:none;background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;font:600 .88rem var(--sans);color:var(--acero);cursor:pointer;white-space:nowrap;margin-bottom:-1.5px}
+.pestañas [role=tab]:hover{color:var(--fiordo)}
+.pestañas [role=tab][aria-selected="true"]{color:var(--fiordo);border-bottom-color:var(--fiordo)}
+.pestañas [role=tab]:focus-visible{outline:2px solid var(--acero);outline-offset:-2px;border-radius:3px}
+[role=tabpanel]{outline:0}
 .tarjeta>h2+p.mini{margin:-6px 0 8px}
 .ajustes-lista{list-style:none;margin:0;padding:0}
 .ajustes-lista>li{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,340px);gap:6px 28px;align-items:center;padding:13px 0;border-top:1px solid var(--linea)}
@@ -426,3 +429,43 @@ section[id]{scroll-margin-top:84px}
 .proximos .ver-mas[open] .menos{display:inline}
 .proximos .ver-mas>ul>li:first-child{border-top:1px solid var(--linea)}
 .proximos .prox>li:last-child{border-bottom:0}
+
+/* ---------- Interruptor (activar/desactivar), en vez de un desplegable Sí/No ---------- */
+.interruptor{display:inline-flex;align-items:center;gap:10px}
+.interruptor-btn{--an:42px;--al:23px;position:relative;width:var(--an);height:var(--al);flex:none;border-radius:999px;border:1.5px solid var(--niebla);background:var(--hielo);cursor:pointer;padding:0;margin:0;transition:background .15s,border-color .15s}
+.interruptor-btn[aria-checked="true"]{background:var(--fiordo);border-color:var(--fiordo)}
+.interruptor-btn:hover{border-color:var(--acero)}
+.interruptor-bola{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(30,43,58,.35);transition:transform .15s}
+.interruptor-btn[aria-checked="true"] .interruptor-bola{transform:translateX(19px)}
+.interruptor-btn:focus-visible{outline:2px solid var(--acero);outline-offset:2px}
+.interruptor-estado{font-size:.88rem;color:var(--grafito);font-weight:500}
+.interruptor-estado.des{color:var(--acero);font-weight:400}
+/* Un interruptor dentro de una .rejilla de formulario, en el hueco de un <label> normal */
+.campo-interruptor{display:flex;flex-direction:column;gap:6px;margin-bottom:15px}
+.campo-interruptor-t{font-size:.85rem;color:var(--acero);font-weight:600}
+
+/* ---------- Comprobadores de formato (NIF, colegiación, correo) ---------- */
+.form input.campo-mal{border-color:var(--lacre)!important;box-shadow:0 0 0 3px rgba(140,47,57,.15)!important}
+.campo-aviso{display:block;color:var(--lacre);font-size:.8rem;margin-top:5px;font-weight:500}
+
+/* ---------- Diagramas de proceso: pasos con flechas, plegados por defecto ---------- */
+.proceso{margin:0 0 18px}
+.proceso>summary{cursor:pointer;list-style:none;padding:12px 16px;display:flex;align-items:center;gap:8px;font-weight:600;color:var(--fiordo);background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);box-shadow:var(--sombra)}
+.proceso>summary::-webkit-details-marker{display:none}
+.proceso>summary::before{content:"›";color:var(--acero);transition:transform .15s}
+.proceso[open]>summary{border-radius:var(--radio) var(--radio) 0 0;box-shadow:none}
+.proceso[open]>summary::before{transform:rotate(90deg)}
+.proceso-cuerpo{border:1px solid var(--linea);border-top:0;border-radius:0 0 var(--radio) var(--radio);padding:18px 20px;background:var(--blanco)}
+.proceso-pasos{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;list-style:none;margin:0;padding:0}
+.proceso-pasos li{display:flex;align-items:center;gap:0}
+.proceso-paso{background:var(--hielo);border:1px solid var(--linea);border-radius:var(--radio);padding:12px 16px;min-width:150px;max-width:190px}
+.proceso-paso b{display:block;color:var(--fiordo);font-size:.9rem;margin-bottom:3px}
+.proceso-paso span{display:block;font-size:.8rem;color:var(--acero);line-height:1.4}
+.proceso-flecha{flex:none;width:26px;height:26px;color:var(--niebla);align-self:center;margin:0 2px}
+.proceso-nota{margin:14px 0 0;font-size:.86rem;color:var(--acero)}
+@media(max-width:700px){
+  .proceso-pasos{flex-direction:column;align-items:stretch}
+  .proceso-pasos li{flex-direction:column;align-items:stretch}
+  .proceso-paso{max-width:none}
+  .proceso-flecha{transform:rotate(90deg);align-self:center;margin:2px 0}
+}

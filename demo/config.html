@@ -70,29 +70,38 @@
 
 
 
+
 <h1>Ajustes</h1>
-<nav aria-label="Secciones de Ajustes"><ul class="indice-ajustes">
-  <li><a href="#profesional">Datos profesionales</a></li><li><a href="#facturacion">Facturación</a></li><li><a href="#presupuestos">Presupuestos</a></li>
-  <li><a href="#conservacion">Conservación</a></li><li><a href="#seguridad">Seguridad y calendario</a></li><li><a href="#copias">Copias</a></li>
-  <li><a href="#notificaciones">Notificaciones</a></li><li><a href="#registro">Registro de accesos</a></li>
-</ul></nav>
+<div class="pestañas" role="tablist" aria-label="Secciones de Ajustes">
+  <button type="button" role="tab" id="tab-profesional" data-tab="profesional" aria-selected="false">Datos profesionales</button>
+  <button type="button" role="tab" id="tab-facturacion" data-tab="facturacion" aria-selected="false">Facturación</button>
+  <button type="button" role="tab" id="tab-presupuestos" data-tab="presupuestos" aria-selected="false">Presupuestos</button>
+  <button type="button" role="tab" id="tab-conservacion" data-tab="conservacion" aria-selected="false">Conservación</button>
+  <button type="button" role="tab" id="tab-seguridad" data-tab="seguridad" aria-selected="false">Seguridad y calendario</button>
+  <button type="button" role="tab" id="tab-copias" data-tab="copias" aria-selected="false">Copias</button>
+  <button type="button" role="tab" id="tab-notificaciones" data-tab="notificaciones" aria-selected="false">Notificaciones</button>
+  <button type="button" role="tab" id="tab-almacenamiento" data-tab="almacenamiento" aria-selected="false">Almacenamiento</button>
+  
+  <button type="button" role="tab" id="tab-registro" data-tab="registro" aria-selected="false">Registro de accesos</button>
+</div>
+
 <form class="form" method="post" action="#" data-demo-form>
-  <section class="tarjeta" id="profesional">
+  <section class="tarjeta" id="profesional" role="tabpanel" aria-labelledby="tab-profesional">
     <h2>Datos profesionales</h2>
     <p class="mini">Aparecen en las facturas, los presupuestos y los documentos que envías.</p>
     <ul class="ajustes-lista">
       <li><div class="aj-txt"><label for="aj-emisor_nombre">Nombre o razón social</label><span class="mini">Como debe figurar en la factura</span></div><div class="aj-ctl"><input name="emisor_nombre" id="aj-emisor_nombre" value="Gabinete Pericial Ejemplo" autocomplete="organization"></div></li>
-      <li><div class="aj-txt"><label for="aj-emisor_nif">NIF</label></div><div class="aj-ctl"><input name="emisor_nif" id="aj-emisor_nif" value="00000000T" ></div></li>
-      <li><div class="aj-txt"><label for="aj-emisor_colegio">Colegiación</label><span class="mini">Colegio profesional y número</span></div><div class="aj-ctl"><input name="emisor_colegio" id="aj-emisor_colegio" value="Psicólogo colegiado (ejemplo)" ></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_nif">NIF</label></div><div class="aj-ctl"><input name="emisor_nif" id="aj-emisor_nif" value="00000000T" data-valida="nif"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_colegio">Colegiación</label><span class="mini">Colegio profesional y número</span></div><div class="aj-ctl"><input name="emisor_colegio" id="aj-emisor_colegio" value="Psicólogo colegiado (ejemplo)" data-valida="colegiado" placeholder="AO-15009"></div></li>
       <li><div class="aj-txt"><label for="aj-emisor_direccion">Dirección</label></div><div class="aj-ctl"><input name="emisor_direccion" id="aj-emisor_direccion" value="Calle del Ejemplo 1, 2.º B" autocomplete="street-address"></div></li>
       <li><div class="aj-txt"><label for="aj-emisor_cp_loc">Código postal y localidad</label></div><div class="aj-ctl"><input name="emisor_cp_loc" id="aj-emisor_cp_loc" value="00000 Ciudad Ejemplo" ></div></li>
-      <li><div class="aj-txt"><label for="aj-emisor_email">Correo electrónico</label><span class="mini">Es también el de contacto en los documentos</span></div><div class="aj-ctl"><input name="emisor_email" id="aj-emisor_email" value="contacto@ejemplo.invalid" type="email" autocomplete="email"></div></li>
+      <li><div class="aj-txt"><label for="aj-emisor_email">Correo electrónico</label><span class="mini">Es también el de contacto en los documentos</span></div><div class="aj-ctl"><input name="emisor_email" id="aj-emisor_email" value="contacto@ejemplo.invalid" type="email" autocomplete="email" data-valida="email"></div></li>
       <li><div class="aj-txt"><label for="aj-emisor_telefono">Teléfono</label><span class="mini">Se usa también en el enlace de WhatsApp</span></div><div class="aj-ctl"><input name="emisor_telefono" id="aj-emisor_telefono" value="+34 600 000 000" type="tel" autocomplete="tel"></div></li>
       <li><div class="aj-txt"><label for="aj-emisor_web">Web</label></div><div class="aj-ctl"><input name="emisor_web" id="aj-emisor_web" value="ejemplo.invalid" ></div></li>
     </ul>
   </section>
 
-  <section class="tarjeta" id="facturacion">
+  <section class="tarjeta" id="facturacion" role="tabpanel" aria-labelledby="tab-facturacion">
     <h2>Facturación</h2>
     <ul class="ajustes-lista">
       <li><div class="aj-txt"><label for="aj-emisor_iban">IBAN de cobro</label><span class="mini">Se muestra en la factura para que te paguen por transferencia</span></div><div class="aj-ctl"><input name="emisor_iban" id="aj-emisor_iban" value="" autocomplete="off"></div></li>
@@ -102,7 +111,7 @@
     </ul>
   </section>
 
-  <section class="tarjeta" id="presupuestos">
+  <section class="tarjeta" id="presupuestos" role="tabpanel" aria-labelledby="tab-presupuestos">
     <h2>Presupuestos</h2>
     <ul class="ajustes-lista">
       <li><div class="aj-txt"><label for="aj-presupuesto_validez_dias">Validez de los presupuestos</label><span class="mini">Tiempo que se mantiene el precio ofrecido</span></div><div class="aj-ctl"><select name="presupuesto_validez_dias" id="aj-presupuesto_validez_dias"><option value="7">7 días</option><option value="15">15 días</option><option value="30" selected>30 días</option><option value="45">45 días</option><option value="60">60 días</option><option value="90">90 días</option></select></div></li>
@@ -110,7 +119,7 @@
     </ul>
   </section>
 
-  <section class="tarjeta" id="conservacion">
+  <section class="tarjeta" id="conservacion" role="tabpanel" aria-labelledby="tab-conservacion">
     <h2>Conservación de documentos</h2>
     <p class="mini">Años que se guarda cada tipo de documento antes de proponerte su eliminación. Son propuestas por defecto: revísalas con tu asesor.</p>
     <ul class="ajustes-lista">
@@ -126,11 +135,19 @@
     </ul>
   </section>
 
-  <section class="tarjeta" id="seguridad">
+  <section class="tarjeta" id="seguridad" role="tabpanel" aria-labelledby="tab-seguridad">
     <h2>Seguridad y calendario</h2>
     <ul class="ajustes-lista">
-      <li><div class="aj-txt"><label for="aj-2fa_obligatoria">Exigir verificación en dos pasos</label><span class="mini">Con «Sí», quien no la tenga debe activarla para seguir usando la aplicación</span></div><div class="aj-ctl"><select name="2fa_obligatoria" id="aj-2fa_obligatoria"><option value="si">Sí: quien no la tenga debe activarla</option><option value="no" selected>No: es opcional</option></select></div></li>
-      <li><div class="aj-txt"><label for="aj-calendario_fiscal">Mostrar vencimientos fiscales</label><span class="mini">Trimestres y modelos en el calendario y en el aviso a la gestoría</span></div><div class="aj-ctl"><select name="calendario_fiscal" id="aj-calendario_fiscal"><option value="si" selected>Sí</option><option value="no">No</option></select></div></li>
+      <li><div class="aj-txt"><label for="aj-2fa_obligatoria">Exigir verificación en dos pasos</label><span class="mini">Quien no la tenga debe activarla para seguir usando la aplicación</span></div><div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="false" id="aj-2fa_obligatoria"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Exigida" data-etiqueta-off="Opcional"
+        aria-label="Exigida / Opcional"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="2fa_obligatoria" value="no">
+      <span class="interruptor-estado des">Opcional</span></span></div></li>
+      <li><div class="aj-txt"><label for="aj-calendario_fiscal">Mostrar vencimientos fiscales</label><span class="mini">Trimestres y modelos en el calendario y en el aviso a la gestoría</span></div><div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="aj-calendario_fiscal"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Se muestran" data-etiqueta-off="Ocultos"
+        aria-label="Se muestran / Ocultos"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="calendario_fiscal" value="si">
+      <span class="interruptor-estado">Se muestran</span></span></div></li>
       <li><div class="aj-txt"><label for="aj-copia_hora">Hora de la copia diaria</label><span class="mini">Cada día a esta hora se hace una copia cifrada</span></div><div class="aj-ctl"><select name="copia_hora" id="aj-copia_hora"><option value="00:00">00:00</option><option value="00:30">00:30</option><option value="01:00">01:00</option><option value="01:30">01:30</option><option value="02:00">02:00</option><option value="02:30">02:30</option><option value="03:00" selected>03:00</option><option value="03:30">03:30</option><option value="04:00">04:00</option><option value="04:30">04:30</option><option value="05:00">05:00</option><option value="05:30">05:30</option><option value="06:00">06:00</option><option value="06:30">06:30</option><option value="07:00">07:00</option><option value="07:30">07:30</option><option value="08:00">08:00</option><option value="08:30">08:30</option><option value="09:00">09:00</option><option value="09:30">09:30</option><option value="10:00">10:00</option><option value="10:30">10:30</option><option value="11:00">11:00</option><option value="11:30">11:30</option><option value="12:00">12:00</option><option value="12:30">12:30</option><option value="13:00">13:00</option><option value="13:30">13:30</option><option value="14:00">14:00</option><option value="14:30">14:30</option><option value="15:00">15:00</option><option value="15:30">15:30</option><option value="16:00">16:00</option><option value="16:30">16:30</option><option value="17:00">17:00</option><option value="17:30">17:30</option><option value="18:00">18:00</option><option value="18:30">18:30</option><option value="19:00">19:00</option><option value="19:30">19:30</option><option value="20:00">20:00</option><option value="20:30">20:30</option><option value="21:00">21:00</option><option value="21:30">21:30</option><option value="22:00">22:00</option><option value="22:30">22:30</option><option value="23:00">23:00</option><option value="23:30">23:30</option></select></div></li>
       <li><div class="aj-txt"><label for="aj-copia_conservar">Copias que se conservan</label><span class="mini">De cada tipo (base de datos y documentos); las más antiguas se eliminan</span></div><div class="aj-ctl"><select name="copia_conservar" id="aj-copia_conservar"><option value="7">7 copias</option><option value="14">14 copias</option><option value="30" selected>30 copias</option><option value="60">60 copias</option><option value="90">90 copias</option><option value="180">180 copias</option></select></div></li>
     </ul>
@@ -140,7 +157,8 @@
 
   <div class="barra-guardar"><span class="mini">Los cambios se aplican al guardar.</span><button class="btn">Guardar ajustes</button></div>
 </form>
-<section class="tarjeta" id="copias">
+
+<section class="tarjeta" id="copias" role="tabpanel" aria-labelledby="tab-copias">
   <h2>Copias de seguridad</h2>
   <p class="error visible">Todavía no hay ninguna copia de seguridad.</p>
   
@@ -152,28 +170,37 @@
   <div class="acciones">
   <form method="post" action="#" data-demo-form><button class="btn linea">Hacer una copia ahora</button></form></div>
 </section>
-<section class="tarjeta" id="notificaciones">
+
+<section class="tarjeta" id="notificaciones" role="tabpanel" aria-labelledby="tab-notificaciones">
   <h2>Notificaciones (Telegram y correo)</h2>
   <p class="mini">Aquí decides qué avisos salen del servidor. Desactivarlos <b>no borra</b> la configuración del <code>.env</code>: cuando vuelvas a ejercer,
   vuelves a activarlos. Los avisos dentro de Probatio (panel, campana y chat) no cambian. El resumen solo incluye referencias de caso y números de factura, nunca nombres.</p>
   <form class="form" method="post" action="#" data-demo-form>
     <ul class="ajustes-lista">
-      <li><div class="aj-txt"><label for="aj-aviso_resumen">Resumen diario de actividad</label><span class="mini">Casos, plazos, tareas, leads y cobros pendientes</span></div>
-        <div class="aj-ctl"><select name="aviso_resumen" id="aj-aviso_resumen">
-          <option value="si" selected>Activado</option>
-          <option value="no" >Desactivado: no se envía ningún resumen</option></select></div></li>
-      <li><div class="aj-txt"><label for="aj-aviso_sistema">Avisos del sistema</label><span class="mini">Fallos de copia de seguridad y otros sucesos importantes</span></div>
-        <div class="aj-ctl"><select name="aviso_sistema" id="aj-aviso_sistema">
-          <option value="si" selected>Activados (recomendado)</option>
-          <option value="no" >Desactivados</option></select></div></li>
-      <li><div class="aj-txt"><label for="aj-aviso_telegram">Telegram</label><span class="mini">Sin configurar en el .env del servidor</span></div>
-        <div class="aj-ctl"><select name="aviso_telegram" id="aj-aviso_telegram">
-          <option value="si" selected>Enviar por Telegram</option>
-          <option value="no" >No enviar por Telegram</option></select></div></li>
-      <li><div class="aj-txt"><label for="aj-aviso_correo">Correo electrónico</label><span class="mini">Sin configurar en el .env del servidor</span></div>
-        <div class="aj-ctl"><select name="aviso_correo" id="aj-aviso_correo">
-          <option value="si" selected>Enviar por correo</option>
-          <option value="no" >No enviar por correo</option></select></div></li>
+      <li><div class="aj-txt"><label id="aj-aviso_resumen-t">Resumen diario de actividad</label><span class="mini">Casos, plazos, tareas, leads y cobros pendientes</span></div>
+        <div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="aj-aviso_resumen"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Activado" data-etiqueta-off="Desactivado"
+        aria-label="Activado / Desactivado"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="aviso_resumen" value="si">
+      <span class="interruptor-estado">Activado</span></span></div></li>
+      <li><div class="aj-txt"><label id="aj-aviso_sistema-t">Avisos del sistema</label><span class="mini">Fallos de copia de seguridad y otros sucesos importantes</span></div>
+        <div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="aj-aviso_sistema"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Activados" data-etiqueta-off="Desactivados"
+        aria-label="Activados / Desactivados"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="aviso_sistema" value="si">
+      <span class="interruptor-estado">Activados</span></span></div></li>
+      <li><div class="aj-txt"><label id="aj-aviso_telegram-t">Telegram</label><span class="mini">Sin configurar en el .env del servidor</span></div>
+        <div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="aj-aviso_telegram"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Activado" data-etiqueta-off="Desactivado"
+        aria-label="Activado / Desactivado"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="aviso_telegram" value="si">
+      <span class="interruptor-estado">Activado</span></span></div></li>
+      <li><div class="aj-txt"><label id="aj-aviso_correo-t">Correo electrónico</label><span class="mini">Sin configurar en el .env del servidor</span></div>
+        <div class="aj-ctl"><span class="interruptor"><button type="button" class="interruptor-btn" role="switch" aria-checked="true" id="aj-aviso_correo"
+        data-interruptor data-on="si" data-off="no" data-etiqueta-on="Activado" data-etiqueta-off="Desactivado"
+        aria-label="Activado / Desactivado"><span class="interruptor-bola"></span></button>
+      <input type="hidden" name="aviso_correo" value="si">
+      <span class="interruptor-estado">Activado</span></span></div></li>
       <li><div class="aj-txt"><label for="aj-aviso_hora">Hora del resumen</label><span class="mini">Se envía una vez al día, a esta hora</span></div>
         <div class="aj-ctl"><select name="aviso_hora" id="aj-aviso_hora"><option value="00:00" >00:00</option><option value="00:30" >00:30</option><option value="01:00" >01:00</option><option value="01:30" >01:30</option><option value="02:00" >02:00</option><option value="02:30" >02:30</option><option value="03:00" >03:00</option><option value="03:30" >03:30</option><option value="04:00" >04:00</option><option value="04:30" >04:30</option><option value="05:00" >05:00</option><option value="05:30" >05:30</option><option value="06:00" >06:00</option><option value="06:30" >06:30</option><option value="07:00" >07:00</option><option value="07:30" >07:30</option><option value="08:00" selected>08:00</option><option value="08:30" >08:30</option><option value="09:00" >09:00</option><option value="09:30" >09:30</option><option value="10:00" >10:00</option><option value="10:30" >10:30</option><option value="11:00" >11:00</option><option value="11:30" >11:30</option><option value="12:00" >12:00</option><option value="12:30" >12:30</option><option value="13:00" >13:00</option><option value="13:30" >13:30</option><option value="14:00" >14:00</option><option value="14:30" >14:30</option><option value="15:00" >15:00</option><option value="15:30" >15:30</option><option value="16:00" >16:00</option><option value="16:30" >16:30</option><option value="17:00" >17:00</option><option value="17:30" >17:30</option><option value="18:00" >18:00</option><option value="18:30" >18:30</option><option value="19:00" >19:00</option><option value="19:30" >19:30</option><option value="20:00" >20:00</option><option value="20:30" >20:30</option><option value="21:00" >21:00</option><option value="21:30" >21:30</option><option value="22:00" >22:00</option><option value="22:30" >22:30</option><option value="23:00" >23:00</option><option value="23:30" >23:30</option></select></div></li>
       <li><div class="aj-txt"><label for="aj-aviso_dias">Antelación de los avisos</label><span class="mini">Con cuántos días de margen se avisa de plazos y vencimientos</span></div>
@@ -190,24 +217,29 @@
     <a class="btn linea" href="verifactu.html">Registro de facturación (VERI*FACTU)</a>
   </div>
 </section>
-<section class="tarjeta"><h2>Almacenamiento documental</h2>
-<p><b>7</b> documentos · <b>371 KB</b> ocupados ·
-<b>0</b> cifrados.
-<br><span class="error">No hay clave de cifrado configurada (DOCS_KEY): los archivos se guardan sin cifrar.</span></p>
+
+<section class="tarjeta" id="almacenamiento" role="tabpanel" aria-labelledby="tab-almacenamiento">
+  <h2>Almacenamiento documental</h2>
+  <p><b>7</b> documentos · <b>373 KB</b> ocupados ·
+  <b>0</b> cifrados.
+  <br><span class="error">No hay clave de cifrado configurada (DOCS_KEY): los archivos se guardan sin cifrar.</span></p>
 </section>
-<section class="tarjeta" id="registro"><h2>Registro de accesos y cambios</h2>
-<table class="lista"><tr><th>Momento</th><th>Usuario</th><th>Acción</th><th>Entidad</th><th>IP</th></tr>
-<tr><td class="mini" data-label="Momento">20/9/2026, 13:40:21</td>
-<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:07</td>
-<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 3</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:07</td>
-<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">cobro</td><td class="mini" data-label="Entidad">facturas 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:05</td>
-<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 2</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">20/9/2026, 13:40:05</td>
-<td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
-<td class="mini" data-label="IP">192.0.2.10</td></tr></table></section>
+
+<section class="tarjeta" id="registro" role="tabpanel" aria-labelledby="tab-registro">
+  <h2>Registro de accesos y cambios</h2>
+  <table class="lista"><tr><th>Momento</th><th>Usuario</th><th>Acción</th><th>Entidad</th><th>IP</th></tr>
+  <tr><td class="mini" data-label="Momento">23/9/2026, 19:00:45</td>
+  <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+  <td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">23/9/2026, 19:00:12</td>
+  <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 3</td>
+  <td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">23/9/2026, 19:00:12</td>
+  <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">cobro</td><td class="mini" data-label="Entidad">facturas 2</td>
+  <td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">23/9/2026, 19:00:09</td>
+  <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">emitir</td><td class="mini" data-label="Entidad">facturas 2</td>
+  <td class="mini" data-label="IP">192.0.2.10</td></tr><tr><td class="mini" data-label="Momento">23/9/2026, 19:00:09</td>
+  <td data-label="Usuario">Marta Ejemplo</td><td data-label="Acción">login</td><td class="mini" data-label="Entidad">usuarios 1</td>
+  <td class="mini" data-label="IP">192.0.2.10</td></tr></table>
+</section>
 </main>
 <footer>Probatio · datos confidenciales</footer>
 <script src="app.js" defer></script>

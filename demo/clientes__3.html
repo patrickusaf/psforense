@@ -77,7 +77,7 @@
       <option value="particular" >Particular</option>
       <option value="empresa" selected>Empresa o profesional</option></select></label>
     <label>Nombre o razón social<input name="nombre" value="Empresa Modelo S.L." required></label>
-    <label>NIF<input name="nif" value="B00000000"></label>
+    <label>NIF<input name="nif" value="B00000000" data-valida="nif"></label>
     <label>Despacho que lo deriva<select name="despacho_id"><option value="">Ninguno</option>
       <option value="4" >Aseguradora Muestra</option><option value="3" selected>Asesoría Laboral Modelo</option><option value="2" >Bufete Ficticio &amp; Asociados</option><option value="1" >Despacho Ejemplo Abogados (ficticio)</option></select></label>
     <label>Dirección<input name="direccion" value="Polígono Ejemplo, nave 4"></label>
@@ -85,7 +85,7 @@
     <label>Localidad<input name="localidad" value="Málaga"></label>
     <label>Provincia<input name="provincia" value="Málaga"></label>
     <label>País<input name="pais" value="España"></label>
-    <label>Correo<input type="email" name="email" value="cliente@ejemplo.invalid"></label>
+    <label>Correo<input type="email" name="email" value="cliente@ejemplo.invalid" data-valida="email"></label>
     <label>Teléfono<input name="telefono" value="600 222 333"></label>
   </div>
   <label>Notas<textarea name="notas" rows="3">CLIENTE FICTICIO para la demostración.</textarea></label>
@@ -98,7 +98,7 @@
     </table></section>
   <section class="tarjeta"><h2>Facturas</h2><table>
     <tr><td><a href="facturas__3.html">2026-002</a></td>
-    <td class="mini">27/8/2026</td><td class="der">954,00 €</td></tr>
+    <td class="mini">30/8/2026</td><td class="der">954,00 €</td></tr>
     </table></section>
 </div>
 <section class="tarjeta">
@@ -129,11 +129,11 @@
     <tr>
       <td><a href="documentos__7.html">2026-002</a>
         
-        <br><span class="mini">probatio_ej-2026-003_factura_2026-002_20260920_v1.pdf · conservar hasta 20/9/2032</span>
+        <br><span class="mini">probatio_ej-2026-003_factura_2026-002_20260923_v1.pdf · conservar hasta 23/9/2032</span>
         <br><span class="mini">PDF generado al emitir la factura</span>
       </td>
       <td><span class="tag">Factura</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">185 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>

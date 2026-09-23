@@ -77,7 +77,7 @@
       <option value="particular" selected>Particular</option>
       <option value="empresa" >Empresa o profesional</option></select></label>
     <label>Nombre o razón social<input name="nombre" value="María Ejemplo Ficticia" required></label>
-    <label>NIF<input name="nif" value="00000000T"></label>
+    <label>NIF<input name="nif" value="00000000T" data-valida="nif"></label>
     <label>Despacho que lo deriva<select name="despacho_id"><option value="">Ninguno</option>
       <option value="4" >Aseguradora Muestra</option><option value="3" >Asesoría Laboral Modelo</option><option value="2" >Bufete Ficticio &amp; Asociados</option><option value="1" selected>Despacho Ejemplo Abogados (ficticio)</option></select></label>
     <label>Dirección<input name="direccion" value="Calle Inventada 1, 2.º B"></label>
@@ -85,7 +85,7 @@
     <label>Localidad<input name="localidad" value="Málaga"></label>
     <label>Provincia<input name="provincia" value="Málaga"></label>
     <label>País<input name="pais" value="España"></label>
-    <label>Correo<input type="email" name="email" value="maria@ejemplo.invalid"></label>
+    <label>Correo<input type="email" name="email" value="maria@ejemplo.invalid" data-valida="email"></label>
     <label>Teléfono<input name="telefono" value="600 111 222"></label>
   </div>
   <label>Notas<textarea name="notas" rows="3">CLIENTE FICTICIO para pruebas. Derivada por Despacho Ejemplo Abogados.</textarea></label>
@@ -98,7 +98,7 @@
     </table></section>
   <section class="tarjeta"><h2>Facturas</h2><table>
     <tr><td><a href="facturas__1.html">borrador</a></td>
-    <td class="mini">20/9/2026</td><td class="der">954,00 €</td></tr>
+    <td class="mini">23/9/2026</td><td class="der">954,00 €</td></tr>
     </table></section>
 </div>
 <section class="tarjeta">
@@ -129,11 +129,11 @@
     <tr>
       <td><a href="documentos__5.html">Correo de la abogada con la documentación del procedimiento</a>
         
-        <br><span class="mini">probatio_ej-2026-001_correspondencia_correo-de-la-abogada-con-la-documentacion-del-procedimiento_20260920_v1.txt · conservar hasta 19/9/2028</span>
+        <br><span class="mini">probatio_ej-2026-001_correspondencia_correo-de-la-abogada-con-la-documentacion-del-procedimiento_20260923_v1.txt · conservar hasta 22/9/2028</span>
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Correspondencia</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -141,11 +141,11 @@
     <tr>
       <td><a href="documentos__4.html">Resultados de las pruebas psicométricas</a>
         
-        <br><span class="mini">probatio_ej-2026-001_prueba_resultados-de-las-pruebas-psicometricas_20260920_v1.csv · conservar hasta 18/9/2032</span>
+        <br><span class="mini">probatio_ej-2026-001_prueba_resultados-de-las-pruebas-psicometricas_20260923_v1.csv · conservar hasta 21/9/2032</span>
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Prueba</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -153,11 +153,11 @@
     <tr>
       <td><a href="documentos__3.html">Notas de la entrevista clínica</a>
         
-        <br><span class="mini">probatio_ej-2026-001_expediente_notas-de-la-entrevista-clinica_20260920_v1.txt · conservar hasta 10/10/2026</span>
+        <br><span class="mini">probatio_ej-2026-001_expediente_notas-de-la-entrevista-clinica_20260923_v1.txt · conservar hasta 13/10/2026</span>
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Expediente</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -165,11 +165,11 @@
     <tr>
       <td><a href="documentos__2.html">Consentimiento informado</a>
         
-        <br><span class="mini">probatio_ej-2026-001_consentimiento_consentimiento-informado_20260920_v1.txt · conservar hasta 18/9/2032</span>
+        <br><span class="mini">probatio_ej-2026-001_consentimiento_consentimiento-informado_20260923_v1.txt · conservar hasta 21/9/2032</span>
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Consentimiento</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>
@@ -177,11 +177,11 @@
     <tr>
       <td><a href="documentos__1.html">Hoja de encargo firmada</a>
         
-        <br><span class="mini">probatio_ej-2026-001_encargo_hoja-de-encargo-firmada_20260920_v1.pdf · conservar hasta 18/9/2032</span>
+        <br><span class="mini">probatio_ej-2026-001_encargo_hoja-de-encargo-firmada_20260923_v1.pdf · conservar hasta 21/9/2032</span>
         <br><span class="mini">Documento de ejemplo</span>
       </td>
       <td><span class="tag">Encargo</span></td>
-      <td class="mini">20/9/2026<br>Marta Ejemplo</td>
+      <td class="mini">23/9/2026<br>Marta Ejemplo</td>
       <td class="der mini">1 KB</td>
       <td><form method="post"
             action="#" data-demo-form><button class="check" title="Eliminar">×</button></form></td>

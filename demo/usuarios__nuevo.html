@@ -75,13 +75,13 @@
 <form class="tarjeta form" method="post" action="#" data-demo-form>
   <div class="rejilla">
     <label>Nombre y apellidos<input name="nombre" value="" required></label>
-    <label>Correo (será su usuario)<input type="email" name="email" value="" required autocomplete="off"></label>
+    <label>Correo (será su usuario)<input type="email" name="email" value="" required autocomplete="off" data-valida="email"></label>
     <label>Rol en la herramienta
       <select name="rol"><option value="admin" >Administrador</option><option value="evaluador" >Evaluador</option><option value="usuario" selected>Profesional</option><option value="lector" >Solo lectura</option></select></label>
     <label>Rol profesional
       <select name="rol_real"><option value="psicologo" selected>Psicólogo/a</option><option value="psiquiatra" >Psiquiatra</option><option value="trabajador_social" >Trabajador/a social</option><option value="abogado" >Abogado/a</option><option value="tecnico" >Técnico/a</option><option value="administrativo" >Administrativo/a</option><option value="otro" >Otro</option></select></label>
     <label>Teléfono<input name="telefono" value=""></label>
-    <label>N.º de colegiado (opcional)<input name="colegiado" value=""></label>
+    <label>N.º de colegiado (opcional)<input name="colegiado" value="" data-valida="colegiado" placeholder="AO-15009"></label>
   </div>
   <p class="mini"><b>Administrador:</b> Acceso total, gestión de usuarios, roles y ajustes. <b>Evaluador:</b> Trabaja con casos, documentos y evaluaciones. No ve la facturación ni la parte comercial. <b>Profesional:</b> Trabaja con casos, clientes, documentos, facturación, pruebas y colaboración. No cambia ajustes ni usuarios. <b>Solo lectura:</b> Consulta casos, recursos y comercial, sin modificar nada. </p>
   
