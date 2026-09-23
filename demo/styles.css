@@ -386,11 +386,13 @@ main>.filtros{margin-bottom:16px}
 section[id]{scroll-margin-top:84px}
 
 /* ---------- Ajustes: pestañas, listas y desplegables ---------- */
-.pestañas{display:flex;gap:2px;border-bottom:1.5px solid var(--linea);margin:0 0 20px;overflow-x:auto;-webkit-overflow-scrolling:touch}
-.pestañas [role=tab]{appearance:none;background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;font:600 .88rem var(--sans);color:var(--acero);cursor:pointer;white-space:nowrap;margin-bottom:-1.5px}
-.pestañas [role=tab]:hover{color:var(--fiordo)}
-.pestañas [role=tab][aria-selected="true"]{color:var(--fiordo);border-bottom-color:var(--fiordo)}
-.pestañas [role=tab]:focus-visible{outline:2px solid var(--acero);outline-offset:-2px;border-radius:3px}
+/* Chips que se ajustan en varias líneas si no caben: nunca aparece una barra de scroll. */
+.pestañas{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.pestañas [role=tab]{appearance:none;background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:8px 16px;
+  font:600 .86rem var(--sans);color:var(--fiordo);cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.pestañas [role=tab]:hover{border-color:var(--acero);background:var(--hielo)}
+.pestañas [role=tab][aria-selected="true"]{background:var(--fiordo);border-color:var(--fiordo);color:#fff}
+.pestañas [role=tab]:focus-visible{outline:2px solid var(--acero);outline-offset:2px}
 [role=tabpanel]{outline:0}
 .tarjeta>h2+p.mini{margin:-6px 0 8px}
 .ajustes-lista{list-style:none;margin:0;padding:0}

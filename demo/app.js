@@ -68,16 +68,12 @@ document.addEventListener("click", (e) => {
     var pestañas = Array.prototype.slice.call(lista.querySelectorAll('[role="tab"]'));
     if (!pestañas.length) return;
     var activar = function (id, mover) {
-      var activa = null;
       pestañas.forEach(function (t) {
         var on = t.getAttribute("data-tab") === id, panel = document.getElementById(t.getAttribute("data-tab"));
         t.setAttribute("aria-selected", on ? "true" : "false");
         t.tabIndex = on ? 0 : -1;
         if (panel) panel.hidden = !on;
-        if (on) activa = t;
       });
-      // Si la pestaña activa no cabe en la tira (por ejemplo, al llegar con #notificaciones en móvil), se desplaza hasta que se vea.
-      if (activa) activa.scrollIntoView({ block: "nearest", inline: "nearest" });
       if (mover) { var el = document.getElementById(id); if (el) el.scrollIntoView({ block: "start", behavior: "smooth" }); }
     };
     var deseada = location.hash.slice(1);

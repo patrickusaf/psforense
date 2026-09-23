@@ -2,6 +2,10 @@
 
 Formato: versionado semántico (mayor.menor.parche).
 
+## [1.3.9] · 2026-09-23
+### Corregido
+- Demo de Probatio (`/demo/`): las pestañas de Ajustes ya no sacan una barra de scroll que las cortaba; se ajustan en varias líneas.
+
 ## [1.3.8] · 2026-09-23
 ### Cambiado
 - Demostración de Probatio (`/demo/`) actualizada a la versión 0.9.6: Ajustes en pestañas, interruptores en vez de «Sí/No», diagramas
